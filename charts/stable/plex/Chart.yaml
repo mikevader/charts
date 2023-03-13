@@ -1,0 +1,26 @@
+---
+apiVersion: v2
+appVersion: 1.31.0.6654-02189b09f
+description: Plex Media Server
+name: plex
+version: 6.5.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - plex
+  - plex-media-server
+home: https://github.com/mikevader/charts/tree/master/charts/stable/plex
+icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+sources:
+  - https://github.com/mikevader/charts/tree/master/charts/stable/plex
+  - https://github.com/mikevader/container-images/
+maintainers:
+  - name: Michael Mühlebach
+    email: michael@anduin.ch
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.2
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2
