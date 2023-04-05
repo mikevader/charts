@@ -523,15 +523,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Volumes referencing persistentVolumeClaims actually reference the PVC again.
 - Items under persistence now default their `mountPath` to the item name, as they should have been doing.
 
-### [2.0.0]
-
-#### Added
-
-- Added support for using Helm template language in `additionalContainers`.
-
-#### Changed
-
-- **Breaking:** `persistence.emptyDir` was changed to allow more configuration options, such as `medium` and `sizeLimit`.
 
 ## Support
 

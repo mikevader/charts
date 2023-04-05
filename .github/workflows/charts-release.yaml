@@ -55,7 +55,7 @@ jobs:
         id: create-commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: charts/**/
+          file_pattern: charts/**
           commit_message: "chore: Auto-update chart README [skip ci]"
           commit_user_name: mikevader[bot]
           commit_user_email: mikevader[bot]@users.noreply.github.com
