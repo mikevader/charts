@@ -29,8 +29,8 @@ Include this chart as a dependency in your `Chart.yaml` e.g.
 # Chart.yaml
 dependencies:
 - name: common
-  version: 4.5.1
-  repository: https://k8s-at-home.com/charts/
+  version: 4.5.2
+  repository: https://mikevader.github.io/charts/
 ```
 
 For more information, take a look at the [Docs](http://docs.k8s-at-home.com/our-helm-charts/common-library/).
