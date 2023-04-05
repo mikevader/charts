@@ -1,0 +1,12 @@
+apiVersion: v2
+name: common
+description: Function library for k8s-at-home charts
+type: library
+version: 4.5.2
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - common
+home: https://github.com/mikevader/charts/tree/master/charts/library/common
+maintainers:
+  - name: Michael Mühlebach
+    email: michael@anduin.ch
