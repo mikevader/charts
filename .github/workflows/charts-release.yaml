@@ -85,7 +85,7 @@ jobs:
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.5.0
         with:
-          charts_dir: charts/
+          charts_dir: charts/*
           charts_repo_url: https://mikevader.github.io/charts/
         env:
           CR_TOKEN: "${{ secrets.K8S_AT_HOME_TOKEN }}"
