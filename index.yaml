@@ -17,6 +17,35 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/common-4.5.2/common-4.5.2.tgz
     version: 4.5.2
+  filebrowser:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 2.18.0
+    created: "2023-04-11T20:09:24.396350058Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.2
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: 59ffc9a34c0a860eebd54219111b877c86cbce92076ef8e2f5ae018be443152e
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michael@anduin.ch
+      name: Michael Mühlebach
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-1.4.2/filebrowser-1.4.2.tgz
+    version: 1.4.2
   plex:
   - annotations:
       artifacthub.io/changes: |-
@@ -47,4 +76,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/plex-6.5.0/plex-6.5.0.tgz
     version: 6.5.0
-generated: "2023-04-11T18:25:57.328444039Z"
+generated: "2023-04-11T20:09:24.539745312Z"
