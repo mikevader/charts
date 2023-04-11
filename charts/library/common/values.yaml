@@ -435,11 +435,11 @@ volumeClaimTemplates: []
 # [[ref]](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#nodeselector)
 nodeSelector: {}
 
-# -- Defines affinity constraint rules.
+# -- Defines affinity constraint rules
 # [[ref]](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity)
 affinity: {}
 
-# -- Defines topologySpreadConstraint rules.
+# -- Defines topologySpreadConstraint rules
 # [[ref]](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/)
 topologySpreadConstraints: []
 # - maxSkew: <integer>
