@@ -1,9 +1,9 @@
 ---
 apiVersion: v2
-appVersion: 2.18.0
+appVersion: 2.23.0
 description: filebrowser provides a file managing interface within a specified directory
 name: filebrowser
-version: 1.4.2
+version: 1.5.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - filebrowser
