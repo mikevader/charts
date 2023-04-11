@@ -15,8 +15,20 @@ charts_summary_file="${charts_folder}"/README.md
 # Gather all charts using the common library, excluding common-test
 incubator_charts=$(find "${charts_folder}/incubator" -name "Chart.yaml" | sort)
 stable_charts=$(find "${charts_folder}/stable" -name "Chart.yaml" | sort)
+library_charts=$(find "${charts_folder}/library" -name "Chart.yaml" | sort)
 
 echo "# Helm charts overview" > "${charts_summary_file}"
+
+echo "### Library charts:" >> "${charts_summary_file}"
+echo "| Chart | Description |" >> "${charts_summary_file}"
+echo "| ----- | ----------- |" >> "${charts_summary_file}"
+for i in ${library_charts[@]}
+do
+    chart_data=($(yq eval '.name, .description' "$i"))
+    chart_name="${chart_data[0]}"
+    chart_description="${chart_data[@]:1}"
+    echo "| [${chart_name}](library/${chart_name}) | ${chart_description} |" >> "${charts_summary_file}"
+done
 
 echo "### Stable charts:" >> "${charts_summary_file}"
 echo "| Chart | Description |" >> "${charts_summary_file}"
