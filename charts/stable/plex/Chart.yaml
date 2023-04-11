@@ -18,7 +18,7 @@ maintainers:
     email: michael@anduin.ch
 dependencies:
   - name: common
-    repository: https://library-charts.k8s-at-home.com
+    repository: https://mikevader.github.io/charts
     version: 4.5.2
 annotations:
   artifacthub.io/changes: |-
