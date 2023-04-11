@@ -83,7 +83,7 @@ Kubernetes: `>=1.16.0-0`
 | addons.vpn.wireguard.image.pullPolicy | string | `"IfNotPresent"` | Specify the WireGuard image pull policy |
 | addons.vpn.wireguard.image.repository | string | `"ghcr.io/k8s-at-home/wireguard"` | Specify the WireGuard image |
 | addons.vpn.wireguard.image.tag | string | `"v1.0.20210914"` | Specify the WireGuard image tag |
-| affinity | object | `{}` | Defines affinity constraint rules. [[ref]](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) |
+| affinity | object | `{}` | Defines affinity constraint rules [[ref]](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity) |
 | args | list | `[]` | Override the args for the default container |
 | automountServiceAccountToken | bool | `true` | Specifies whether a service account token should be automatically mounted. |
 | autoscaling | object | <disabled> | Add a Horizontal Pod Autoscaler |
@@ -198,7 +198,7 @@ Kubernetes: `>=1.16.0-0`
 | termination.messagePath | string | `nil` | Configure the path at which the file to which the main container's termination message will be written. -- [[ref](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#lifecycle-1)] |
 | termination.messagePolicy | string | `nil` | Indicate how the main container's termination message should be populated. Valid options are `File` and `FallbackToLogsOnError`. -- [[ref](https://kubernetes.io/docs/reference/kubernetes-api/workload-resources/pod-v1/#lifecycle-1)] |
 | tolerations | list | `[]` | Specify taint tolerations [[ref]](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/) |
-| topologySpreadConstraints | list | `[]` | Defines topologySpreadConstraint rules. [[ref]](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/) |
+| topologySpreadConstraints | list | `[]` | Defines topologySpreadConstraint rules [[ref]](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/) |
 | volumeClaimTemplates | list | `[]` | Used in conjunction with `controller.type: statefulset` to create individual disks for each instance. |
 
 ----------------------------------------------
