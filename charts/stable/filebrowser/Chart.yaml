@@ -13,7 +13,7 @@ sources:
   - https://github.com/filebrowser/filebrowser
 maintainers:
   - name: Michael Mühlebach
-    email: michael@anduin.ch
+    email: mikevader@users.noreply.github.com
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
