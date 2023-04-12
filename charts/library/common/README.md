@@ -1,8 +1,8 @@
 # common
 
-![Version: 4.5.2](https://img.shields.io/badge/Version-4.5.2-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
+![Version: 4.5.3](https://img.shields.io/badge/Version-4.5.3-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
 
-Function library for k8s-at-home charts
+Function library for mikevader charts
 
 Since a lot of the mikevader charts follow a similar pattern, this library was built to reduce maintenance cost between the charts that use it and try achieve a goal of being DRY.
 
@@ -30,7 +30,7 @@ Include this chart as a dependency in your `Chart.yaml` e.g.
 dependencies:
 - name: common
   version: 4.5.1
-  repository: https://mikevader.com/charts/
+  repository: https://mikevader.github.io/charts/
 ```
 
 For more information, take a look at the [Docs](http://docs.k8s-at-home.com/our-helm-charts/common-library/).
