@@ -13,6 +13,17 @@
     "fileMatch": ["charts/.+/Chart\\.yaml$"]
   },
   "packageRules": [
+    {
+      "regexManagers": [
+        {
+          "datasourceTemplate": "docker",
+          "fileMatch": ["(^|/)Chart\\.yaml$"],
+          "matchStrings": [
+            "#\\s?renovate: image=(?<depName>.*?)\\s?appVersion:\\s?\\\"?(?<currentValue>[\\w+\\.\\-]*)\""
+          ]
+        }
+      ]
+    },
     // Setup datasources
     {
       "matchDatasources": ["helm"],
