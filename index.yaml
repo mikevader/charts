@@ -299,6 +299,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.3
     apiVersion: v2
+    appVersion: 1.21.2
+    created: "2023-04-15T21:53:41.631095086Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.3
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 405c99f35476511ddfbbc042b21d969214c151acabad0d86a02f1c65a93160cb
+    home: https://github.com/mikevader/charts/tree/master/charts/incubator/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.5.0/uptime-kuma-1.5.0.tgz
+    version: 1.5.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.3
+    apiVersion: v2
     appVersion: 1.17.1
     created: "2023-04-15T15:31:22.878379369Z"
     dependencies:
@@ -354,4 +385,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.4.2/uptime-kuma-1.4.2.tgz
     version: 1.4.2
-generated: "2023-04-15T21:45:03.957541194Z"
+generated: "2023-04-15T21:53:41.631120186Z"
