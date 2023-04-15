@@ -3,7 +3,7 @@ apiVersion: v2
 appVersion: 1.31.0.6654-02189b09f
 description: Plex Media Server
 name: plex
-version: 6.5.0
+version: 6.5.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - plex
@@ -19,7 +19,7 @@ maintainers:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.2
+    version: 4.5.3
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
