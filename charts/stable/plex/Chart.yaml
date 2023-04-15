@@ -21,7 +21,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
 
-#  renovate: image=ghcr.io/mikevader/plex
+# renovate: image=ghcr.io/mikevader/plex
 appVersion: 1.31.0.6654-02189b09f
 
 annotations:
