@@ -23,7 +23,7 @@ maintainers:
 icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
 
 # renovate: image=louislam/uptime-kuma
-appVersion: 1.17.1
+appVersion: 1.21.2
 
 annotations:
   artifacthub.io/changes: |-
