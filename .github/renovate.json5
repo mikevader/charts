@@ -5,7 +5,7 @@
   "assigneesFromCodeOwners": true,
   "reviewersFromCodeOwners": true,
   "allowPostUpgradeCommandTemplating": true,
-  "allowedPostUpgradeCommands": ["^.*"],
+  "allowedPostUpgradeCommands": ["^.*$", "^sed -i"],
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
   "helm-values": {
