@@ -53,6 +53,11 @@ jobs:
         with:
           python-version: "3.10"
 
+      # - name: Bump Chart.yaml version
+      #   if: inputs.isRenovatePR == 'true' && inputs.modifiedCharts != ''
+      #   run: |
+      #     sed -i '' "s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" Chart.yaml
+
       - name: Annotate Charts.yaml for Renovate PR's
         if: inputs.isRenovatePR == 'true' && inputs.modifiedCharts != ''
         env:
