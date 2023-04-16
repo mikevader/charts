@@ -4,8 +4,8 @@
   "dependencyDashboardTitle": "Renovate Dashboard",
   "assigneesFromCodeOwners": true,
   "reviewersFromCodeOwners": true,
-  "allowPostUpgradeCommandTemplating": true,
-  "allowedPostUpgradeCommands": ["^.*$", "^sed -i"],
+//  "allowPostUpgradeCommandTemplating": true,
+//  "allowedPostUpgradeCommands": ["^.*$", "^sed -i"],
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
   "helm-values": {
@@ -55,39 +55,39 @@
       "updateTypes": ["major"],
       "bumpVersion": "major",
       "labels": ["type/major"],
-      "postUpgradeTasks": {
-        "commands": [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
-        ],
-        "fileFilters": ["Chart.yaml"],
-        "executionMode": "branch"
-      }
+      // "postUpgradeTasks": {
+      //   "commands": [
+      //     "sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
+      //   ],
+      //   "fileFilters": ["Chart.yaml"],
+      //   "executionMode": "branch"
+      // }
     },
     {
       "matchDatasources": ["docker"],
       "updateTypes": ["minor"],
       "bumpVersion": "minor",
       "labels": ["type/minor"],
-      "postUpgradeTasks": {
-        "commands": [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
-        ],
-        "fileFilters": ["Chart.yaml"],
-        "executionMode": "branch"
-      }
+      // "postUpgradeTasks": {
+      //   "commands": [
+      //     "sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
+      //   ],
+      //   "fileFilters": ["Chart.yaml"],
+      //   "executionMode": "branch"
+      // }
     },
     {
       "matchDatasources": ["docker"],
       "updateTypes": ["patch"],
       "bumpVersion": "patch",
       "labels": ["type/patch"],
-      "postUpgradeTasks": {
-        "commands": [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
-        ],
-        "fileFilters": ["Chart.yaml"],
-        "executionMode": "branch"
-      }
+      // "postUpgradeTasks": {
+      //   "commands": [
+      //     "sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
+      //   ],
+      //   "fileFilters": ["Chart.yaml"],
+      //   "executionMode": "branch"
+      // }
     },
     //
     // Common library dep
