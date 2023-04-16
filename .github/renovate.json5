@@ -4,6 +4,7 @@
   "dependencyDashboardTitle": "Renovate Dashboard",
   "assigneesFromCodeOwners": true,
   "reviewersFromCodeOwners": true,
+  "allowedPostUpgradeCommands": ["sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"],
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
   "helm-values": {
@@ -17,7 +18,7 @@
       "datasourceTemplate": "docker",
       "fileMatch": ["(^|/)Chart\\.yaml$"],
       "matchStrings": [
-        "#\\s?renovate: image=(?<depName>.*?)\\s?appVersion:\\s?\\"?(?<currentValue>[\\w+\\.\\-]*)\\"?"
+        "#\\s?renovate: image=(?<depName>.*?)\\s?appVersion:\\s?\\\"?(?<currentValue>[\\w+\\.\\-]*)\\\"?"
       ]
     }
   ],
