@@ -17,7 +17,7 @@ dependencies:
     repository: https://mikevader.github.io/charts
     version: 4.5.3
 maintainers:
-  - name: Michael Mühlebach
+  - name: mikevader
     email: mikevader@users.noreply.github.com
 icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
 
