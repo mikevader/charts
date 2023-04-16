@@ -58,10 +58,10 @@ jobs:
         run: |
           sed -i '' "s/^    version:.*/    version: $(grep '^version:' charts/library/common/Chart.yaml | awk '{print $2}')/" helper-charts/common-test/Chart.yaml
 
-      # - name: Bump Chart.yaml version
-      #   if: inputs.isRenovatePR == 'true' && inputs.modifiedCharts != ''
-      #   run: |
-      #     sed -i '' "s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" Chart.yaml
+      - name: Bump Chart.yaml version
+        if: inputs.isRenovatePR == 'true' && contains(inputs.modifiedCharts, 'common')
+        run: |
+          sed -i '' "s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" Chart.yaml
 
       - name: Annotate Charts.yaml for Renovate PR's
         if: inputs.isRenovatePR == 'true' && inputs.modifiedCharts != ''
