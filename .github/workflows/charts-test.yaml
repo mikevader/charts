@@ -122,7 +122,7 @@ jobs:
 
       - name: Run chart-testing (install)
         if: ${{ contains(matrix.chart, 'library') }}
-        run: ct install --config .github/ct-install-library.yaml --charts ${{ matrix.chart }}
+        run: ct install --config .github/ct-install-library.yaml
 
   # Summarize matrix https://github.community/t/status-check-for-a-matrix-jobs/127354/7
   install_success:
