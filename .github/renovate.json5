@@ -4,7 +4,8 @@
   "dependencyDashboardTitle": "Renovate Dashboard",
   "assigneesFromCodeOwners": true,
   "reviewersFromCodeOwners": true,
-  "allowedPostUpgradeCommands": ["sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"],
+  "allowPostUpgradeCommandTemplating": true,
+  "allowedPostUpgradeCommands": ["^.*"],
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
   "helm-values": {
