@@ -18,7 +18,14 @@
       "fileMatch": ["(^|/)Chart\\.yaml$"],
       "matchStrings": [
         "#\\s?renovate: image=(?<depName>.*?)\\s?appVersion:\\s?\\\"?(?<currentValue>[\\w+\\.\\-]*)\"?"
-      ]
+      ],
+      "postUpgradeTasks": {
+        "commands": [
+          "sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml",
+        ],
+        "fileFilters": ["Chart.yaml"],
+        "executionMode": "branch"
+      }
     }
   ],
   "packageRules": [
