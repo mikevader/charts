@@ -1,0 +1,7 @@
+remote: origin
+target-branch: main
+helm-extra-args: --timeout 600s
+chart-dirs:
+  - helper-charts
+chart-repos:
+  - mikevader=https://mikevader.github.io/charts

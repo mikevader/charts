@@ -117,7 +117,12 @@ jobs:
           kubectl taint --all=true nodes node.cloudprovider.kubernetes.io/uninitialized- || true
 
       - name: Run chart-testing (install)
+        if: ${{ !contains(matrix.chart, 'library') }}
         run: ct install --config .github/ct-install.yaml --charts ${{ matrix.chart }}
+
+      - name: Run chart-testing (install)
+        if: ${{ contains(matrix.chart, 'library') }}
+        run: ct install --config .github/ct-install-library.yaml --charts ${{ matrix.chart }}
 
   # Summarize matrix https://github.community/t/status-check-for-a-matrix-jobs/127354/7
   install_success:
