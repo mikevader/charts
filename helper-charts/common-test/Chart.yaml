@@ -1,0 +1,17 @@
+---
+apiVersion: v2
+name: common-test
+version: 0.1.0
+kubeVersion: ">=1.16.0-0"
+description: Helper chart to test different use cases of the common library
+keywords:
+  - k8s-at-home
+  - common
+home: https://github.com/mikevader/charts/tree/main/stable/common-test
+dependencies:
+  - name: common
+    repository: file://../../charts/library/common
+    version: n/a
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
