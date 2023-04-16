@@ -1,12 +1,13 @@
+---
 apiVersion: v2
 name: common
-description: Function library for mikevader charts
-type: library
 version: 4.5.3
 kubeVersion: ">=1.16.0-0"
+description: Function library for mikevader charts
+type: library
 keywords:
   - common
 home: https://github.com/mikevader/charts/tree/master/charts/library/common
 maintainers:
-  - name: Michael Mühlebach
+  - name: mikevader
     email: mikevader@users.noreply.github.com
