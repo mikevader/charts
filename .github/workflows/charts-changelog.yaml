@@ -70,7 +70,7 @@ jobs:
           for i in "${CHARTS[@]}"
           do
               IFS='/' read -r -a chart_parts <<< "$i"
-              sed -i "s/^version:.*/version: $(grep '^version:' charts/${chart_parts[0]}/${chart_parts[1]} | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" charts/${chart_parts[0]}/${chart_parts[1]}
+              sed -i "s/^version:.*/version: $(grep '^version:' charts/${chart_parts[0]}/${chart_parts[1]}/Chart.yaml | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" charts/${chart_parts[0]}/${chart_parts[1]}/Chart.yaml
               echo ""
           done
 
