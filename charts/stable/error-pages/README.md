@@ -1,6 +1,6 @@
 # error-pages
 
-![Version: 1.4.0](https://img.shields.io/badge/Version-1.4.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.22.0](https://img.shields.io/badge/AppVersion-2.22.0-informational?style=flat-square)
+![Version: 1.4.1](https://img.shields.io/badge/Version-1.4.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.22.0](https://img.shields.io/badge/AppVersion-2.22.0-informational?style=flat-square)
 
 Server error pages in the docker image
 
@@ -83,7 +83,7 @@ spec:
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"ghcr.io/tarampampam/error-pages"` | image repository |
-| image.tag | string | `"2.6.0"` | image tag |
+| image.tag | string | `nil` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
 | service.main.ports.http.port | int | `8080` |  |
