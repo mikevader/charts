@@ -9,7 +9,7 @@ image:
   # -- image repository
   repository: ghcr.io/tarampampam/error-pages
   # -- image tag
-  tag: 2.6.0
+  tag: 2.23.0
   # -- image pull policy
   pullPolicy: IfNotPresent
 
