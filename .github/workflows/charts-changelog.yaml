@@ -58,10 +58,21 @@ jobs:
         run: |
           sed -i "s/^    version:.*/    version: $(grep '^version:' charts/library/common/Chart.yaml | awk '{print $2}')/" helper-charts/common-test/Chart.yaml
 
+      # - name: Bump Chart.yaml version
+      #   if: inputs.isRenovatePR == 'true' && contains(inputs.modifiedCharts, 'common')
+      #   run: |
+      #     sed -i "s/^version:.*/version: $(grep '^version:' charts/library/common/Chart.yaml | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" charts/library/common/Chart.yaml
+
       - name: Bump Chart.yaml version
-        if: inputs.isRenovatePR == 'true' && contains(inputs.modifiedCharts, 'common')
+        if: inputs.isRenovatePR == 'true'
         run: |
-          sed -i "s/^version:.*/version: $(grep '^version:' charts/library/common/Chart.yaml | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" charts/library/common/Chart.yaml
+          CHARTS=(${{ inputs.modifiedCharts }})
+          for i in "${CHARTS[@]}"
+          do
+              IFS='/' read -r -a chart_parts <<< "$i"
+              sed -i "s/^version:.*/version: $(grep '^version:' charts/${chart_parts[0]}/${chart_parts[1]} | awk '{print $2}' | awk -F '[."]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/" charts/${chart_parts[0]}/${chart_parts[1]}
+              echo ""
+          done
 
       - name: Annotate Charts.yaml for Renovate PR's
         if: inputs.isRenovatePR == 'true' && inputs.modifiedCharts != ''
