@@ -21,7 +21,7 @@ maintainers:
 icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
 
 # renovate: image=tarampampam/error-pages
-appVersion: 2.22.0
+appVersion: 2.23.0
 
 annotations:
   artifacthub.io/changes: |-
