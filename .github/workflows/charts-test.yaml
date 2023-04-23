@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.K8S_AT_HOME_TOKEN }}
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
@@ -59,7 +59,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.K8S_AT_HOME_TOKEN }}
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
@@ -92,7 +92,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.K8S_AT_HOME_TOKEN }}
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
