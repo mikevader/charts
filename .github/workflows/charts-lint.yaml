@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.K8S_AT_HOME_TOKEN }}
+          persist-credentials: false
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
