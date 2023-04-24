@@ -43,6 +43,8 @@ jobs:
       - validate-changelog
     outputs:
       commitHash: ${{ steps.save-commit-hash.outputs.commit_hash }}
+    env:
+      PAT_TOKEN: ${{ secrets.K8S_AT_HOME_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -93,6 +95,14 @@ jobs:
           commit_message: "chore: Auto-update chart metadata"
           commit_user_name: ${{ github.actor }}
           commit_user_email: ${{ github.actor }}@users.noreply.github.com
+
+      - name: Annotate Charts.yaml for Renovate PR's
+        if: inputs.isRenovatePR == 'true' && inputs.modifiedCharts != ''
+        run: |
+            curl -X POST https://api.github.com/repos/mikevader/charts/actions/workflows/pr-validate/dispatches \
+              -H 'Authorization: Bearer $PAT_TOKEN' \
+              -H 'Accept: application/vnd.github.v3+json' \
+              -d '{"ref":"master"}'
 
       - name: Save commit hash
         id: save-commit-hash
