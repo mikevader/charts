@@ -96,7 +96,7 @@ jobs:
           commit_user_name: ${{ github.actor }}
           commit_user_email: ${{ github.actor }}@users.noreply.github.com
 
-      - name: Annotate Charts.yaml for Renovate PR's
+      - name: Trigger workflow
         if: inputs.isRenovatePR == 'true' && inputs.modifiedCharts != ''
         run: |
             curl -X POST https://api.github.com/repos/mikevader/charts/actions/workflows/pr-validate/dispatches \
