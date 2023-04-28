@@ -4,8 +4,6 @@
   "dependencyDashboardTitle": "Renovate Dashboard",
   "assigneesFromCodeOwners": true,
   "reviewersFromCodeOwners": true,
-  "allowPostUpgradeCommandTemplating": true,
-  "allowedPostUpgradeCommands": ["^.*$", "^sed -i"],
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
   "helm-values": {
