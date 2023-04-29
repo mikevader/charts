@@ -1,6 +1,6 @@
 # error-pages
 
-![Version: 1.4.2](https://img.shields.io/badge/Version-1.4.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.23.0](https://img.shields.io/badge/AppVersion-2.23.0-informational?style=flat-square)
+![Version: 1.4.3](https://img.shields.io/badge/Version-1.4.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.24.0](https://img.shields.io/badge/AppVersion-2.24.0-informational?style=flat-square)
 
 Server error pages in the docker image
 
