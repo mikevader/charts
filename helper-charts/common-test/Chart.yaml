@@ -11,7 +11,7 @@ home: https://github.com/mikevader/charts/tree/main/stable/common-test
 dependencies:
   - name: common
     repository: file://../../charts/library/common
-    version: 4.5.4
+    version: 4.5.5
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
