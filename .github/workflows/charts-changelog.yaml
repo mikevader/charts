@@ -57,10 +57,10 @@ jobs:
         with:
           python-version: "3.10"
 
-      - name: Bump Chart.yaml version in test-chart
-        if: inputs.isRenovatePR == 'true' && contains(inputs.modifiedCharts, 'common')
-        run: |
-          sed -i "s/^    version:.*/    version: $(grep '^version:' charts/library/common/Chart.yaml | awk '{print $2}')/" helper-charts/common-test/Chart.yaml
+      # - name: Bump Chart.yaml version in test-chart
+      #   if: inputs.isRenovatePR == 'true' && contains(inputs.modifiedCharts, 'common')
+      #   run: |
+      #     sed -i "s/^    version:.*/    version: $(grep '^version:' charts/library/common/Chart.yaml | awk '{print $2}')/" helper-charts/common-test/Chart.yaml
 
       # - name: Bump Chart.yaml version
       #   if: inputs.isRenovatePR == 'true' && contains(inputs.modifiedCharts, 'common')
