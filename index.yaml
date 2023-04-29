@@ -71,6 +71,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.3
     apiVersion: v2
+    appVersion: 2.24.0
+    created: "2023-04-29T12:14:55.11831105Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.3
+    description: Server error pages in the docker image
+    digest: 9f4dd4514561bf40374a937f1d6189a60726c60cd62ba1430d511ca52a32a078
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/error-pages
+    icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
+    keywords:
+    - traefik
+    - error-pages
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: error-pages
+    sources:
+    - https://github.com/tarampampam/error-pages
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/error-pages-1.4.3/error-pages-1.4.3.tgz
+    version: 1.4.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.3
+    apiVersion: v2
     appVersion: 2.23.0
     created: "2023-04-20T16:01:18.593750569Z"
     dependencies:
@@ -475,4 +504,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.4.2/uptime-kuma-1.4.2.tgz
     version: 1.4.2
-generated: "2023-04-20T16:01:18.594008285Z"
+generated: "2023-04-29T12:14:55.118355351Z"
