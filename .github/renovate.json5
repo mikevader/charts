@@ -55,10 +55,10 @@
       "labels": ["type/major", "test1"],
       "postUpgradeTasks": {
         "commands": [
-          "cd {{{packageFileDir}}} && sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
+          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml"
         ],
-        "fileFilters": ["Chart.yaml"],
-        "executionMode": "update"
+        "fileFilters": ["**/Chart.yaml"],
+        "executionMode": "branch"
       }
     },
     {
@@ -68,10 +68,10 @@
       "labels": ["type/minor", "test2"],
       "postUpgradeTasks": {
         "commands": [
-          "cd {{{packageFileDir}}} && sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
+          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml"
         ],
-        "fileFilters": ["Chart.yaml"],
-        "executionMode": "update"
+        "fileFilters": ["**/Chart.yaml"],
+        "executionMode": "branch"
       }
     },
     {
@@ -81,10 +81,10 @@
       "labels": ["type/patch", "test3"],
       "postUpgradeTasks": {
         "commands": [
-          "cd {{{packageFileDir}}} && sed -i \"s/^version:.*/version: $(grep '^version:' Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" Chart.yaml"
+          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml"
         ],
-        "fileFilters": ["Chart.yaml"],
-        "executionMode": "update"
+        "fileFilters": ["**/Chart.yaml"],
+        "executionMode": "branch"
       }
     },
     //
