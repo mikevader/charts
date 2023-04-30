@@ -1393,6 +1393,34 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
+    appVersion: "4.3"
+    created: "2023-04-30T16:23:37.669770825Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.8
+    description: Self-hosted YouTube downloader built on Material Design
+    digest: 9f8bea584181941b8df3c328508eb1bbe98a8b78311e4b75a76ba82039347d18
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/youtubedl-material
+    icon: https://i.imgur.com/IKOlr0N.png
+    keywords:
+    - youtubedl-material
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: youtubedl-material
+    sources:
+    - https://github.com/Tzahi12345/YoutubeDL-Material
+    - https://github.com/mikevader/charts/tree/master/charts/youtubedl-material
+    urls:
+    - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.3/youtubedl-material-4.4.3.tgz
+    version: 4.4.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
     appVersion: "4.2"
     created: "2023-04-30T12:34:24.628124101Z"
     dependencies:
@@ -1416,4 +1444,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-04-30T16:22:07.130080789Z"
+generated: "2023-04-30T16:23:37.669848028Z"
