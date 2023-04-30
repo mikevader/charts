@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: youtubedl-material
-version: 4.4.2
+version: 4.4.3
 kubeVersion: ">=1.16.0-0"
 description: Self-hosted YouTube downloader built on Material Design
 keywords:
@@ -20,7 +20,7 @@ maintainers:
 icon: https://i.imgur.com/IKOlr0N.png
 
 # renovate: image=tzahi12345/youtubedl-material
-appVersion: "4.2"
+appVersion: "4.3"
 
 annotations:
   artifacthub.io/changes: |-
