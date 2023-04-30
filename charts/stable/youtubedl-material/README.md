@@ -1,6 +1,6 @@
 # youtubedl-material
 
-![Version: 4.4.2](https://img.shields.io/badge/Version-4.4.2-informational?style=flat-square) ![AppVersion: 4.2](https://img.shields.io/badge/AppVersion-4.2-informational?style=flat-square)
+![Version: 4.4.3](https://img.shields.io/badge/Version-4.4.3-informational?style=flat-square) ![AppVersion: 4.3](https://img.shields.io/badge/AppVersion-4.3-informational?style=flat-square)
 
 Self-hosted YouTube downloader built on Material Design
 
