@@ -1,0 +1,29 @@
+---
+apiVersion: v2
+name: heimdall
+version: 8.4.2
+kubeVersion: ">=1.16.0-0"
+description: An Application dashboard and launcher
+type: application
+keywords:
+  - heimdall
+home: https://github.com/mikevader/charts/tree/master/charts/stable/heimdall
+sources:
+  - https://hub.docker.com/r/linuxserver/heimdall/
+  - https://github.com/linuxserver/heimdall
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.8
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://i.imgur.com/mM4tcO5.png
+
+# renovate: image=linuxserver/heimdall
+appVersion: 2.2.2
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2
