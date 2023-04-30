@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: filebrowser
-version: 1.5.2
+version: 1.5.3
 kubeVersion: ">=1.16.0-0"
 description: filebrowser provides a file managing interface within a specified directory
 type: application
@@ -13,7 +13,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.3
+    version: 4.5.8
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -25,6 +25,4 @@ appVersion: v2.23.0
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Use correct appVersion (missing prefix)
-    - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.3
+      description: Upgraded `common` chart dependency to version 4.5.8
