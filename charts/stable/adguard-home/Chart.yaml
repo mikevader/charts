@@ -4,6 +4,7 @@ name: adguard-home
 version: 5.5.2
 kubeVersion: ">=1.16.0-0"
 description: DNS proxy as ad-blocker for local network
+type: application
 keywords:
   - adguard-home
   - adblock
