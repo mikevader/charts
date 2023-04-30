@@ -25,6 +25,4 @@ appVersion: v2.23.0
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Use correct appVersion (missing prefix)
-    - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.3
+      description: Upgraded `common` chart dependency to version 4.5.8
