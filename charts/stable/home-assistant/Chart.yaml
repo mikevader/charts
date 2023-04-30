@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: home-assistant
-version: 13.4.3
+version: 13.4.4
 kubeVersion: ">=1.16.0-0"
 description: Home Assistant
 keywords:
@@ -35,7 +35,7 @@ maintainers:
 icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
 
 # renovate: image=ghcr.io/home-assistant/home-assistant
-appVersion: 2022.5.4
+appVersion: 2022.12.9
 
 annotations:
   artifacthub.io/changes: |-
