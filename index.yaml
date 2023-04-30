@@ -435,6 +435,36 @@ entries:
   plex:
   - annotations:
       artifacthub.io/changes: |-
+        - kind: fixed
+          description: Correct appVersion with prefix
+    apiVersion: v2
+    appVersion: v1.31.0.6654-02189b09f
+    created: "2023-04-30T06:37:36.212056772Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.3
+    description: Plex Media Server
+    digest: 85be6578b79f172381bb8b0c9a0cace7d58ec2a4d70b29415976728ad7841f05
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: plex
+    sources:
+    - https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/plex-6.6.1/plex-6.6.1.tgz
+    version: 6.6.1
+  - annotations:
+      artifacthub.io/changes: |-
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.3
     apiVersion: v2
@@ -583,4 +613,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.4.2/uptime-kuma-1.4.2.tgz
     version: 1.4.2
-generated: "2023-04-30T06:10:01.764412439Z"
+generated: "2023-04-30T06:37:36.212123473Z"
