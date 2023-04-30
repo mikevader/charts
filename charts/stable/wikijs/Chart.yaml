@@ -1,0 +1,29 @@
+---
+apiVersion: v2
+name: wikijs
+version: 6.4.2
+kubeVersion: ">=1.16.0-0"
+description: Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!
+keywords:
+  - wiki
+  - wikijs
+home: https://github.com/mikevader/charts/tree/master/charts/stable/wikijs
+sources:
+  - https://hub.docker.com/r/linuxserver/wikijs/
+  - https://github.com/Requarks/wiki
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.8
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://static.requarks.io/logo/wikijs-butterfly.svg
+
+# renovate: image=ghcr.io/linuxserver/wikijs
+appVersion: version-2.5.201
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2

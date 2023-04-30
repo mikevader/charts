@@ -1,0 +1,41 @@
+---
+apiVersion: v2
+name: firefly-iii
+version: 0.2.2
+kubeVersion: ">=1.16.0-0"
+description: "Firefly III: a personal finances manager"
+type: application
+keywords:
+  - firefly-iii
+  - firefly
+home: "https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii"
+sources:
+  - https://github.com/firefly-iii/firefly-iii
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.8
+  - name: mariadb
+    version: 12.1.3
+    repository: https://charts.bitnami.com/bitnami
+    condition: mariadb.enabled
+  - name: postgresql
+    version: 11.6.12
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
+  - name: redis
+    version: 16.13.1
+    repository: https://charts.bitnami.com/bitnami
+    condition: redis.enabled
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: "https://www.firefly-iii.org/assets/logo/color.png"
+
+# renovate: image=fireflyiii/core
+appVersion: version-5.6.14
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2

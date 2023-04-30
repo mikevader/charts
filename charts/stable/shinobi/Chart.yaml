@@ -1,0 +1,27 @@
+---
+apiVersion: v2
+name: shinobi
+version: 1.2.2
+kubeVersion: ">=1.16.0-0"
+description: shinobi helm package
+keywords:
+  - shinobi
+home: https://github.com/mikevader/charts/tree/master/charts/stable/shinobi
+sources:
+  - https://gitlab.com/Shinobi-Systems/Shinobi-Installer
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.8
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://shinobi.org/icon
+
+# renovate: image=registry.gitlab.com/shinobi-systems/shinobi
+appVersion: dev
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2

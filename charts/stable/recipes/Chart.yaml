@@ -1,0 +1,29 @@
+---
+apiVersion: v2
+name: recipes
+version: 6.6.2
+kubeVersion: ">=1.16.0-0"
+description: Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.
+keywords:
+  - recipes
+  - cooking
+home: https://github.com/mikevader/charts/tree/master/charts/stable/recipes
+sources:
+  - https://github.com/vabene1111/recipes
+  - https://hub.docker.com/r/vabene1111/recipes
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.8
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+
+# renovate: image=vabene1111/recipes
+appVersion: 1.0.5.2
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2

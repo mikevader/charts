@@ -1,0 +1,28 @@
+---
+apiVersion: v2
+name: stash
+version: 3.4.2
+kubeVersion: ">=1.16.0-0"
+description: An organizer for your porn, written in Go
+keywords:
+  - porn
+home: https://github.com/mikevader/charts/tree/master/charts/stable/stash
+sources:
+  - https://github.com/stashapp/stash
+  - https://hub.docker.com/r/stashapp/stash
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.8
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
+
+# renovate: image=stashapp/stash
+appVersion: v0.20.2
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2

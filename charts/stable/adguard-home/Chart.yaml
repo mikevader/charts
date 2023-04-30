@@ -1,0 +1,31 @@
+---
+apiVersion: v2
+name: adguard-home
+version: 5.5.2
+kubeVersion: ">=1.16.0-0"
+description: DNS proxy as ad-blocker for local network
+type: application
+keywords:
+  - adguard-home
+  - adblock
+  - dns
+home: https://github.com/mikevader/charts/tree/master/charts/stable/adguard-home
+sources:
+  - https://github.com/AdguardTeam/AdGuardHome
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.8
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+
+# renovate: image=adguard/adguardhome
+appVersion: v0.107.7
+
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2
