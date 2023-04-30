@@ -40,4 +40,4 @@ appVersion: 2023.4.6
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.2
+      description: Upgraded `mariadb` chart dependency to version 12.1.3
