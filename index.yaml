@@ -320,6 +320,37 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Use correct appVersion (missing prefix)
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.3
+    apiVersion: v2
+    appVersion: v2.23.0
+    created: "2023-04-30T06:10:01.764367738Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.3
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: 510b6b2203113dd9101bd65a2333a5f2e0c3c8b51dcfc2c638c04c5d7e3d4396
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-1.5.2/filebrowser-1.5.2.tgz
+    version: 1.5.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.3
     apiVersion: v2
     appVersion: 2.23.0
@@ -552,4 +583,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.4.2/uptime-kuma-1.4.2.tgz
     version: 1.4.2
-generated: "2023-04-29T14:34:47.552386159Z"
+generated: "2023-04-30T06:10:01.764412439Z"
