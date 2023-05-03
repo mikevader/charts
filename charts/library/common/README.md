@@ -1,6 +1,6 @@
 # common
 
-![Version: 4.5.8](https://img.shields.io/badge/Version-4.5.8-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
+![Version: 4.5.9](https://img.shields.io/badge/Version-4.5.9-informational?style=flat-square) ![Type: library](https://img.shields.io/badge/Type-library-informational?style=flat-square)
 
 Function library for mikevader charts
 
@@ -79,7 +79,7 @@ N/A
 | addons.promtail.env | object | `{}` | Set any environment variables for promtail here |
 | addons.promtail.image.pullPolicy | string | `"IfNotPresent"` | Specify the promtail image pull policy |
 | addons.promtail.image.repository | string | `"docker.io/grafana/promtail"` | Specify the promtail image |
-| addons.promtail.image.tag | string | `"2.8.1"` | Specify the promtail image tag |
+| addons.promtail.image.tag | string | `"2.8.2"` | Specify the promtail image tag |
 | addons.promtail.logs | list | `[]` | The paths to logs on the volume |
 | addons.promtail.loki | string | `""` | The URL to Loki |
 | addons.promtail.volumeMounts | list | `[]` | Specify a list of volumes that get mounted in the promtail container. At least 1 volumeMount is required! |
