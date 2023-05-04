@@ -21,7 +21,7 @@ Kubernetes: `>=1.16.0-0`
 | https://charts.bitnami.com/bitnami | influxdb | 5.5.1 |
 | https://charts.bitnami.com/bitnami | mariadb | 12.1.3 |
 | https://charts.bitnami.com/bitnami | postgresql | 12.4.2 |
-| https://mikevader.github.io/charts | common | 4.5.8 |
+| https://mikevader.github.io/charts | common | 4.5.9 |
 
 ## Installing the Chart
 
