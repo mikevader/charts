@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: plex
-version: 6.6.2
+version: 6.6.3
 kubeVersion: ">=1.16.0-0"
 description: Plex Media Server
 type: application
@@ -15,7 +15,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.8
+    version: 4.5.9
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -27,4 +27,4 @@ appVersion: v1.31.0.6654-02189b09f
 annotations:
   artifacthub.io/changes: |- #added, changed, deprecated, removed, fixed and security
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.8
+      description: Upgraded `common` chart dependency to version 4.5.9
