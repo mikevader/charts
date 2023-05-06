@@ -1005,6 +1005,49 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.9
+    apiVersion: v2
+    appVersion: 2023.5.2
+    created: "2023-05-06T12:04:30.674845596Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.9
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.4.2
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.3
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.5.1
+    description: Home Assistant
+    digest: 013b41a16099ad29f687d0076c4b668a06c39b96fb121971629df665b5795deb
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-15.0.2/home-assistant-15.0.2.tgz
+    version: 15.0.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `postgresql` chart dependency to version 12.4.2
     apiVersion: v2
     appVersion: 2023.5.0
@@ -2205,4 +2248,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-05-04T04:57:13.760942481Z"
+generated: "2023-05-06T12:04:30.675163901Z"
