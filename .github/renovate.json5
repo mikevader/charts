@@ -127,9 +127,9 @@
       "bumpVersion": "major",
       "labels": ["type/major"],
       "excludePackageNames": ["common"],
-      "schedule": [
-        "every 3 months on the first day of the month"
-      ]
+      // "schedule": [
+      //   "every 3 months on the first day of the month"
+      // ]
     },
     {
       "matchDatasources": ["helm"],
@@ -138,9 +138,9 @@
       "labels": ["type/minor"],
       "excludePackageNames": ["common"],
       "groupName": ["external dependency minor"],
-      "schedule": [
-        "every 2 months on the first day of the month"
-      ]
+      // "schedule": [
+      //   "every 2 months on the first day of the month"
+      // ]
     },
     {
       "matchDatasources": ["helm"],
@@ -149,9 +149,9 @@
       "labels": ["type/patch"],
       "excludePackageNames": ["common"],
       "groupName": ["external dependency patch"],
-      "schedule": [
-        "every 1 months on the first day of the month"
-      ]
+      // "schedule": [
+      //   "every 1 months on the first day of the month"
+      // ]
     }
   ]
 }
