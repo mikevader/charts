@@ -2,7 +2,7 @@
 
 ![Version: 3.4.3](https://img.shields.io/badge/Version-3.4.3-informational?style=flat-square) ![AppVersion: v0.20.2](https://img.shields.io/badge/AppVersion-v0.20.2-informational?style=flat-square)
 
-An organizer for your other movies, written in Go
+An organizer for your porn, written in Go
 
 ## Source Code
 
