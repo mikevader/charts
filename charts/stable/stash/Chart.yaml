@@ -3,7 +3,7 @@ apiVersion: v2
 name: stash
 version: 3.4.3
 kubeVersion: ">=1.16.0-0"
-description: An organizer for your porn, written in Go
+description: An organizer for your other movies, written in Go
 keywords:
   - porn
 home: https://github.com/mikevader/charts/tree/master/charts/stable/stash
