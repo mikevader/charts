@@ -17,7 +17,7 @@
 | [qbittorrent](stable/qbittorrent) | qBittorrent is a cross-platform free and open-source BitTorrent client |
 | [recipes](stable/recipes) | Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files. |
 | [shinobi](stable/shinobi) | shinobi helm package |
-| [stash](stable/stash) | An organizer for your porn, written in Go |
+| [stash](stable/stash) | An organizer for your other movies, written in Go |
 | [tautulli](stable/tautulli) | A Python based monitoring and tracking tool for Plex Media Server |
 | [uptime-kuma](stable/uptime-kuma) | A fancy self-hosted monitoring tool for your websites and applications |
 | [wikijs](stable/wikijs) | Make documentation a joy to write using Wiki.js's beautiful and intuitive interface! |
