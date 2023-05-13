@@ -1,6 +1,6 @@
 # magic-mirror
 
-![Version: 4.4.3](https://img.shields.io/badge/Version-4.4.3-informational?style=flat-square) ![AppVersion: v2.15.0](https://img.shields.io/badge/AppVersion-v2.15.0-informational?style=flat-square)
+![Version: 4.4.4](https://img.shields.io/badge/Version-4.4.4-informational?style=flat-square) ![AppVersion: v2.15.0](https://img.shields.io/badge/AppVersion-v2.15.0-informational?style=flat-square)
 
 magic-mirror helm package
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.9 |
+| https://mikevader.github.io/charts | common | 4.5.10 |
 
 ## Installing the Chart
 
