@@ -18,15 +18,15 @@ dependencies:
     repository: https://mikevader.github.io/charts
     version: 4.5.9
   - name: postgresql
-    version: 12.4.2
+    version: 12.4.3
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: mariadb
-    version: 12.1.5
+    version: 12.1.6
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
   - name: influxdb
-    version: 5.5.1
+    version: 5.5.2
     repository: https://charts.bitnami.com/bitnami
     condition: influxdb.enabled
 maintainers:
@@ -40,4 +40,8 @@ appVersion: 2023.5.2
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `mariadb` chart dependency to version 12.1.5
+      description: Upgraded `postgresql` chart dependency to version 12.4.3
+    - kind: changed
+      description: Upgraded `mariadb` chart dependency to version 12.1.6
+    - kind: changed
+      description: Upgraded `influxdb` chart dependency to version 5.5.2
