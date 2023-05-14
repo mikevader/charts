@@ -90,9 +90,10 @@
     {
       "matchDatasources": ["docker"],
       "matchPackagePatterns": [
+        "^ghcr.io/k8s-at-home/.*",
+        "^ghcr.io/mikevader/.*",
         "bitnami/external-dns",
-        "fireflyiii/core",
-        "^ghcr.io/mikevader/plex"
+        "fireflyiii/.*"
       ],
       "versioning": "loose"
     },
