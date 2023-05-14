@@ -14,7 +14,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.9
+    version: 4.5.10
   - name: mariadb
     version: 12.2.3
     repository: https://charts.bitnami.com/bitnami
@@ -24,7 +24,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: redis
-    version: 17.10.2
+    version: 17.10.3
     repository: https://charts.bitnami.com/bitnami
     condition: redis.enabled
 maintainers:

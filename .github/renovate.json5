@@ -6,20 +6,6 @@
   "reviewersFromCodeOwners": true,
   "suppressNotifications": ["prIgnoreNotification"],
   "prConcurrentLimit": 5,
-  // "hostRules": [
-  //   {
-  //     "hostType": "docker",
-  //     "matchHost": "https://ghcr.io",
-  //     "password": "{{ secrets.GITHUB_TOKEN}}",
-  //     "token": "{{ secrets.GITHUB_TOKEN}}"
-  //   },
-  //   {
-  //     "hostType": "docker",
-  //     "matchHost": "https://ghcr.io/v2",
-  //     "password": "{{ secrets.GITHUB_TOKEN}}",
-  //     "token": "{{ secrets.GITHUB_TOKEN}}"
-  //   }
-  // ],
   "helm-values": {
     "enabled": true
   },
@@ -100,6 +86,16 @@
         "fileFilters": ["**/Chart.yaml"],
         "executionMode": "branch"
       }
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": [
+        "^ghcr.io/k8s-at-home/.*",
+        "^ghcr.io/mikevader/.*",
+        "bitnami/external-dns",
+        "fireflyiii/.*"
+      ],
+      "versioning": "loose"
     },
     //
     // Common library dep
