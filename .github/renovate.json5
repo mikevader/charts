@@ -87,6 +87,15 @@
         "executionMode": "branch"
       }
     },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": [
+        "bitnami/external-dns",
+        "fireflyiii/core",
+        "^ghcr.io/mikevader/plex"
+      ],
+      "versioning": "loose"
+    },
     //
     // Common library dep
     //
