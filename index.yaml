@@ -1189,6 +1189,35 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/firefly-iii-0.2.2/firefly-iii-0.2.2.tgz
     version: 0.2.2
+  foundryvtt:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 0.8.3
+    created: "2023-05-15T17:30:55.707039826Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
+    digest: a1bf3f73a61cc1266f2dad1ef11be0dcc2f51e35cd5b3f7698ed3b28a772d55c
+    home: https://github.com/felddy/foundryvtt-docker
+    icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
+    keywords:
+    - foundryvtt
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: foundryvtt
+    sources:
+    - https://github.com/felddy/foundryvtt-docker
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/foundryvtt-3.4.2/foundryvtt-3.4.2.tgz
+    version: 3.4.2
   heimdall:
   - annotations:
       artifacthub.io/changes: |-
@@ -3152,4 +3181,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-05-15T05:19:07.421845372Z"
+generated: "2023-05-15T17:30:55.707184528Z"
