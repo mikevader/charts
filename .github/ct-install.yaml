@@ -5,6 +5,7 @@ chart-dirs:
   - charts/library
   - charts/stable
 excluded-charts:
+  - charts/stable/foundryvtt # complex to download foundryvtt binaries (credentials required)
   - charts/stable/heimdall
 chart-repos:
   - bitnami=https://charts.bitnami.com/bitnami
