@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: tautulli
-version: 11.4.5
+version: 11.5.0
 kubeVersion: ">=1.16.0-0"
 description: A Python based monitoring and tracking tool for Plex Media Server
 keywords:
@@ -20,7 +20,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 icon: https://github.com/Tautulli/Tautulli/blob/master/data/interfaces/default/images/logo.png?raw=true
 
-# renovate: image=ghcr.io/k8s-at-home/tautulli
+# renovate: image=ghcr.io/mikevader/tautulli
 appVersion: v2.10.5
 
 annotations:
