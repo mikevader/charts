@@ -3000,6 +3000,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Switched to own image
+    apiVersion: v2
+    appVersion: v2.12.3
+    created: "2023-05-22T16:38:43.034619008Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.10
+    description: A Python based monitoring and tracking tool for Plex Media Server
+    digest: be60b5137911cfe4dca025e2d9df911a7dd165cba5895644642616d159250dc2
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tautulli
+    icon: https://github.com/Tautulli/Tautulli/blob/master/data/interfaces/default/images/logo.png?raw=true
+    keywords:
+    - tautulli
+    - plex
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tautulli
+    sources:
+    - https://github.com/Tautulli/Tautulli
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tautulli-11.5.0/tautulli-11.5.0.tgz
+    version: 11.5.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.10
     apiVersion: v2
     appVersion: v2.10.5
@@ -3533,4 +3562,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-05-21T20:53:58.769189209Z"
+generated: "2023-05-22T16:38:43.03481191Z"
