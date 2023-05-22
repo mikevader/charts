@@ -749,6 +749,47 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 12.5.3
+    apiVersion: v2
+    appVersion: version-5.6.14
+    created: "2023-05-22T16:39:40.531579531Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.10
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.5.3
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.11.3
+    description: 'Firefly III: a personal finances manager'
+    digest: e357d1f605b02141be38cf4fff231ef8894777ee9d721443a3b3efdb4c4b7930
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii
+    icon: https://www.firefly-iii.org/assets/logo/color.png
+    keywords:
+    - firefly-iii
+    - firefly
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: firefly-iii
+    sources:
+    - https://github.com/firefly-iii/firefly-iii
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/firefly-iii-2.2.2/firefly-iii-2.2.2.tgz
+    version: 2.2.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `mariadb` chart dependency to version 12.2.4
         - kind: changed
           description: Upgraded `redis` chart dependency to version 17.11.3
@@ -1602,6 +1643,49 @@ entries:
     - https://github.com/mikevader/charts/releases/download/heimdall-8.4.2/heimdall-8.4.2.tgz
     version: 8.4.2
   home-assistant:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 12.5.3
+    apiVersion: v2
+    appVersion: 2023.5.3
+    created: "2023-05-22T16:39:40.666466596Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.10
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.5.3
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.4
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.5.2
+    description: Home Assistant
+    digest: 7d0e9da858d1fcaf9581b05d44e1c24d6e560ab9d7aef3abe301ed425ce86ff4
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-15.1.4/home-assistant-15.1.4.tgz
+    version: 15.1.4
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -3562,4 +3646,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-05-22T16:38:43.03481191Z"
+generated: "2023-05-22T16:39:40.667014503Z"
