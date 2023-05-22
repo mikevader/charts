@@ -1,6 +1,6 @@
 # tautulli
 
-![Version: 11.4.5](https://img.shields.io/badge/Version-11.4.5-informational?style=flat-square) ![AppVersion: v2.10.5](https://img.shields.io/badge/AppVersion-v2.10.5-informational?style=flat-square)
+![Version: 11.5.0](https://img.shields.io/badge/Version-11.5.0-informational?style=flat-square) ![AppVersion: v2.12.3](https://img.shields.io/badge/AppVersion-v2.12.3-informational?style=flat-square)
 
 A Python based monitoring and tracking tool for Plex Media Server
 
@@ -42,7 +42,7 @@ N/A
 | env | object | See below | environment variables. |
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"ghcr.io/k8s-at-home/tautulli"` | image repository |
+| image.repository | string | `"ghcr.io/mikevader/tautulli"` | image repository |
 | image.tag | string | `nil` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
