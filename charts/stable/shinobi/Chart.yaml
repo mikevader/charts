@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: shinobi
-version: 1.2.4
+version: 1.2.5
 kubeVersion: ">=1.16.0-0"
 description: shinobi helm package
 keywords:
@@ -12,7 +12,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.10
+    version: 4.5.12
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -24,4 +24,4 @@ appVersion: dev
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.10
+      description: Upgraded `common` chart dependency to version 4.5.12
