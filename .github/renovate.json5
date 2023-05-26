@@ -43,6 +43,19 @@
       "automergeType": "branch",
       "matchUpdateTypes": ["minor", "patch"]
     },
+    ///
+    /// Automatically update minor/patch certain image sources
+    ///
+    {
+      "matchManagers": ["docker"],
+      "automerge": true,
+      "automergeType": "branch",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchPackagePatterns":[
+        "felddy/foundryvtt",
+        "^ghcr.io/mikevader/.*"
+      ]
+    },
     //
     // Docker appVersion dep
     //
