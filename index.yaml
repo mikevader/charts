@@ -1645,6 +1645,34 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.12
     apiVersion: v2
+    appVersion: 11.299.0
+    created: "2023-05-26T13:24:40.12590761Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.12
+    description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
+    digest: 27b6c80f91a809b70a7d62d69ce295e43820b575fd5326f23756466983c28913
+    home: https://github.com/felddy/foundryvtt-docker
+    icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
+    keywords:
+    - foundryvtt
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: foundryvtt
+    sources:
+    - https://github.com/felddy/foundryvtt-docker
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/foundryvtt-3.4.7/foundryvtt-3.4.7.tgz
+    version: 3.4.7
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.12
+    apiVersion: v2
     appVersion: 11.298.0
     created: "2023-05-26T09:50:23.122802389Z"
     dependencies:
@@ -4422,4 +4450,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-05-26T09:50:24.104907692Z"
+generated: "2023-05-26T13:24:40.126121209Z"
