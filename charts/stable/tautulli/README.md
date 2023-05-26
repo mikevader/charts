@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.10 |
+| https://mikevader.github.io/charts | common | 4.5.12 |
 
 ## Installing the Chart
 

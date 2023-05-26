@@ -19,7 +19,7 @@ Kubernetes: `>=1.16.0-0`
 | https://charts.bitnami.com/bitnami | mariadb | 12.2.4 |
 | https://charts.bitnami.com/bitnami | postgresql | 12.5.5 |
 | https://charts.bitnami.com/bitnami | redis | 17.11.3 |
-| https://mikevader.github.io/charts | common | 4.5.10 |
+| https://mikevader.github.io/charts | common | 4.5.12 |
 
 ## Installing the Chart
 
