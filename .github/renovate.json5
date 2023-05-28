@@ -47,7 +47,7 @@
     /// Automatically update minor/patch certain image sources
     ///
     {
-      "matchManagers": ["docker"],
+      "matchDatasources": ["docker"],
       "automerge": true,
       "automergeType": "branch",
       "matchUpdateTypes": ["minor", "patch"],
