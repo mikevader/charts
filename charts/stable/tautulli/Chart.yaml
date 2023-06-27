@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: tautulli
-version: 11.5.1
+version: 11.5.2
 kubeVersion: ">=1.16.0-0"
 description: A Python based monitoring and tracking tool for Plex Media Server
 keywords:
@@ -14,7 +14,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.12
+    version: 4.5.13
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
