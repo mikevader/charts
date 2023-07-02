@@ -22,6 +22,15 @@ env:
   # -- Set the container timezone
   TZ: UTC
 
+  # -- Account password for foundryvtt.com. Required for downloading an application distribution.
+  FOUNDRY_PASSWORD:
+  # -- Account username or email address for foundryvtt.com. Required for downloading an application distribution.
+  FOUNDRY_USERNAME:
+  # -- S3 pre-signed URL generate from the user's profile. Required for downloading an application distribution.
+  FOUNDRY_RELEASE_URL:
+  # -- Admin password to be applied at startup. If omitted the admin password will be cleared. May be set using secrets.
+  FOUNDRY_ADMIN_KEY:
+
 
 # -- Configures service settings for the chart. Normally this does not need to be modified.
 # @default -- See values.yaml
