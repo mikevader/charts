@@ -54,7 +54,7 @@ cronjobs:
 
 importer:
   # -- Deploy transaction importer
-  enabled: false
+  enabled: true
   controllerAnnotations: {}
 
   controllerLabels: {}
@@ -77,7 +77,7 @@ importer:
   image:
     repository: fireflyiii/data-importer
     pullPolicy: IfNotPresent
-    tag: "version-0.8.0"
+    tag: "version-1.2.2"
   specs:
   - importerName: default-importer
 
