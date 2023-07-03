@@ -1,0 +1,31 @@
+---
+apiVersion: v2
+name: sonarr
+version: 16.3.2
+kubeVersion: ">=1.16.0-0"
+description: Smart PVR for newsgroup and bittorrent users
+type: application
+keywords:
+  - sonarr
+  - torrent
+  - usenet
+home: https://github.com/mikevader/charts/tree/master/charts/stable/sonarr
+sources:
+  - https://github.com/Sonarr/Sonarr
+  - https://github.com/mikevader/container-images/
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.13
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
+
+# renovate: image=ghcr.io/mikevader/sonarr
+appVersion: v3.0.9.1549
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2
