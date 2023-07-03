@@ -23,7 +23,7 @@ maintainers:
 icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
 
 # renovate: image=ghcr.io/mikevader/radarr
-appVersion: v4.1.0.6175
+appVersion: v4.2.4.6635
 
 annotations:
   artifacthub.io/changes: |-
