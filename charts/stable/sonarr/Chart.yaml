@@ -23,7 +23,7 @@ maintainers:
 icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
 
 # renovate: image=ghcr.io/mikevader/sonarr
-appVersion: v3.0.8.1507
+appVersion: v3.0.9.1549
 
 annotations:
   artifacthub.io/changes: |-
