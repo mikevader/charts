@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: foundryvtt
-version: 3.4.10
+version: 3.4.11
 kubeVersion: ">=1.16.0-0"
 description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
 type: application
@@ -20,7 +20,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
 
 # renovate: image=felddy/foundryvtt
-appVersion: 11.304.0
+appVersion: 11.305.0
 
 
 annotations:
