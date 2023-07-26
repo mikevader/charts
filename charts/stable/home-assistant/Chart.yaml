@@ -40,8 +40,4 @@ appVersion: 2023.7.3
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `postgresql` chart dependency to version 12.6.9
-    - kind: changed
-      description: Upgraded `mariadb` chart dependency to version 12.2.8
-    - kind: changed
-      description: Upgraded `influxdb` chart dependency to version 5.7.3
+      description: Upgraded `postgresql` chart dependency to version 12.7.0
