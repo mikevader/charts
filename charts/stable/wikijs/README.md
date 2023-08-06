@@ -1,10 +1,8 @@
 # wikijs
 
-![Version: 6.4.5](https://img.shields.io/badge/Version-6.4.5-informational?style=flat-square) ![AppVersion: version-2.5.201](https://img.shields.io/badge/AppVersion-version--2.5.201-informational?style=flat-square)
+![Version: 6.4.6](https://img.shields.io/badge/Version-6.4.6-informational?style=flat-square) ![AppVersion: version-2.5.201](https://img.shields.io/badge/AppVersion-version--2.5.201-informational?style=flat-square)
 
 Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!
-
-Force change
 
 ## Source Code
 
@@ -19,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.12 |
+| https://mikevader.github.io/charts | common | 4.5.13 |
 
 ## Installing the Chart
 

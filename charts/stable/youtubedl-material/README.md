@@ -1,10 +1,8 @@
 # youtubedl-material
 
-![Version: 4.4.6](https://img.shields.io/badge/Version-4.4.6-informational?style=flat-square) ![AppVersion: 4.3](https://img.shields.io/badge/AppVersion-4.3-informational?style=flat-square)
+![Version: 4.4.7](https://img.shields.io/badge/Version-4.4.7-informational?style=flat-square) ![AppVersion: 4.3](https://img.shields.io/badge/AppVersion-4.3-informational?style=flat-square)
 
 Self-hosted YouTube downloader built on Material Design
-
-Force change
 
 ## Source Code
 
@@ -19,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.12 |
+| https://mikevader.github.io/charts | common | 4.5.13 |
 
 ## Installing the Chart
 

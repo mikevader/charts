@@ -1,10 +1,8 @@
 # recipes
 
-![Version: 6.6.7](https://img.shields.io/badge/Version-6.6.7-informational?style=flat-square) ![AppVersion: 1.0.5.2](https://img.shields.io/badge/AppVersion-1.0.5.2-informational?style=flat-square)
+![Version: 6.6.9](https://img.shields.io/badge/Version-6.6.9-informational?style=flat-square) ![AppVersion: 1.0.5.2](https://img.shields.io/badge/AppVersion-1.0.5.2-informational?style=flat-square)
 
 Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.
-
-Force change
 
 ## Source Code
 
@@ -19,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.12 |
+| https://mikevader.github.io/charts | common | 4.5.13 |
 
 ## Installing the Chart
 
@@ -52,5 +50,5 @@ N/A
 | sidecar.config.reverse_proxy_header_username | string | `"x_authentik_username"` | define the name of the variable in the header containing the authenticated user. It is used together with enabling `REVERSE_PROXY_AUTH` |
 | sidecar.image.pullPolicy | string | `"IfNotPresent"` | nginx sidecar image pull policy |
 | sidecar.image.repository | string | `"nginx"` | nginx sidecar image repository |
-| sidecar.image.tag | string | `"1.25.0"` | nginx sidecar image tag |
+| sidecar.image.tag | string | `"1.25.1"` | nginx sidecar image tag |
 
