@@ -4,6 +4,8 @@
 
 magic-mirror helm package
 
+Force change
+
 ## Source Code
 
 * <https://github.com/MichMich/MagicMirror>
