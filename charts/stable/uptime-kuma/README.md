@@ -1,10 +1,8 @@
 # uptime-kuma
 
-![Version: 1.5.5](https://img.shields.io/badge/Version-1.5.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.21.3](https://img.shields.io/badge/AppVersion-1.21.3-informational?style=flat-square)
+![Version: 1.5.8](https://img.shields.io/badge/Version-1.5.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.22.1](https://img.shields.io/badge/AppVersion-1.22.1-informational?style=flat-square)
 
 A fancy self-hosted monitoring tool for your websites and applications
-
-Force change
 
 ## Source Code
 
@@ -18,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.12 |
+| https://mikevader.github.io/charts | common | 4.5.13 |
 
 ## Installing the Chart
 
@@ -41,7 +39,7 @@ N/A
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | env.TZ | string | `"UTC"` | Set the container timezone |
-| env.UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN | int | `0` | Set the custom ssl cert path (string) UPTIME_KUMA_SSL_CERT: -- Set the custom ssl key path (string) UPTIME_KUMA_SSL_KEY: -- Set the frame same-origin policy (int) |
+| env.UPTIME_KUMA_DISABLE_FRAME_SAMEORIGIN | int | `0` | Set the frame same-origin policy (int) |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"louislam/uptime-kuma"` | image repository |
 | image.tag | string | chart.appVersion | image tag |

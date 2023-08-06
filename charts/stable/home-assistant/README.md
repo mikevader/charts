@@ -1,10 +1,8 @@
 # home-assistant
 
-![Version: 15.2.3](https://img.shields.io/badge/Version-15.2.3-informational?style=flat-square) ![AppVersion: 2023.5.4](https://img.shields.io/badge/AppVersion-2023.5.4-informational?style=flat-square)
+![Version: 15.4.1](https://img.shields.io/badge/Version-15.4.1-informational?style=flat-square) ![AppVersion: 2023.7.3](https://img.shields.io/badge/AppVersion-2023.7.3-informational?style=flat-square)
 
 Home Assistant
-
-Force change
 
 ## Source Code
 
@@ -20,10 +18,10 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | influxdb | 5.6.1 |
-| https://charts.bitnami.com/bitnami | mariadb | 12.2.4 |
-| https://charts.bitnami.com/bitnami | postgresql | 12.5.6 |
-| https://mikevader.github.io/charts | common | 4.5.12 |
+| https://charts.bitnami.com/bitnami | influxdb | 5.7.3 |
+| https://charts.bitnami.com/bitnami | mariadb | 12.2.9 |
+| https://charts.bitnami.com/bitnami | postgresql | 12.7.1 |
+| https://mikevader.github.io/charts | common | 4.5.13 |
 
 ## Installing the Chart
 
@@ -135,7 +133,7 @@ endpoint in your Home-Assistant configuration. See the [official documentation](
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
 | persistence.usb | object | See values.yaml | Configure a hostPathMount to mount a USB device in the container. |
 | postgresql | object | See values.yaml | Enable and configure postgresql database subchart under this key.    For more options see [postgresql chart documentation](https://github.com/bitnami/charts/tree/master/bitnami/postgresql) |
-| securityContext | object | `{"privileged":null}` | Enable devices to be discoverable hostNetwork: true -- When hostNetwork is true set dnsPolicy to ClusterFirstWithHostNet dnsPolicy: ClusterFirstWithHostNet |
+| securityContext | object | `{"privileged":null}` | When hostNetwork is true set dnsPolicy to ClusterFirstWithHostNet dnsPolicy: ClusterFirstWithHostNet |
 | securityContext.privileged | bool | `nil` | Privileged securityContext may be required if USB devics are accessed directly through the host machine |
 | service | object | See values.yaml | Configures service settings for the chart. Normally this does not need to be modified. |
 

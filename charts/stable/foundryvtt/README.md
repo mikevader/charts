@@ -1,10 +1,8 @@
 # foundryvtt
 
-![Version: 3.4.8](https://img.shields.io/badge/Version-3.4.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 11.300.0](https://img.shields.io/badge/AppVersion-11.300.0-informational?style=flat-square)
+![Version: 3.4.12](https://img.shields.io/badge/Version-3.4.12-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 11.306.0](https://img.shields.io/badge/AppVersion-11.306.0-informational?style=flat-square)
 
 An easy-to-deploy Dockerized Foundry Virtual Tabletop server
-
-Force change
 
 ## Source Code
 
@@ -18,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.12 |
+| https://mikevader.github.io/charts | common | 4.5.13 |
 
 ## Installing the Chart
 
@@ -41,6 +39,10 @@ N/A
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | env | object | See below | environment variables. See [image docs](https://github.com/felddy/foundryvtt-docker#environment-variables) for more details. |
+| env.FOUNDRY_ADMIN_KEY | string | `nil` | Admin password to be applied at startup. If omitted the admin password will be cleared. May be set using secrets. |
+| env.FOUNDRY_PASSWORD | string | `nil` | Account password for foundryvtt.com. Required for downloading an application distribution. |
+| env.FOUNDRY_RELEASE_URL | string | `nil` | S3 pre-signed URL generate from the user's profile. Required for downloading an application distribution. |
+| env.FOUNDRY_USERNAME | string | `nil` | Account username or email address for foundryvtt.com. Required for downloading an application distribution. |
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"felddy/foundryvtt"` | image repository |
