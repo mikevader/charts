@@ -16,8 +16,10 @@
 | [magic-mirror](stable/magic-mirror) | magic-mirror helm package |
 | [plex](stable/plex) | Plex Media Server |
 | [qbittorrent](stable/qbittorrent) | qBittorrent is a cross-platform free and open-source BitTorrent client |
+| [radarr](stable/radarr) | A fork of Sonarr to work with movies à la Couchpotato |
 | [recipes](stable/recipes) | Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files. |
 | [shinobi](stable/shinobi) | shinobi helm package |
+| [sonarr](stable/sonarr) | Smart PVR for newsgroup and bittorrent users |
 | [stash](stable/stash) | An organizer for your other movies, written in Go |
 | [tautulli](stable/tautulli) | A Python based monitoring and tracking tool for Plex Media Server |
 | [uptime-kuma](stable/uptime-kuma) | A fancy self-hosted monitoring tool for your websites and applications |
