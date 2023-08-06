@@ -1,10 +1,8 @@
 # error-pages
 
-![Version: 1.4.7](https://img.shields.io/badge/Version-1.4.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.24.0](https://img.shields.io/badge/AppVersion-2.24.0-informational?style=flat-square)
+![Version: 1.4.8](https://img.shields.io/badge/Version-1.4.8-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.24.0](https://img.shields.io/badge/AppVersion-2.24.0-informational?style=flat-square)
 
 Server error pages in the docker image
-
-Force change
 
 ## Source Code
 
@@ -18,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.12 |
+| https://mikevader.github.io/charts | common | 4.5.13 |
 
 ## Installing the Chart
 
