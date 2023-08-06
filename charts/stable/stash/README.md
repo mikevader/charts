@@ -4,6 +4,8 @@
 
 An organizer for your other movies, written in Go
 
+Force change
+
 ## Source Code
 
 * <https://github.com/stashapp/stash>

@@ -4,6 +4,8 @@
 
 DNS proxy as ad-blocker for local network
 
+Force change
+
 ## Source Code
 
 * <https://github.com/AdguardTeam/AdGuardHome>
