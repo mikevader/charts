@@ -6,6 +6,8 @@ Function library for mikevader charts
 
 Since a lot of the mikevader charts follow a similar pattern, this library was built to reduce maintenance cost between the charts that use it and try achieve a goal of being DRY.
 
+Force change
+
 ## Requirements
 
 Kubernetes: `>=1.16.0-0`
