@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: home-assistant
-version: 15.5.0
+version: 15.5.1
 kubeVersion: ">=1.16.0-0"
 description: Home Assistant
 keywords:
@@ -18,7 +18,7 @@ dependencies:
     repository: https://mikevader.github.io/charts
     version: 4.5.17
   - name: postgresql
-    version: 12.8.2
+    version: 12.8.5
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: mariadb
@@ -26,7 +26,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
   - name: influxdb
-    version: 5.8.1
+    version: 5.8.3
     repository: https://charts.bitnami.com/bitnami
     condition: influxdb.enabled
 maintainers:
