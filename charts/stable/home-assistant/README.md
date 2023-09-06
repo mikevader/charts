@@ -1,6 +1,6 @@
 # home-assistant
 
-![Version: 15.5.0](https://img.shields.io/badge/Version-15.5.0-informational?style=flat-square) ![AppVersion: 2023.7.3](https://img.shields.io/badge/AppVersion-2023.7.3-informational?style=flat-square)
+![Version: 15.5.1](https://img.shields.io/badge/Version-15.5.1-informational?style=flat-square) ![AppVersion: 2023.7.3](https://img.shields.io/badge/AppVersion-2023.7.3-informational?style=flat-square)
 
 Home Assistant
 
@@ -18,9 +18,9 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | influxdb | 5.8.1 |
+| https://charts.bitnami.com/bitnami | influxdb | 5.8.3 |
 | https://charts.bitnami.com/bitnami | mariadb | 12.2.9 |
-| https://charts.bitnami.com/bitnami | postgresql | 12.8.2 |
+| https://charts.bitnami.com/bitnami | postgresql | 12.8.5 |
 | https://mikevader.github.io/charts | common | 4.5.17 |
 
 ## Installing the Chart
