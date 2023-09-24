@@ -155,7 +155,7 @@
       "updateTypes": ["major"],
       "bumpVersion": "major",
       "labels": ["type/major"],
-      "excludePackageNames": ["common"],
+      "excludePackageNames": ["common"]
       // "schedule": [
       //   "every 3 months on the first day of the month"
       // ]
@@ -166,7 +166,7 @@
       "bumpVersion": "minor",
       "labels": ["type/minor"],
       "excludePackageNames": ["common"],
-      "groupName": ["external dependency minor"],
+      "groupName": ["external dependency minor"]
       // "schedule": [
       //   "every 2 months on the first day of the month"
       // ]
@@ -177,7 +177,7 @@
       "bumpVersion": "patch",
       "labels": ["type/patch"],
       "excludePackageNames": ["common"],
-      "groupName": ["external dependency patch"],
+      "groupName": ["external dependency patch"]
       // "schedule": [
       //   "every 1 months on the first day of the month"
       // ]
