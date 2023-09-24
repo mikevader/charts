@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: plex
-version: 6.6.12
+version: 6.6.13
 kubeVersion: ">=1.16.0-0"
 description: Plex Media Server
 type: application
@@ -22,7 +22,7 @@ maintainers:
 icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
 
 # renovate: image=ghcr.io/mikevader/plex
-appVersion: v1.32.5.7349-8f4248874
+appVersion: v1.32.6.7468-07e0d4a7e
 
 annotations:
   artifacthub.io/changes: |- #added, changed, deprecated, removed, fixed and security
