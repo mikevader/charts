@@ -2595,6 +2595,34 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.17
     apiVersion: v2
+    appVersion: 11.308.0
+    created: "2023-09-24T20:44:06.835674727Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.17
+    description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
+    digest: acbd39ce05c08edc22cc5f756d7a48bd3f3e9f41db56c73f1864e2c3bf5c180c
+    home: https://github.com/felddy/foundryvtt-docker
+    icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
+    keywords:
+    - foundryvtt
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: foundryvtt
+    sources:
+    - https://github.com/felddy/foundryvtt-docker
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/foundryvtt-3.4.14/foundryvtt-3.4.14.tgz
+    version: 3.4.14
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.17
+    apiVersion: v2
     appVersion: 11.306.0
     created: "2023-08-10T22:47:20.584741476Z"
     dependencies:
@@ -4689,6 +4717,36 @@ entries:
     - https://github.com/mikevader/charts/releases/download/magic-mirror-4.4.2/magic-mirror-4.4.2.tgz
     version: 4.4.2
   plex:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.17
+    apiVersion: v2
+    appVersion: v1.32.6.7468-07e0d4a7e
+    created: "2023-09-24T20:44:06.962782201Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.17
+    description: Plex Media Server
+    digest: 987b97ffb085da22335e4cedd7edbe3c3dc36545d13e03d65f4b940db8997235
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: plex
+    sources:
+    - https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/plex-6.6.13/plex-6.6.13.tgz
+    version: 6.6.13
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -6969,4 +7027,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-09-23T12:38:11.55815332Z"
+generated: "2023-09-24T20:44:06.963384836Z"
