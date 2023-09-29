@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: firefly-iii
-version: 4.2.2
+version: 4.2.3
 kubeVersion: ">=1.16.0-0"
 description: "Firefly III: a personal finances manager"
 type: application
@@ -20,7 +20,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
   - name: postgresql
-    version: 12.12.9
+    version: 12.12.10
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: redis
