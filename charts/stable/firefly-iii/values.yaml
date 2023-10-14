@@ -25,7 +25,7 @@ cronjobs:
     image:
       repository: curlimages/curl
       pullPolicy: IfNotPresent
-      tag: 8.3.0
+      tag: 8.4.0
 
     # -- How many pods to keep around for successful jobs
     successfulJobsHistoryLimit: 3
