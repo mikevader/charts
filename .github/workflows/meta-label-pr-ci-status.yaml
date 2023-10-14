@@ -19,7 +19,7 @@ jobs:
           token: ${{ secrets.K8S_AT_HOME_TOKEN }}
 
       - name: Download workflow artifact
-        uses: dawidd6/action-download-artifact@v2.27.0
+        uses: dawidd6/action-download-artifact@v2.28.0
         with:
           github_token: ${{ secrets.K8S_AT_HOME_TOKEN }}
           workflow: pr-validate.yaml
