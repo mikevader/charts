@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: sonarr
-version: 16.3.4
+version: 16.3.5
 kubeVersion: ">=1.16.0-0"
 description: Smart PVR for newsgroup and bittorrent users
 type: application
