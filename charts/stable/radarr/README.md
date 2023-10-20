@@ -1,6 +1,6 @@
 # radarr
 
-![Version: 16.3.5](https://img.shields.io/badge/Version-16.3.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v4.7.5.7809](https://img.shields.io/badge/AppVersion-v4.7.5.7809-informational?style=flat-square)
+![Version: 16.3.6](https://img.shields.io/badge/Version-16.3.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v4.7.5.7809](https://img.shields.io/badge/AppVersion-v4.7.5.7809-informational?style=flat-square)
 
 A fork of Sonarr to work with movies à la Couchpotato
 
@@ -51,7 +51,7 @@ N/A
 | metrics.exporter.env.unknownQueueItems | bool | `false` | Set to true to enable gathering unknown queue items |
 | metrics.exporter.image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | metrics.exporter.image.repository | string | `"ghcr.io/onedr0p/exportarr"` | image repository |
-| metrics.exporter.image.tag | string | `"v1.0.0"` | image tag |
+| metrics.exporter.image.tag | string | `"v1.6.0"` | image tag |
 | metrics.prometheusRule | object | See values.yaml | Enable and configure Prometheus Rules for the chart under this key. |
 | metrics.prometheusRule.rules | list | See prometheusrules.yaml | Configure additionial rules for the chart under this key. |
 | metrics.serviceMonitor.interval | string | `"3m"` |  |
