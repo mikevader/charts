@@ -1,6 +1,6 @@
 # radarr
 
-![Version: 16.3.6](https://img.shields.io/badge/Version-16.3.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v4.7.5.7809](https://img.shields.io/badge/AppVersion-v4.7.5.7809-informational?style=flat-square)
+![Version: 16.3.7](https://img.shields.io/badge/Version-16.3.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v4.7.5.7809](https://img.shields.io/badge/AppVersion-v4.7.5.7809-informational?style=flat-square)
 
 A fork of Sonarr to work with movies à la Couchpotato
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.17 |
+| https://mikevader.github.io/charts | common | 4.5.21 |
 
 ## Installing the Chart
 

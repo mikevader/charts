@@ -1,6 +1,6 @@
 # sonarr
 
-![Version: 16.3.5](https://img.shields.io/badge/Version-16.3.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.0.10.1567](https://img.shields.io/badge/AppVersion-v3.0.10.1567-informational?style=flat-square)
+![Version: 16.3.6](https://img.shields.io/badge/Version-16.3.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.0.10.1567](https://img.shields.io/badge/AppVersion-v3.0.10.1567-informational?style=flat-square)
 
 Smart PVR for newsgroup and bittorrent users
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.17 |
+| https://mikevader.github.io/charts | common | 4.5.21 |
 
 ## Installing the Chart
 

@@ -1,6 +1,6 @@
 # tautulli
 
-![Version: 11.5.5](https://img.shields.io/badge/Version-11.5.5-informational?style=flat-square) ![AppVersion: v2.13.1](https://img.shields.io/badge/AppVersion-v2.13.1-informational?style=flat-square)
+![Version: 11.5.6](https://img.shields.io/badge/Version-11.5.6-informational?style=flat-square) ![AppVersion: v2.13.1](https://img.shields.io/badge/AppVersion-v2.13.1-informational?style=flat-square)
 
 A Python based monitoring and tracking tool for Plex Media Server
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.17 |
+| https://mikevader.github.io/charts | common | 4.5.21 |
 
 ## Installing the Chart
 
