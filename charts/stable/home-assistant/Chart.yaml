@@ -40,4 +40,4 @@ appVersion: 2023.10.3
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `influxdb` chart dependency to version 5.9.11
+      description: Upgraded `mariadb` chart dependency to version 14.0.2
