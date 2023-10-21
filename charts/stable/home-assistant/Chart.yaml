@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: home-assistant
-version: 17.0.2
+version: 18.0.0
 kubeVersion: ">=1.16.0-0"
 description: Home Assistant
 keywords:
@@ -18,7 +18,7 @@ dependencies:
     repository: https://mikevader.github.io/charts
     version: 4.5.21
   - name: postgresql
-    version: 12.12.10
+    version: 13.1.5
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: mariadb
@@ -40,4 +40,4 @@ appVersion: 2023.10.3
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `mariadb` chart dependency to version 14.0.3
+      description: Upgraded `postgresql` chart dependency to version 13.1.5
