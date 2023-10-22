@@ -1,0 +1,31 @@
+---
+apiVersion: v2
+description: Tdarr is a self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc.
+name: tdarr
+version: 4.6.2
+keywords:
+  - transcoding
+  - remux
+  - media
+  - video
+home: https://github.com/mikevader/charts/tree/master/charts/stable/tdarr
+icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+sources:
+  - https://www.github.com/HaveAGitGat/Tdarr
+  - https://hub.docker.com/r/haveagitgat/tdarr/
+  - https://tdarr.io/docs/
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.21
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+
+# renovate: image=haveagitgat/tdarr
+appVersion: 2.00.18
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.21
