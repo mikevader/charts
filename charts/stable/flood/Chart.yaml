@@ -1,0 +1,31 @@
+---
+apiVersion: v2
+name: flood
+version: 6.4.2
+kubeVersion: ">=1.16.0-0"
+description: Flood is a monitoring service for various torrent clients
+keywords:
+  - flood
+  - rtorrent
+  - qbittorrent
+  - transmission
+home: https://github.com/mikevader/charts/tree/master/charts/stable/flood
+sources:
+  - https://github.com/jesec/flood
+  - https://hub.docker.com/r/jesec/flood
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.21
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
+
+# renovate: image=jesec/flood
+appVersion: 4.6.0
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.21
