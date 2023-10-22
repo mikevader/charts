@@ -1,0 +1,29 @@
+---
+apiVersion: v2
+description: API Support for your favorite torrent trackers
+name: jackett
+version: 11.7.2
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - jackett
+  - torrent
+home: https://github.com/mikevader/charts/tree/master/charts/stable/jackett
+icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-banner.png
+sources:
+  - https://github.com/Jackett/Jackett
+  - https://github.com/mikevader/container-images
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.21
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+
+# renovate: image=ghcr.io/mikevader/jackett
+appVersion: v0.20.1316
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.21
