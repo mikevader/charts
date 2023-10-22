@@ -6082,6 +6082,36 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/home-assistant-13.4.2/home-assistant-13.4.2.tgz
     version: 13.4.2
+  jackett:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.21
+    apiVersion: v2
+    appVersion: v0.20.2269
+    created: "2023-10-22T17:55:44.407568123Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: API Support for your favorite torrent trackers
+    digest: 1364c1df512d8098f760b12d8da91bb0d8642f73f51858f4e562431ff3051463
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-banner.png
+    keywords:
+    - jackett
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/jackett-11.7.2/jackett-11.7.2.tgz
+    version: 11.7.2
   magic-mirror:
   - annotations:
       artifacthub.io/changes: |-
@@ -8220,7 +8250,105 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/tautulli-11.4.2/tautulli-11.4.2.tgz
     version: 11.4.2
+  tdarr:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.21
+    apiVersion: v2
+    appVersion: 2.00.18
+    created: "2023-10-22T17:55:44.53618775Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: Tdarr is a self hosted web-app for automating media library transcode/remux
+      management and making sure your files are exactly how you need them to be in
+      terms of codecs/streams/containers etc.
+    digest: fc904dfad52e49a5ca362cc28d7c36bd1c7406d20e6463474af53b3c17e991bf
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tdarr
+    icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+    keywords:
+    - transcoding
+    - remux
+    - media
+    - video
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tdarr
+    sources:
+    - https://www.github.com/HaveAGitGat/Tdarr
+    - https://hub.docker.com/r/haveagitgat/tdarr/
+    - https://tdarr.io/docs/
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tdarr-4.6.2/tdarr-4.6.2.tgz
+    version: 4.6.2
+  transmission:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Fixed icon URL
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 4.0.4
+    created: "2023-10-22T17:55:44.654361226Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: Transmission is a cross-platform BitTorrent client
+    digest: 0ed7aa37c7ebcbcfee9a74e335496e20511b2b7d7dd2892acc8ef9b0ac1db70c
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/transmission
+    icon: https://raw.githubusercontent.com/transmission/transmission/main/extras/transmission-1920.jpg
+    keywords:
+    - transmission
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: transmission
+    sources:
+    - https://github.com/transmission/transmission
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/transmission-8.4.3/transmission-8.4.3.tgz
+    version: 8.4.3
   uptime-kuma:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Fix home page link
+    apiVersion: v2
+    appVersion: 1.23.3
+    created: "2023-10-22T17:55:44.765318767Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: d9c077dd59eb5f3ebb3928d43dad781d9e1dbf4e5aa05b206129b85b9860f3e7
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.5.14/uptime-kuma-1.5.14.tgz
+    version: 1.5.14
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -9089,4 +9217,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-10-21T20:20:44.039777723Z"
+generated: "2023-10-22T17:55:44.76584387Z"
