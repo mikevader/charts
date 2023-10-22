@@ -20,7 +20,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 icon: https://cloud.githubusercontent.com/assets/14862437/23586868/89ef2922-01c4-11e7-869c-52aafcece17f.png
 
-# renovate: image=ghcr.io/k8s-at-home/qbittorrent
+# renovate: image=ghcr.io/mikevader/qbittorrent
 appVersion: v4.4.3.1
 
 annotations:
