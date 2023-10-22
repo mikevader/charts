@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 13.5.9](https://img.shields.io/badge/Version-13.5.9-informational?style=flat-square) ![AppVersion: v4.4.3.1](https://img.shields.io/badge/AppVersion-v4.4.3.1-informational?style=flat-square)
+![Version: 13.5.10](https://img.shields.io/badge/Version-13.5.10-informational?style=flat-square) ![AppVersion: v4.5.5](https://img.shields.io/badge/AppVersion-v4.5.5-informational?style=flat-square)
 
 qBittorrent is a cross-platform free and open-source BitTorrent client
 
@@ -42,7 +42,7 @@ N/A
 | env | object | See below | environment variables. See [image docs](https://docs.k8s-at-home.com/our-container-images/configuration/) for more details. |
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"ghcr.io/k8s-at-home/qbittorrent"` | image repository |
+| image.repository | string | `"ghcr.io/mikevader/qbittorrent"` | image repository |
 | image.tag | string | `nil` |  |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | metrics.enabled | bool | See values.yaml | Enable and configure prometheus-qbittorrent-exporter sidecar and Prometheus podMonitor. |
