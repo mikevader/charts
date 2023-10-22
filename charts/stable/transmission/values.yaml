@@ -27,7 +27,8 @@ image:
   # -- image repository
   repository: lscr.io/linuxserver/transmission
   # -- image tag
-  tag: v3.00
+  # @default -- chart.appVersion
+  tag:
   # -- image pull policy
   pullPolicy: IfNotPresent
 
