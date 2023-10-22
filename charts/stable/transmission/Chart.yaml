@@ -22,7 +22,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/transmission/transmission/main/extras/transmission-1920.jpg
 
 # renovate: image=lscr.io/linuxserver/transmission
-appVersion: v3.00
+appVersion: 4.0.4
 
 annotations:
   artifacthub.io/changes: |-
