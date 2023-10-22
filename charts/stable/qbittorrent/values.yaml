@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: ghcr.io/k8s-at-home/qbittorrent
+  repository: ghcr.io/mikevader/qbittorrent
   # @default -- chart.appVersion
   tag:
   # -- image pull policy
