@@ -21,7 +21,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 
 # renovate: image=ghcr.io/mikevader/jackett
-appVersion: v0.20.1316
+appVersion: v0.20.2269
 
 annotations:
   artifacthub.io/changes: |-
