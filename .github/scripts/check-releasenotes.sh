@@ -37,11 +37,13 @@ if [ $# -ge 1 ] && [ -n "$1" ]; then
     fi
 
     DEFAULT_BRANCH=$(git remote show origin | awk '/HEAD branch/ {print $NF}')
-    ORIGINAL=$(git show origin/$DEFAULT_BRANCH:./Chart.yaml | yq e '.annotations."artifacthub.io/changes"' -P -)
+    if git show origin/$DEFAULT_BRANCH:./Chart.yaml >/dev/null; then
+      ORIGINAL=$(git show origin/$DEFAULT_BRANCH:./Chart.yaml | yq e '.annotations."artifacthub.io/changes"' -P -)
 
-    if [ "$CURRENT" == "$ORIGINAL" ]; then
-      printf >&2 "Changelog annotation has not been updated in %s!\n" "$chart_file"
-      exit 1
+      if [ "$CURRENT" == "$ORIGINAL" ]; then
+        printf >&2 "Changelog annotation has not been updated in %s!\n" "$chart_file"
+        exit 1
+      fi
     fi
 else
     printf >&2 "%s\n" "No chart folder has been specified."
