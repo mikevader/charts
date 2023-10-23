@@ -1,0 +1,31 @@
+---
+apiVersion: v2
+name: prowlarr
+version: 4.5.2
+kubeVersion: ">=1.16.0-0"
+description: Indexer manager/proxy built on the popular arr net base stack to integrate with your various PVR apps.
+type: application
+keywords:
+  - prowlarr
+  - torrent
+  - usenet
+home: https://github.com/mikevader/charts/tree/master/charts/stable/prowlarr
+icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+sources:
+  - https://github.com/Prowlarr/Prowlarr
+  - https://github.com/mikevader/container-images
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.21
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+
+# renovate: image=lscr.io/linuxserver/prowlarr
+appVersion: v0.3.0.1710
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.21
