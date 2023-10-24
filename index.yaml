@@ -6795,6 +6795,39 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/plex-6.5.0/plex-6.5.0.tgz
     version: 6.5.0
+  prowlarr:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.21
+    apiVersion: v2
+    appVersion: 1.9.4
+    created: "2023-10-24T05:12:52.838775847Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: Indexer manager/proxy built on the popular arr net base stack to
+      integrate with your various PVR apps.
+    digest: 92ab967eb457689e58f89fa689f9d352e558fa3c29330b697203db48f57869b1
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+    keywords:
+    - prowlarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/prowlarr-5.0.0/prowlarr-5.0.0.tgz
+    version: 5.0.0
   qbittorrent:
   - annotations:
       artifacthub.io/changes: |-
@@ -9383,4 +9416,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-10-23T21:48:33.08772897Z"
+generated: "2023-10-24T05:12:52.839368052Z"
