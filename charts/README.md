@@ -17,6 +17,7 @@
 | [jackett](stable/jackett) | API Support for your favorite torrent trackers |
 | [magic-mirror](stable/magic-mirror) | magic-mirror helm package |
 | [plex](stable/plex) | Plex Media Server |
+| [prowlarr](stable/prowlarr) | Indexer manager/proxy built on the popular arr net base stack to integrate with your various PVR apps. |
 | [qbittorrent](stable/qbittorrent) | qBittorrent is a cross-platform free and open-source BitTorrent client |
 | [radarr](stable/radarr) | A fork of Sonarr to work with movies à la Couchpotato |
 | [recipes](stable/recipes) | Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files. |
