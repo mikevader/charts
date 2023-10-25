@@ -2,7 +2,7 @@
 apiVersion: v2
 description: API Support for your favorite torrent trackers
 name: jackett
-version: 11.7.2
+version: 11.8.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - jackett
@@ -26,4 +26,4 @@ appVersion: v0.21.1077
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.21
+      description: Upgrade jackett to 11.8.0
