@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 13.5.10](https://img.shields.io/badge/Version-13.5.10-informational?style=flat-square) ![AppVersion: v4.5.5](https://img.shields.io/badge/AppVersion-v4.5.5-informational?style=flat-square)
+![Version: 13.5.11](https://img.shields.io/badge/Version-13.5.11-informational?style=flat-square) ![AppVersion: v4.6.0](https://img.shields.io/badge/AppVersion-v4.6.0-informational?style=flat-square)
 
 qBittorrent is a cross-platform free and open-source BitTorrent client
 
