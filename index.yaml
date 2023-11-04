@@ -1061,6 +1061,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.21
     apiVersion: v2
+    appVersion: v2.26.0
+    created: "2023-11-04T16:58:23.785932735Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: 17acf8816bb81ee47d7d9ead06aa8ce98bf591d1069c5a607d41f920702ae192
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-1.5.12/filebrowser-1.5.12.tgz
+    version: 1.5.12
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.21
+    apiVersion: v2
     appVersion: v2.25.0
     created: "2023-10-20T22:46:11.652632987Z"
     dependencies:
@@ -6518,6 +6547,35 @@ entries:
         - kind: changed
           description: Upgrade jackett to 11.8.0
     apiVersion: v2
+    appVersion: v0.21.1128
+    created: "2023-11-04T16:58:23.922486795Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: API Support for your favorite torrent trackers
+    digest: 161fe92268e3d2703bbe1cbdeaacd594120fa1f141cc282a476c2a899288740f
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-banner.png
+    keywords:
+    - jackett
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/jackett-11.8.1/jackett-11.8.1.tgz
+    version: 11.8.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgrade jackett to 11.8.0
+    apiVersion: v2
     appVersion: v0.21.1077
     created: "2023-10-25T06:00:57.462125531Z"
     dependencies:
@@ -7505,6 +7563,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/qbittorrent-13.5.2/qbittorrent-13.5.2.tgz
     version: 13.5.2
   radarr:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.21
+    apiVersion: v2
+    appVersion: v5.0.3.8127
+    created: "2023-11-04T16:58:24.061974574Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: ecdfdfee81c42f0b40b97c0c20cc70934bd1ccab46a3bd1178b31177314ec610
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/radarr-16.3.8/radarr-16.3.8.tgz
+    version: 16.3.8
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -8571,6 +8660,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/stash-3.4.2/stash-3.4.2.tgz
     version: 3.4.2
   tautulli:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.21
+    apiVersion: v2
+    appVersion: v2.13.2
+    created: "2023-11-04T16:58:24.205585185Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: A Python based monitoring and tracking tool for Plex Media Server
+    digest: 4d340c4a2d37c8162f71c8513fe9727dc06b17f0ff5c35710024505118d604ac
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tautulli
+    icon: https://github.com/Tautulli/Tautulli/blob/master/data/interfaces/default/images/logo.png?raw=true
+    keywords:
+    - tautulli
+    - plex
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tautulli
+    sources:
+    - https://github.com/Tautulli/Tautulli
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tautulli-11.5.7/tautulli-11.5.7.tgz
+    version: 11.5.7
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -9894,4 +10012,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-11-04T14:05:20.969516785Z"
+generated: "2023-11-04T16:58:24.206315085Z"
