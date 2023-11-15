@@ -4239,6 +4239,49 @@ entries:
           description: Upgraded `postgresql` chart dependency to version 13.2.1
     apiVersion: v2
     appVersion: 2023.10.5
+    created: "2023-11-15T21:34:59.290877314Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.1
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.1.0
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.10.0
+    description: Home Assistant
+    digest: 87198522057b419b93b0abfb7afc9bf93dff01d0b70ab14102d95e12a0089bdf
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-18.2.2/home-assistant-18.2.2.tgz
+    version: 18.2.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 13.2.1
+    apiVersion: v2
+    appVersion: 2023.10.5
     created: "2023-11-04T14:05:20.968859372Z"
     dependencies:
     - name: common
@@ -10151,4 +10194,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-11-15T18:45:18.434015538Z"
+generated: "2023-11-15T21:34:59.291381949Z"
