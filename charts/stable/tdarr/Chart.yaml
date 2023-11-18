@@ -28,4 +28,4 @@ appVersion: 2.14.02
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Set gid and uid to standard ids
+      description: Upgraded `common` chart dependency to version 4.5.23

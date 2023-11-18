@@ -40,4 +40,4 @@ appVersion: 2023.11.2
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `postgresql` chart dependency to version 13.2.1
+      description: Upgraded `common` chart dependency to version 4.5.23
