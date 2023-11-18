@@ -4266,6 +4266,49 @@ entries:
         - kind: changed
           description: Upgraded `postgresql` chart dependency to version 13.2.1
     apiVersion: v2
+    appVersion: 2023.11.2
+    created: "2023-11-18T08:55:32.473886661Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.1
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.1.0
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.10.0
+    description: Home Assistant
+    digest: dff4c06ab15de121a75543589c5129fd95687ec57c2a3e91a0e97e6513d07df7
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-18.2.3/home-assistant-18.2.3.tgz
+    version: 18.2.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 13.2.1
+    apiVersion: v2
     appVersion: 2023.10.5
     created: "2023-11-15T21:34:59.290877314Z"
     dependencies:
@@ -10222,4 +10265,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-11-17T08:01:49.345326898Z"
+generated: "2023-11-18T08:55:32.474883566Z"
