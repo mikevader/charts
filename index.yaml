@@ -9340,6 +9340,37 @@ entries:
         - kind: changed
           description: Fix home page link
     apiVersion: v2
+    appVersion: 1.23.6
+    created: "2023-11-18T12:32:43.729723526Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.21
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 121720d655a1bd3ada060f871b164fa97573e79ccea76cd6058497fca719f1a7
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.5.16/uptime-kuma-1.5.16.tgz
+    version: 1.5.16
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Fix home page link
+    apiVersion: v2
     appVersion: 1.23.4
     created: "2023-11-15T18:45:18.433534302Z"
     dependencies:
@@ -10265,4 +10296,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-11-18T08:55:32.474883566Z"
+generated: "2023-11-18T12:32:43.730197212Z"
