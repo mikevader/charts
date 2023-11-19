@@ -1,6 +1,6 @@
 # tdarr
 
-![Version: 4.7.3](https://img.shields.io/badge/Version-4.7.3-informational?style=flat-square) ![AppVersion: 2.14.02](https://img.shields.io/badge/AppVersion-2.14.02-informational?style=flat-square)
+![Version: 4.7.4](https://img.shields.io/badge/Version-4.7.4-informational?style=flat-square) ![AppVersion: 2.15.01](https://img.shields.io/badge/AppVersion-2.15.01-informational?style=flat-square)
 
 Tdarr is a self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc.
 
