@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: transmission
-version: 8.4.4
+version: 8.4.5
 kubeVersion: ">=1.16.0-0"
 description: Transmission is a cross-platform BitTorrent client
 type: application
@@ -15,7 +15,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.23
+    version: 4.5.24
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
