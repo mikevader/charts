@@ -1,6 +1,6 @@
 # uptime-kuma
 
-![Version: 1.5.16](https://img.shields.io/badge/Version-1.5.16-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.23.6](https://img.shields.io/badge/AppVersion-1.23.6-informational?style=flat-square)
+![Version: 1.5.17](https://img.shields.io/badge/Version-1.5.17-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.23.6](https://img.shields.io/badge/AppVersion-1.23.6-informational?style=flat-square)
 
 A fancy self-hosted monitoring tool for your websites and applications
 
@@ -16,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.21 |
+| https://mikevader.github.io/charts | common | 4.5.23 |
 
 ## Installing the Chart
 
