@@ -40,7 +40,7 @@ N/A
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | env | object | See below | environment variables. See [plex docs](https://support.plex.tv/articles/201105343-advanced-hidden-server-settings/) for more details. **NOTE:** Plex preference options are camelCase and CASE SENSITIVE! You can do horrible things to your Plex configuration if you are not careful |
-| env.TZ | string | `"UTC"` | Set the container timezone |
+| env.TZ | string | `"Europe/Zurich"` | Set the container timezone |
 | hostNetwork | bool | `false` | Enable devices to be discoverable |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"ghcr.io/mikevader/plex"` | image repository |
