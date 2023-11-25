@@ -19,7 +19,10 @@ image:
 # @default -- See below
 env:
   # -- Set the container timezone
-  TZ: UTC
+  TZ: Europe/Zurich
+  PLEX_UID: 666
+  PLEX_GID: 666
+
   # ADVERTISE_IP:
   # ALLOWED_NETWORKS:
   # PLEX_CLAIM:
