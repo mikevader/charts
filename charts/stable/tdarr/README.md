@@ -1,6 +1,6 @@
 # tdarr
 
-![Version: 4.7.4](https://img.shields.io/badge/Version-4.7.4-informational?style=flat-square) ![AppVersion: 2.15.01](https://img.shields.io/badge/AppVersion-2.15.01-informational?style=flat-square)
+![Version: 4.7.5](https://img.shields.io/badge/Version-4.7.5-informational?style=flat-square) ![AppVersion: 2.15.01](https://img.shields.io/badge/AppVersion-2.15.01-informational?style=flat-square)
 
 Tdarr is a self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc.
 
@@ -16,7 +16,7 @@ Tdarr is a self hosted web-app for automating media library transcode/remux mana
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.23 |
+| https://mikevader.github.io/charts | common | 4.5.24 |
 
 ## Installing the Chart
 
@@ -54,7 +54,7 @@ N/A
 | node.id | string | `"node"` | Node ID |
 | node.image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | node.image.repository | string | `"haveagitgat/tdarr_node"` | image repository |
-| node.image.tag | string | `"2.14.02"` | image tag |
+| node.image.tag | string | `"2.16.01"` | image tag |
 | node.resources | object | `{}` | Node resources |
 | persistence | object | See below | Configure persistence settings for the chart under this key. |
 | persistence.config | object | See values.yaml | Volume used for configuration |
