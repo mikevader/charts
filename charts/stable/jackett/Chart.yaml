@@ -2,7 +2,7 @@
 apiVersion: v2
 description: API Support for your favorite torrent trackers
 name: jackett
-version: 11.8.3
+version: 11.8.4
 kubeVersion: ">=1.16.0-0"
 keywords:
   - jackett
@@ -21,7 +21,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 
 # renovate: image=ghcr.io/mikevader/jackett
-appVersion: v0.21.1128
+appVersion: v0.21.1264
 
 annotations:
   artifacthub.io/changes: |-
