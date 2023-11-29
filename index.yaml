@@ -8267,6 +8267,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.24
     apiVersion: v2
+    appVersion: v4.6.2
+    created: "2023-11-29T08:02:17.7471978Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.24
+    description: qBittorrent is a cross-platform free and open-source BitTorrent client
+    digest: 15617e4712a45e475768ffc413752c7bd0fe6f26445d3c5510b2d3526a88300d
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/qbittorrent
+    icon: https://cloud.githubusercontent.com/assets/14862437/23586868/89ef2922-01c4-11e7-869c-52aafcece17f.png
+    keywords:
+    - qbittorrent
+    - torrrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: qbittorrent
+    sources:
+    - https://github.com/qbittorrent/qBittorrent
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/qbittorrent-13.5.14/qbittorrent-13.5.14.tgz
+    version: 13.5.14
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.24
+    apiVersion: v2
     appVersion: v4.6.0
     created: "2023-11-26T19:34:46.286741956Z"
     dependencies:
@@ -11846,4 +11875,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-11-29T00:02:18.919527635Z"
+generated: "2023-11-29T08:02:17.747797212Z"
