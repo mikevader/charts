@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: home-assistant
-version: 18.2.6
+version: 18.3.0
 kubeVersion: ">=1.16.0-0"
 description: Home Assistant
 keywords:
@@ -26,7 +26,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: mariadb.enabled
   - name: influxdb
-    version: 5.10.0
+    version: 5.11.0
     repository: https://charts.bitnami.com/bitnami
     condition: influxdb.enabled
 maintainers:
@@ -40,4 +40,4 @@ appVersion: 2023.11.3
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.24
+      description: Upgraded `influxdb` chart dependency to version 5.11.0
