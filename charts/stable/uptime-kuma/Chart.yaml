@@ -28,4 +28,4 @@ appVersion: 1.23.9
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.24
+      description: Upgraded `common` chart dependency to version 4.5.25
