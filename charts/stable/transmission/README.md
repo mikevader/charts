@@ -1,6 +1,6 @@
 # transmission
 
-![Version: 8.4.4](https://img.shields.io/badge/Version-8.4.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.4](https://img.shields.io/badge/AppVersion-4.0.4-informational?style=flat-square)
+![Version: 8.4.6](https://img.shields.io/badge/Version-8.4.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 4.0.4](https://img.shields.io/badge/AppVersion-4.0.4-informational?style=flat-square)
 
 Transmission is a cross-platform BitTorrent client
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.23 |
+| https://mikevader.github.io/charts | common | 4.5.25 |
 
 ## Installing the Chart
 

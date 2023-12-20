@@ -1,6 +1,6 @@
 # foundryvtt
 
-![Version: 3.4.18](https://img.shields.io/badge/Version-3.4.18-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 11.315.0](https://img.shields.io/badge/AppVersion-11.315.0-informational?style=flat-square)
+![Version: 3.4.20](https://img.shields.io/badge/Version-3.4.20-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 11.315.0](https://img.shields.io/badge/AppVersion-11.315.0-informational?style=flat-square)
 
 An easy-to-deploy Dockerized Foundry Virtual Tabletop server
 
@@ -16,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.23 |
+| https://mikevader.github.io/charts | common | 4.5.25 |
 
 ## Installing the Chart
 

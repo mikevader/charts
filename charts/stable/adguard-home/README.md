@@ -1,6 +1,6 @@
 # adguard-home
 
-![Version: 5.5.20](https://img.shields.io/badge/Version-5.5.20-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.107.43](https://img.shields.io/badge/AppVersion-v0.107.43-informational?style=flat-square)
+![Version: 5.5.21](https://img.shields.io/badge/Version-5.5.21-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.107.43](https://img.shields.io/badge/AppVersion-v0.107.43-informational?style=flat-square)
 
 DNS proxy as ad-blocker for local network
 
@@ -16,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.24 |
+| https://mikevader.github.io/charts | common | 4.5.25 |
 
 ## Installing the Chart
 
