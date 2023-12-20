@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: stash
-version: 3.4.13
+version: 3.4.14
 kubeVersion: ">=1.16.0-0"
 description: An organizer for your other movies, written in Go
 keywords:
@@ -13,7 +13,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.24
+    version: 4.5.25
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -25,4 +25,4 @@ appVersion: v0.23.1
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.24
+      description: Upgraded `common` chart dependency to version 4.5.25
