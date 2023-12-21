@@ -1,6 +1,6 @@
 # recipes
 
-![Version: 6.6.16](https://img.shields.io/badge/Version-6.6.16-informational?style=flat-square) ![AppVersion: 1.0.5.2](https://img.shields.io/badge/AppVersion-1.0.5.2-informational?style=flat-square)
+![Version: 6.6.17](https://img.shields.io/badge/Version-6.6.17-informational?style=flat-square) ![AppVersion: 1.0.5.2](https://img.shields.io/badge/AppVersion-1.0.5.2-informational?style=flat-square)
 
 Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.25 |
+| https://mikevader.github.io/charts | common | 4.5.26 |
 
 ## Installing the Chart
 
