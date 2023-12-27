@@ -543,6 +543,22 @@ entries:
     version: 5.5.2
   common:
   - apiVersion: v2
+    created: "2023-12-27T21:28:17.425909237Z"
+    description: Function library for mikevader charts
+    digest: 69e69fa425ef7f915e875ca87030435e841cfb019ecfa771592eb0a05c72c3b5
+    home: https://github.com/mikevader/charts/tree/master/charts/library/common
+    keywords:
+    - common
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: common
+    type: library
+    urls:
+    - https://github.com/mikevader/charts/releases/download/common-4.5.27/common-4.5.27.tgz
+    version: 4.5.27
+  - apiVersion: v2
     created: "2023-12-20T11:35:52.64867989Z"
     description: Function library for mikevader charts
     digest: 75d69266884e9a75d7b404904b46e492d974bf651a0ad1854c13e043295e3127
@@ -1997,6 +2013,47 @@ entries:
     - https://github.com/mikevader/charts/releases/download/filebrowser-1.4.2/filebrowser-1.4.2.tgz
     version: 1.4.2
   firefly-iii:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `redis` chart dependency to version 18.6.1
+    apiVersion: v2
+    appVersion: version-5.6.14
+    created: "2023-12-27T21:28:17.596230651Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.26
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.1.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.6.1
+    description: 'Firefly III: a personal finances manager'
+    digest: 6c9505b18b3882afd460b8c163cac65859069a0d40569049b3a9a3f45a1c5d2f
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii
+    icon: https://www.firefly-iii.org/assets/logo/color.png
+    keywords:
+    - firefly-iii
+    - firefly
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: firefly-iii
+    sources:
+    - https://github.com/firefly-iii/firefly-iii
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/firefly-iii-6.6.0/firefly-iii-6.6.0.tgz
+    version: 6.6.0
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -14070,4 +14127,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2023-12-27T21:27:10.544679259Z"
+generated: "2023-12-27T21:28:17.59692514Z"
