@@ -20,9 +20,9 @@ env:
   TZ: Europe/Zurich
   # -- Set the application log level
   LOG_LEVEL: info
-  S6_READ_ONLY_ROOT : 1
-  UMASK : 0022
-  UMASK_SET : 0022
+  S6_READ_ONLY_ROOT: '1'
+  UMASK: '0022'
+  UMASK_SET: '0022'
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
