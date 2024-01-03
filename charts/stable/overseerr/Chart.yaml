@@ -1,0 +1,32 @@
+---
+apiVersion: v2
+name: overseerr
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+description: Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services such as Sonarr, Radarr and Plex!
+type: application
+keywords:
+  - overseerr
+  - plex
+  - sonarr
+  - radarr
+home: https://github.com/mikevader/charts/tree/master/charts/stable/overseerr
+icon: https://i.imgur.com/TMoEG7g.png
+sources:
+  - https://github.com/sct/overseerr
+  - https://hub.docker.com/r/sctx/overseerr
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.26
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+
+# renovate: image=ghcr.io/sct/overseerr
+appVersion: 1.33.2
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Upgraded `common` chart dependency to version 4.5.2
