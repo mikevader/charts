@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: uptime-kuma
-version: 1.5.26
+version: 1.5.27
 kubeVersion: ">=1.16.0-0"
 description: A fancy self-hosted monitoring tool for your websites and applications
 type: application
@@ -16,7 +16,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.27
+    version: 4.5.28
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
