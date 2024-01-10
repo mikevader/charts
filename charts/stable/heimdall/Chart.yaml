@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: heimdall
-version: 8.4.16
+version: 8.4.17
 kubeVersion: ">=1.16.0-0"
 description: An Application dashboard and launcher
 type: application
@@ -14,7 +14,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.27
+    version: 4.5.28
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -26,4 +26,4 @@ appVersion: 2.5.8
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.27
+      description: Upgraded `common` chart dependency to version 4.5.28
