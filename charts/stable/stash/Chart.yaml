@@ -20,7 +20,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
 
 # renovate: image=stashapp/stash
-appVersion: v0.24.0
+appVersion: v0.24.2
 
 annotations:
   artifacthub.io/changes: |-
