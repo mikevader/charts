@@ -1,6 +1,6 @@
 # filebrowser
 
-![Version: 1.5.17](https://img.shields.io/badge/Version-1.5.17-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.26.0](https://img.shields.io/badge/AppVersion-v2.26.0-informational?style=flat-square)
+![Version: 1.5.18](https://img.shields.io/badge/Version-1.5.18-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v2.26.0](https://img.shields.io/badge/AppVersion-v2.26.0-informational?style=flat-square)
 
 filebrowser provides a file managing interface within a specified directory
 
@@ -16,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.27 |
+| https://mikevader.github.io/charts | common | 4.5.28 |
 
 ## Installing the Chart
 
