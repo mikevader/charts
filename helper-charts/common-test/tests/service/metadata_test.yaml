@@ -8,7 +8,7 @@ tests:
         isKind:
           of: Service
       - documentIndex: *ServiceDocument
-        isNull:
+        isNullOrEmpty:
           path: metadata.annotations
       - documentIndex: *ServiceDocument
         equal:

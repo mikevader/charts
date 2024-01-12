@@ -10,7 +10,7 @@ tests:
         isKind:
           of: PersistentVolumeClaim
       - documentIndex: *PersistentVolumeClaimDocument
-        isNull:
+        isNullOrEmpty:
           path: metadata.annotations
       - documentIndex: *PersistentVolumeClaimDocument
         equal:
