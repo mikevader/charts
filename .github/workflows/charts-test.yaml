@@ -73,11 +73,11 @@ jobs:
 
       - name: Run chart-testing (install)
         if: ${{ !contains(matrix.chart, 'library') }}
-        run: helm unittest -f "tests/**/*_test.yaml" --charts ${{ matrix.chart }}
+        run: helm unittest -f "tests/**/*_test.yaml" ${{ matrix.chart }}
 
       - name: Run library-chart-testing (install)
         if: ${{ contains(matrix.chart, 'library') }}
-        run: helm unittest -f "tests/**/*_test.yaml" --charts helper-charts/common-test
+        run: helm unittest -f "tests/**/*_test.yaml" helper-charts/common-test
 
   unittest_success:
     needs:
