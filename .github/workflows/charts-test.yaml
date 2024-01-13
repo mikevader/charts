@@ -118,7 +118,7 @@ jobs:
         with:
           setup-tools: |
             helmv3
-          helm: "3.13.0"
+          helm: "3.13.3"
 
       - uses: actions/setup-python@v4
         with:

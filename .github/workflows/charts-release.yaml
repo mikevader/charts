@@ -89,6 +89,7 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.K8S_AT_HOME_TOKEN }}"
           CR_SKIP_EXISTING: "true"
+          CR_GENERATE_RELEASE_NOTES: "true"
 
   generate-summary:
     name: Auto-generate charts summary
