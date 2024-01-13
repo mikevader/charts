@@ -45,7 +45,7 @@ jobs:
       chartChangesDetected: ${{ needs.pr-metadata.outputs.addedOrModified }}
 
   charts-test:
-    uses: mikevader/charts/.github/workflows/charts-test.yaml@master
+    uses: mikevader/charts/.github/workflows/charts-test.yaml@feature/unittests
     needs:
       - pr-metadata
       - charts-changelog

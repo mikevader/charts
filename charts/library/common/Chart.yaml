@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: common
-version: 4.5.28
+version: 4.5.29
 kubeVersion: ">=1.16.0-0"
 description: Function library for mikevader charts
 type: library
@@ -11,3 +11,8 @@ home: https://github.com/mikevader/charts/tree/master/charts/library/common
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: improve tests

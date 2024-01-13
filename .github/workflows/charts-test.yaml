@@ -11,41 +11,6 @@ on:
         type: string
 
 jobs:
-  unit-test:
-    name: Run unit tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-          ref: ${{ inputs.checkoutCommit }}
-
-      - name: Install Kubernetes tools
-        uses: yokawasa/action-setup-kube-tools@v0.9.3
-        with:
-          setup-tools: |
-            helmv3
-          helm: "3.13.0"
-
-      - name: Install Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-
-      - name: Install dependencies
-        env:
-          RUBYJQ_USE_SYSTEM_LIBRARIES: 1
-        run: |
-          sudo apt-get update
-          sudo apt-get install libjq-dev
-          bundle install
-
-      - name: Run tests
-        run: |
-          bundle exec m -r ./test/
-
   generate-install-matrix:
     name: Generate matrix for install
     runs-on: ubuntu-latest
@@ -79,8 +44,60 @@ jobs:
             echo "detected=true" >> "$GITHUB_OUTPUT"
           fi
 
+  unittest:
+    needs:
+      - generate-install-matrix
+    if: needs.generate-install-matrix.outputs.detected == 'true'
+    name: Run unit tests
+    strategy:
+      matrix: ${{ fromJson(needs.generate-install-matrix.outputs.matrix) }}
+      fail-fast: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          ref: ${{ inputs.checkoutCommit }}
+
+      - name: Install Kubernetes tools
+        uses: yokawasa/action-setup-kube-tools@v0.9.3
+        with:
+          setup-tools: |
+            helmv3
+          helm: "3.13.0"
+
+      - name: Prep Helm
+        run: helm plugin install https://github.com/helm-unittest/helm-unittest.git
+
+      - name: Run chart-testing (install)
+        if: ${{ !contains(matrix.chart, 'library') }}
+        run: helm unittest -f "tests/**/*_test.yaml" ${{ matrix.chart }}
+
+      - name: Run library-chart-testing (install)
+        if: ${{ contains(matrix.chart, 'library') }}
+        run: |
+          helm dep update helper-charts/common-test
+          helm unittest -f "tests/**/*_test.yaml" helper-charts/common-test
+
+  unittest_success:
+    needs:
+      - generate-install-matrix
+      - unittest
+    if: |
+      always()
+    name: Install successful
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check install matrix status
+        if: ${{ (needs.generate-install-matrix.outputs.detected == 'true') && (needs.unittest.result != 'success') }}
+        run: exit 1
+
+
   install-charts:
     needs:
+      - unittest_success
       - generate-install-matrix
     if: needs.generate-install-matrix.outputs.detected == 'true'
     name: Install charts

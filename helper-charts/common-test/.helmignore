@@ -26,4 +26,3 @@ OWNERS
 *.gotmpl
 # Test files
 tests/
-charts/
