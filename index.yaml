@@ -602,6 +602,26 @@ entries:
     - https://github.com/mikevader/charts/releases/download/adguard-home-5.5.2/adguard-home-5.5.2.tgz
     version: 5.5.2
   common:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: improve tests
+    apiVersion: v2
+    created: "2024-01-13T07:52:06.786401622Z"
+    description: Function library for mikevader charts
+    digest: 42bf44ee2145e2f5d1aca9b42cd6074a734bcf687e9d3bd57cfa39d7cd534e32
+    home: https://github.com/mikevader/charts/tree/master/charts/library/common
+    keywords:
+    - common
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: common
+    type: library
+    urls:
+    - https://github.com/mikevader/charts/releases/download/common-4.5.29/common-4.5.29.tgz
+    version: 4.5.29
   - apiVersion: v2
     created: "2024-01-06T21:38:18.257745562Z"
     description: Function library for mikevader charts
@@ -13657,6 +13677,39 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.28
     apiVersion: v2
+    appVersion: 2.17.01
+    created: "2024-01-13T07:52:06.980019403Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.28
+    description: Tdarr is a self hosted web-app for automating media library transcode/remux
+      management and making sure your files are exactly how you need them to be in
+      terms of codecs/streams/containers etc.
+    digest: c4de339c915e8c3f3e7de02dbe711e90ca540520afe00b128ee336f6375f589a
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tdarr
+    icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+    keywords:
+    - transcoding
+    - remux
+    - media
+    - video
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tdarr
+    sources:
+    - https://www.github.com/HaveAGitGat/Tdarr
+    - https://hub.docker.com/r/haveagitgat/tdarr/
+    - https://tdarr.io/docs/
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tdarr-4.7.11/tdarr-4.7.11.tgz
+    version: 4.7.11
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.28
+    apiVersion: v2
     appVersion: 2.16.01
     created: "2024-01-10T12:47:15.20314413Z"
     dependencies:
@@ -15942,4 +15995,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-01-12T22:29:44.487596125Z"
+generated: "2024-01-13T07:52:06.98076437Z"
