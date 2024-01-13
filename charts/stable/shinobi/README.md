@@ -1,6 +1,6 @@
 # shinobi
 
-![Version: 1.2.14](https://img.shields.io/badge/Version-1.2.14-informational?style=flat-square) ![AppVersion: dev](https://img.shields.io/badge/AppVersion-dev-informational?style=flat-square)
+![Version: 1.2.15](https://img.shields.io/badge/Version-1.2.15-informational?style=flat-square) ![AppVersion: dev](https://img.shields.io/badge/AppVersion-dev-informational?style=flat-square)
 
 shinobi helm package
 
@@ -16,7 +16,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.28 |
+| https://mikevader.github.io/charts | common | 4.5.29 |
 
 ## Installing the Chart
 
