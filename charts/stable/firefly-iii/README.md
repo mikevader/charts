@@ -1,6 +1,6 @@
 # firefly-iii
 
-![Version: 6.6.4](https://img.shields.io/badge/Version-6.6.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: version-5.6.14](https://img.shields.io/badge/AppVersion-version--5.6.14-informational?style=flat-square)
+![Version: 6.6.5](https://img.shields.io/badge/Version-6.6.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: version-5.6.14](https://img.shields.io/badge/AppVersion-version--5.6.14-informational?style=flat-square)
 
 Firefly III: a personal finances manager
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 | Repository | Name | Version |
 |------------|------|---------|
 | https://charts.bitnami.com/bitnami | mariadb | 14.1.4 |
-| https://charts.bitnami.com/bitnami | postgresql | 13.2.28 |
+| https://charts.bitnami.com/bitnami | postgresql | 13.2.29 |
 | https://charts.bitnami.com/bitnami | redis | 18.6.3 |
 | https://mikevader.github.io/charts | common | 4.5.29 |
 
