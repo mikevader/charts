@@ -1,6 +1,6 @@
 # home-assistant
 
-![Version: 18.3.8](https://img.shields.io/badge/Version-18.3.8-informational?style=flat-square) ![AppVersion: 2023.12.4](https://img.shields.io/badge/AppVersion-2023.12.4-informational?style=flat-square)
+![Version: 18.3.9](https://img.shields.io/badge/Version-18.3.9-informational?style=flat-square) ![AppVersion: 2024.1.3](https://img.shields.io/badge/AppVersion-2024.1.3-informational?style=flat-square)
 
 Home Assistant
 
