@@ -1,6 +1,6 @@
 # stash
 
-![Version: 3.4.19](https://img.shields.io/badge/Version-3.4.19-informational?style=flat-square) ![AppVersion: v0.24.2](https://img.shields.io/badge/AppVersion-v0.24.2-informational?style=flat-square)
+![Version: 3.4.20](https://img.shields.io/badge/Version-3.4.20-informational?style=flat-square) ![AppVersion: v0.24.3](https://img.shields.io/badge/AppVersion-v0.24.3-informational?style=flat-square)
 
 An organizer for your other movies, written in Go
 
