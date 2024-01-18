@@ -40,4 +40,4 @@ appVersion: 2024.1.3
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `influxdb` chart dependency to version 5.12.0
+      description: Upgraded `influxdb` chart dependency to version 5.12.1
