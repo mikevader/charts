@@ -2345,6 +2345,51 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 15.1.1
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 13.3.0
+        - kind: changed
+          description: Upgraded `redis` chart dependency to version 18.7.0
+    apiVersion: v2
+    appVersion: version-5.6.14
+    created: "2024-01-21T09:16:39.750331472Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.29
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.7.0
+    description: 'Firefly III: a personal finances manager'
+    digest: 57badbb7b851dab52b230b22d9f49477b37aaf6bb7259e538fd24ba6ebaf0a47
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii
+    icon: https://www.firefly-iii.org/assets/logo/color.png
+    keywords:
+    - firefly-iii
+    - firefly
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: firefly-iii
+    sources:
+    - https://github.com/firefly-iii/firefly-iii
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/firefly-iii-7.1.0/firefly-iii-7.1.0.tgz
+    version: 7.1.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `postgresql` chart dependency to version 13.2.30
         - kind: changed
           description: Upgraded `redis` chart dependency to version 18.6.4
@@ -6332,6 +6377,51 @@ entries:
     - https://github.com/mikevader/charts/releases/download/heimdall-8.4.2/heimdall-8.4.2.tgz
     version: 8.4.2
   home-assistant:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 13.3.0
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 15.1.1
+    apiVersion: v2
+    appVersion: 2024.1.3
+    created: "2024-01-21T09:16:39.864096301Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.29
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.3.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.1.1
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.12.1
+    description: Home Assistant
+    digest: 0fc567e4bd9766fd7c778a32f52d0f05d232ca9013abca2170bf25b5a943148a
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-19.3.0/home-assistant-19.3.0.tgz
+    version: 19.3.0
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -17307,4 +17397,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-01-20T06:53:47.994234705Z"
+generated: "2024-01-21T09:16:39.864905969Z"
