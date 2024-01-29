@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: firefly-iii
-version: 7.4.0
+version: 7.5.0
 kubeVersion: ">=1.16.0-0"
 description: "Firefly III: a personal finances manager"
 type: application
@@ -24,7 +24,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: redis
-    version: 18.8.0
+    version: 18.9.0
     repository: https://charts.bitnami.com/bitnami
     condition: redis.enabled
 maintainers:
@@ -38,4 +38,4 @@ appVersion: version-5.6.14
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `redis` chart dependency to version 18.8.0
+      description: Upgraded `redis` chart dependency to version 18.9.0
