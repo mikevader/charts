@@ -1,6 +1,6 @@
 # heimdall
 
-![Version: 8.4.18](https://img.shields.io/badge/Version-8.4.18-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.5.8](https://img.shields.io/badge/AppVersion-2.5.8-informational?style=flat-square)
+![Version: 8.4.19](https://img.shields.io/badge/Version-8.4.19-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.5.8](https://img.shields.io/badge/AppVersion-2.5.8-informational?style=flat-square)
 
 An Application dashboard and launcher
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.29 |
+| https://mikevader.github.io/charts | common | 4.5.30 |
 
 ## Installing the Chart
 
