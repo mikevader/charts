@@ -2453,6 +2453,51 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 15.2.2
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 13.4.4
+        - kind: changed
+          description: Upgraded `redis` chart dependency to version 18.9.1
+    apiVersion: v2
+    appVersion: version-5.6.14
+    created: "2024-02-05T21:06:36.847458226Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.30
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.4.4
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.9.1
+    description: 'Firefly III: a personal finances manager'
+    digest: 7ebfcdee9ae463d2f08103bcaf7b3ada12e0e001bd85801a891276c1b3cdabd5
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii
+    icon: https://www.firefly-iii.org/assets/logo/color.png
+    keywords:
+    - firefly-iii
+    - firefly
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: firefly-iii
+    sources:
+    - https://github.com/firefly-iii/firefly-iii
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/firefly-iii-7.5.3/firefly-iii-7.5.3.tgz
+    version: 7.5.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: version-5.6.14
@@ -6819,6 +6864,53 @@ entries:
     - https://github.com/mikevader/charts/releases/download/heimdall-8.4.2/heimdall-8.4.2.tgz
     version: 8.4.2
   home-assistant:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 14.0.1
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 15.2.2
+        - kind: changed
+          description: Upgraded `influxdb` chart dependency to version 5.13.6
+    apiVersion: v2
+    appVersion: 2024.1.3
+    created: "2024-02-05T21:06:36.978228514Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.30
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.0.1
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.2
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.13.6
+    description: Home Assistant
+    digest: 60473e9b24eb3dcdda56cdfa7fb1416633bdd3c21e6312882d2e2d5d7186cb94
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-20.0.2/home-assistant-20.0.2.tgz
+    version: 20.0.2
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -18523,4 +18615,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-02-04T08:46:21.112136771Z"
+generated: "2024-02-05T21:06:36.979179731Z"
