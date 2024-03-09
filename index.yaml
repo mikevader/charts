@@ -15172,6 +15172,34 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
+    appVersion: v0.25.0
+    created: "2024-03-09T12:15:42.121485732Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.30
+    description: An organizer for your other movies, written in Go
+    digest: c6512baaa9f96c118acb7330f9940ad645b1a2e27a46a28a4b019a370b7953e2
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/stash
+    icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
+    keywords:
+    - porn
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: stash
+    sources:
+    - https://github.com/stashapp/stash
+    - https://hub.docker.com/r/stashapp/stash
+    urls:
+    - https://github.com/mikevader/charts/releases/download/stash-3.4.22/stash-3.4.22.tgz
+    version: 3.4.22
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.30
+    apiVersion: v2
     appVersion: v0.24.3
     created: "2024-02-04T08:46:20.54086335Z"
     dependencies:
@@ -18970,4 +18998,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-03-09T07:39:53.560471476Z"
+generated: "2024-03-09T12:15:42.122317882Z"
