@@ -4,6 +4,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v0.107.45
+    created: "2024-03-10T15:23:27.520453553Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: DNS proxy as ad-blocker for local network
+    digest: ca6405bb27c6dd73336880f7153a63ddca22921b0d8ab74a61dd33969ff578dd
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/adguard-home
+    icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+    keywords:
+    - adguard-home
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: adguard-home
+    sources:
+    - https://github.com/AdguardTeam/AdGuardHome
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/adguard-home-5.5.29/adguard-home-5.5.29.tgz
+    version: 5.5.29
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: v0.107.45
@@ -1170,6 +1200,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 2.26.0
+    created: "2024-03-10T15:23:27.604452102Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Server error pages in the docker image
+    digest: 38c09a853ff7179fb7823cc3ed66d4c83e9d16498d73d65311efcc477fae6d7b
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/error-pages
+    icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
+    keywords:
+    - traefik
+    - error-pages
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: error-pages
+    sources:
+    - https://github.com/tarampampam/error-pages
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/error-pages-1.4.21/error-pages-1.4.21.tgz
+    version: 1.4.21
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: 2.26.0
@@ -1866,6 +1925,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v2.27.0
+    created: "2024-03-10T15:23:27.679972852Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: e066288799f3e7d46da5a8dd913a99c2f195642a8650b013d771935aefe86586
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-1.5.22/filebrowser-1.5.22.tgz
+    version: 1.5.22
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: v2.27.0
@@ -2530,6 +2618,47 @@ entries:
     - https://github.com/mikevader/charts/releases/download/filebrowser-1.4.2/filebrowser-1.4.2.tgz
     version: 1.4.2
   firefly-iii:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: version-5.6.14
+    created: "2024-03-10T15:23:27.792993411Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.5.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.4.4
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.19.1
+    description: 'Firefly III: a personal finances manager'
+    digest: 481f4668437687669d92188c8a9431aada9dec82731f83261167c34480e5b350
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii
+    icon: https://www.firefly-iii.org/assets/logo/color.png
+    keywords:
+    - firefly-iii
+    - firefly
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: firefly-iii
+    sources:
+    - https://github.com/firefly-iii/firefly-iii
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/firefly-iii-8.2.1/firefly-iii-8.2.1.tgz
+    version: 8.2.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -5690,6 +5819,37 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 4.7.0
+    created: "2024-03-10T15:23:27.923108139Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Flood is a monitoring service for various torrent clients
+    digest: d760305b197f698c8a96276449d0fe06aee98982ef3036204d25d18033592a0f
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/flood
+    icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
+    keywords:
+    - flood
+    - rtorrent
+    - qbittorrent
+    - transmission
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: flood
+    sources:
+    - https://github.com/jesec/flood
+    - https://hub.docker.com/r/jesec/flood
+    urls:
+    - https://github.com/mikevader/charts/releases/download/flood-6.4.12/flood-6.4.12.tgz
+    version: 6.4.12
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: 4.7.0
@@ -5998,6 +6158,34 @@ entries:
     - https://github.com/mikevader/charts/releases/download/flood-6.4.2/flood-6.4.2.tgz
     version: 6.4.2
   foundryvtt:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 11.315.1
+    created: "2024-03-10T15:23:28.016686028Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
+    digest: e7123a70b971176bf1d1f1447e2bd032d06dfe931074058041896150fdf25872
+    home: https://github.com/felddy/foundryvtt-docker
+    icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
+    keywords:
+    - foundryvtt
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: foundryvtt
+    sources:
+    - https://github.com/felddy/foundryvtt-docker
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/foundryvtt-3.4.26/foundryvtt-3.4.26.tgz
+    version: 3.4.26
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -6590,6 +6778,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 2.6.1
+    created: "2024-03-10T15:23:28.102459934Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: An Application dashboard and launcher
+    digest: 171d8353d8466d541f21ec268141ce4476603b730f8592606b1e9996413ebd52
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/heimdall-8.4.21/heimdall-8.4.21.tgz
+    version: 8.4.21
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: 2.6.1
@@ -7139,6 +7356,49 @@ entries:
     - https://github.com/mikevader/charts/releases/download/heimdall-8.4.2/heimdall-8.4.2.tgz
     version: 8.4.2
   home-assistant:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 2024.1.3
+    created: "2024-03-10T15:23:28.213205668Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.3.1
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.2
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 5.18.1
+    description: Home Assistant
+    digest: 75d69279eae2c9b4aae2b71cc8325d8066ac71ac85cc6a1766f06061373522df
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-20.2.1/home-assistant-20.2.1.tgz
+    version: 20.2.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -10836,6 +11096,35 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v0.21.1468
+    created: "2024-03-10T15:23:28.304760791Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: API Support for your favorite torrent trackers
+    digest: 37b064563cab98aa6ae24ceb83d4cd97d1bedaa45fc022d1bb0ee6447808a69d
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-banner.png
+    keywords:
+    - jackett
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/jackett-11.8.13/jackett-11.8.13.tgz
+    version: 11.8.13
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: v0.21.1468
@@ -11240,6 +11529,33 @@ entries:
     - https://github.com/mikevader/charts/releases/download/jackett-11.7.2/jackett-11.7.2.tgz
     version: 11.7.2
   magic-mirror:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v2.15.0
+    created: "2024-03-10T15:23:28.393468541Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: magic-mirror helm package
+    digest: 0c71e0f6f5d5d7f9cce67aef636cdab7f80f09e5dfcaf05f915e7554e5699903
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/magic-mirror
+    keywords:
+    - magic-mirror
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: magic-mirror
+    sources:
+    - https://github.com/MichMich/MagicMirror
+    - https://hub.docker.com/r/bastilimbach/docker-magicmirror
+    urls:
+    - https://github.com/mikevader/charts/releases/download/magic-mirror-4.4.17/magic-mirror-4.4.17.tgz
+    version: 4.4.17
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -11649,6 +11965,40 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 1.33.2
+    created: "2024-03-10T15:23:28.482162635Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Overseerr is a free and open source software application for managing
+      requests for your media library. It integrates with your existing services such
+      as Sonarr, Radarr and Plex!
+    digest: 0abeb00087dcdc76b6a8344cc28698564d814fa3ca6b4fd1134dc29f98cef49c
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/overseerr
+    icon: https://i.imgur.com/TMoEG7g.png
+    keywords:
+    - overseerr
+    - plex
+    - sonarr
+    - radarr
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: overseerr
+    sources:
+    - https://github.com/sct/overseerr
+    - https://hub.docker.com/r/sctx/overseerr
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/overseerr-1.0.5/overseerr-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: 1.33.2
@@ -11817,6 +12167,36 @@ entries:
     - https://github.com/mikevader/charts/releases/download/overseerr-1.0.0/overseerr-1.0.0.tgz
     version: 1.0.0
   plex:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v1.32.8.7639-fb6452ebf
+    created: "2024-03-10T15:23:28.561114574Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Plex Media Server
+    digest: 53c14bedbfac883f472965d1199086486dcee6444aa17ab996909fb7cd4c25f6
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: plex
+    sources:
+    - https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/plex-6.6.25/plex-6.6.25.tgz
+    version: 6.6.25
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -12509,6 +12889,38 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 1.11.4
+    created: "2024-03-10T15:23:28.654789678Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Indexer manager/proxy built on the popular arr net base stack to
+      integrate with your various PVR apps.
+    digest: b409df6ce3c8a80a7ef99ce9164b534b5f538d7ef9a280a1c2a731a26f2ab641
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+    keywords:
+    - prowlarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/prowlarr-5.0.11/prowlarr-5.0.11.tgz
+    version: 5.0.11
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: 1.11.4
@@ -12859,6 +13271,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/prowlarr-5.0.0/prowlarr-5.0.0.tgz
     version: 5.0.0
   qbittorrent:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v4.6.2
+    created: "2024-03-10T15:23:28.747765615Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: qBittorrent is a cross-platform free and open-source BitTorrent client
+    digest: 45735178493148c2c07ef2e322cb5593250d95bf5ec3a4485fea0876bc80c8a7
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/qbittorrent
+    icon: https://cloud.githubusercontent.com/assets/14862437/23586868/89ef2922-01c4-11e7-869c-52aafcece17f.png
+    keywords:
+    - qbittorrent
+    - torrrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: qbittorrent
+    sources:
+    - https://github.com/qbittorrent/qBittorrent
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/qbittorrent-13.5.23/qbittorrent-13.5.23.tgz
+    version: 13.5.23
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -13472,6 +13913,37 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v5.2.6.8376
+    created: "2024-03-10T15:23:28.854774808Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: ec1c1c8814d93e682280f44ac57b674ef9c676e12268347b0680a6798e206bba
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/radarr-16.4.3/radarr-16.4.3.tgz
+    version: 16.4.3
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: v5.2.6.8376
@@ -13935,6 +14407,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/radarr-16.3.3/radarr-16.3.3.tgz
     version: 16.3.3
   recipes:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 1.0.5.2
+    created: "2024-03-10T15:23:28.934768147Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Recipes is a Django application to manage, tag and search recipes
+      using either built in models or external storage providers hosting PDF's, Images
+      or other files.
+    digest: e17e6d4c4a4e69dfade72e3c669790f96019793422c89fd83f32ba5b574d76ce
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/recipes
+    icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - cooking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: recipes
+    sources:
+    - https://github.com/vabene1111/recipes
+    - https://hub.docker.com/r/vabene1111/recipes
+    urls:
+    - https://github.com/mikevader/charts/releases/download/recipes-6.6.22/recipes-6.6.22.tgz
+    version: 6.6.22
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -14528,6 +15031,33 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: dev
+    created: "2024-03-10T15:23:29.022135843Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: shinobi helm package
+    digest: 93a6f471b71479f43b43f5f81eb41c15539189d8cabfd43478e0fd7572677b39
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/shinobi
+    icon: https://shinobi.org/icon
+    keywords:
+    - shinobi
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: shinobi
+    sources:
+    - https://gitlab.com/Shinobi-Systems/Shinobi-Installer
+    urls:
+    - https://github.com/mikevader/charts/releases/download/shinobi-1.2.17/shinobi-1.2.17.tgz
+    version: 1.2.17
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: dev
@@ -14934,6 +15464,37 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v3.0.10.1567
+    created: "2024-03-10T15:23:29.09819712Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Smart PVR for newsgroup and bittorrent users
+    digest: 02e6460e104993a670fbf866106a759e8198fb3fd45ffcd00d2fce7b288dea6f
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/sonarr
+    icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
+    keywords:
+    - sonarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: sonarr
+    sources:
+    - https://github.com/Sonarr/Sonarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/sonarr-16.3.15/sonarr-16.3.15.tgz
+    version: 16.3.15
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: v3.0.10.1567
@@ -15304,6 +15865,34 @@ entries:
     - https://github.com/mikevader/charts/releases/download/sonarr-16.3.3/sonarr-16.3.3.tgz
     version: 16.3.3
   stash:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v0.25.0
+    created: "2024-03-10T15:23:29.202106368Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: An organizer for your other movies, written in Go
+    digest: ee5f0e95906f92b88aba2a94ebb0a97482fae8d5516243f0b72164cab2ec7571
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/stash
+    icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
+    keywords:
+    - porn
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: stash
+    sources:
+    - https://github.com/stashapp/stash
+    - https://hub.docker.com/r/stashapp/stash
+    urls:
+    - https://github.com/mikevader/charts/releases/download/stash-3.4.23/stash-3.4.23.tgz
+    version: 3.4.23
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -15865,6 +16454,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/stash-3.4.2/stash-3.4.2.tgz
     version: 3.4.2
   tautulli:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: v2.13.4
+    created: "2024-03-10T15:23:29.285999704Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: A Python based monitoring and tracking tool for Plex Media Server
+    digest: 69acc4a57dcba9b84b3601d53dcf48cb568c12e00f93c4afb431309bb71f7fc9
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tautulli
+    icon: https://github.com/Tautulli/Tautulli/blob/master/data/interfaces/default/images/logo.png?raw=true
+    keywords:
+    - tautulli
+    - plex
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tautulli
+    sources:
+    - https://github.com/Tautulli/Tautulli
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tautulli-11.5.18/tautulli-11.5.18.tgz
+    version: 11.5.18
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -16478,6 +17096,39 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 2.17.01
+    created: "2024-03-10T15:23:29.369250231Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Tdarr is a self hosted web-app for automating media library transcode/remux
+      management and making sure your files are exactly how you need them to be in
+      terms of codecs/streams/containers etc.
+    digest: 757ee30c0c49e93bc2e4d9e3511ceb765fd6765a5bad0e1d2d8bec0b99f25d83
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tdarr
+    icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+    keywords:
+    - transcoding
+    - remux
+    - media
+    - video
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tdarr
+    sources:
+    - https://www.github.com/HaveAGitGat/Tdarr
+    - https://hub.docker.com/r/haveagitgat/tdarr/
+    - https://tdarr.io/docs/
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tdarr-4.7.15/tdarr-4.7.15.tgz
+    version: 4.7.15
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: 2.17.01
@@ -17007,6 +17658,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 4.0.5
+    created: "2024-03-10T15:23:29.465417931Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Transmission is a cross-platform BitTorrent client
+    digest: 6738a3fb8969c6e50abfa72aef43058a97173b3c733343de10e9da41c8b0d4be
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/transmission
+    icon: https://raw.githubusercontent.com/transmission/transmission/main/extras/transmission-1920.jpg
+    keywords:
+    - transmission
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: transmission
+    sources:
+    - https://github.com/transmission/transmission
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/transmission-8.4.13/transmission-8.4.13.tgz
+    version: 8.4.13
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: 4.0.5
@@ -17307,6 +17988,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/transmission-8.4.3/transmission-8.4.3.tgz
     version: 8.4.3
   uptime-kuma:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: 1.23.11
+    created: "2024-03-10T15:23:29.600150323Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: ca4dc08f9a0c4f0d8ce666236d3003adb0361d107c3ffac1545f7936ad67a1ab
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.5.30/uptime-kuma-1.5.30.tgz
+    version: 1.5.30
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -18239,6 +18951,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: version-2.5.201
+    created: "2024-03-10T15:23:29.691690314Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Make documentation a joy to write using Wiki.js's beautiful and intuitive
+      interface!
+    digest: 013cab12089b3ba98e8682e68652eea3976108f351213401a7719ad61f478a2e
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/wikijs
+    icon: https://static.requarks.io/logo/wikijs-butterfly.svg
+    keywords:
+    - wiki
+    - wikijs
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: wikijs
+    sources:
+    - https://hub.docker.com/r/linuxserver/wikijs/
+    - https://github.com/Requarks/wiki
+    urls:
+    - https://github.com/mikevader/charts/releases/download/wikijs-6.4.17/wikijs-6.4.17.tgz
+    version: 6.4.17
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: version-2.5.201
@@ -18690,6 +19432,34 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
+    appVersion: "4.3"
+    created: "2024-03-10T15:23:29.801634762Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Self-hosted YouTube downloader built on Material Design
+    digest: f250d10834e3e330276b762a05007135cf20644f0ce1a55263604f508fe9fcb4
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/youtubedl-material
+    icon: https://i.imgur.com/IKOlr0N.png
+    keywords:
+    - youtubedl-material
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: youtubedl-material
+    sources:
+    - https://github.com/Tzahi12345/YoutubeDL-Material
+    - https://github.com/mikevader/charts/tree/master/charts/youtubedl-material
+    urls:
+    - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.18/youtubedl-material-4.4.18.tgz
+    version: 4.4.18
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
     appVersion: "4.3"
@@ -19135,4 +19905,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-03-10T08:11:50.225430558Z"
+generated: "2024-03-10T15:23:29.804904932Z"
