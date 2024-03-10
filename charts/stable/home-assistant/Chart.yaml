@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: home-assistant
-version: 20.2.0
+version: 20.2.1
 kubeVersion: ">=1.16.0-0"
 description: Home Assistant
 keywords:
@@ -16,7 +16,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.30
+    version: 4.5.31
   - name: postgresql
     version: 14.3.1
     repository: https://charts.bitnami.com/bitnami
