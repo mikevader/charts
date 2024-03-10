@@ -6529,6 +6529,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.30
     apiVersion: v2
+    appVersion: 2.6.1
+    created: "2024-03-10T08:10:05.433339667Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.30
+    description: An Application dashboard and launcher
+    digest: 0b6aa00fa61340ec344a57fae3697a148a7ad69e9bbc48ce64cf53f77b2b4d7a
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/heimdall-8.4.20/heimdall-8.4.20.tgz
+    version: 8.4.20
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.30
+    apiVersion: v2
     appVersion: 2.5.8
     created: "2024-02-04T08:46:19.455623324Z"
     dependencies:
@@ -18998,4 +19027,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-03-09T12:15:42.122317882Z"
+generated: "2024-03-10T08:10:05.434214343Z"
