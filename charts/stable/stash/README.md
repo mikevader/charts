@@ -1,6 +1,6 @@
 # stash
 
-![Version: 3.4.22](https://img.shields.io/badge/Version-3.4.22-informational?style=flat-square) ![AppVersion: v0.25.0](https://img.shields.io/badge/AppVersion-v0.25.0-informational?style=flat-square)
+![Version: 3.4.24](https://img.shields.io/badge/Version-3.4.24-informational?style=flat-square) ![AppVersion: v0.25.1](https://img.shields.io/badge/AppVersion-v0.25.1-informational?style=flat-square)
 
 An organizer for your other movies, written in Go
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.30 |
+| https://mikevader.github.io/charts | common | 4.5.31 |
 
 ## Installing the Chart
 
