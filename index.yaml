@@ -1202,6 +1202,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.31
     apiVersion: v2
+    appVersion: 2.27.0
+    created: "2024-03-22T21:15:32.431954793Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.31
+    description: Server error pages in the docker image
+    digest: 989eeb14b586f6719db9eb3a09f440aa7f197b7a7b5399f32feb9d165022324d
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/error-pages
+    icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
+    keywords:
+    - traefik
+    - error-pages
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: error-pages
+    sources:
+    - https://github.com/tarampampam/error-pages
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/error-pages-1.4.22/error-pages-1.4.22.tgz
+    version: 1.4.22
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.31
+    apiVersion: v2
     appVersion: 2.26.0
     created: "2024-03-10T15:23:27.604452102Z"
     dependencies:
@@ -19933,4 +19962,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-03-15T18:48:47.202615506Z"
+generated: "2024-03-22T21:15:32.432752304Z"
