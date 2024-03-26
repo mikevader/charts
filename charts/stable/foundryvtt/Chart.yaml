@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: foundryvtt
-version: 3.4.26
+version: 3.4.27
 kubeVersion: ">=1.16.0-0"
 description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
 type: application
@@ -13,7 +13,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.31
+    version: 4.5.32
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -26,4 +26,4 @@ appVersion: 11.315.1
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.31
+      description: Upgraded `common` chart dependency to version 4.5.32
