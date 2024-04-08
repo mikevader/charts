@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: sonarr
-version: 16.3.16
+version: 16.3.17
 kubeVersion: ">=1.16.0-0"
 description: Smart PVR for newsgroup and bittorrent users
 type: application
@@ -16,7 +16,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.32
+    version: 4.5.33
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
