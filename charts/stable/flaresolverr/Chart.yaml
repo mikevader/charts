@@ -26,6 +26,6 @@ icon: https://raw.githubusercontent.com/FlareSolverr/FlareSolverr/master/resourc
 appVersion: v1.2.8
 
 annotations:
-  artifacthub.io/added: |-
+  artifacthub.io/changes: |-
     - kind: added
       description: Initial release
