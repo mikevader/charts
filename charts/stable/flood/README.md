@@ -1,6 +1,6 @@
 # flood
 
-![Version: 6.4.13](https://img.shields.io/badge/Version-6.4.13-informational?style=flat-square) ![AppVersion: 4.7.0](https://img.shields.io/badge/AppVersion-4.7.0-informational?style=flat-square)
+![Version: 6.4.14](https://img.shields.io/badge/Version-6.4.14-informational?style=flat-square) ![AppVersion: 4.7.0](https://img.shields.io/badge/AppVersion-4.7.0-informational?style=flat-square)
 
 Flood is a monitoring service for various torrent clients
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.32 |
+| https://mikevader.github.io/charts | common | 4.5.33 |
 
 ## Installing the Chart
 
