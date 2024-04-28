@@ -10,6 +10,7 @@
 | [error-pages](stable/error-pages) | Server error pages in the docker image |
 | [filebrowser](stable/filebrowser) | filebrowser provides a file managing interface within a specified directory |
 | [firefly-iii](stable/firefly-iii) | Firefly III: a personal finances manager |
+| [flaresolverr](stable/flaresolverr) | FlareSolverr is a proxy server to bypass Cloudflare protection |
 | [flood](stable/flood) | Flood is a monitoring service for various torrent clients |
 | [foundryvtt](stable/foundryvtt) | An easy-to-deploy Dockerized Foundry Virtual Tabletop server |
 | [heimdall](stable/heimdall) | An Application dashboard and launcher |
