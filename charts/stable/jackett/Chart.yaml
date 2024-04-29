@@ -2,7 +2,7 @@
 apiVersion: v2
 description: API Support for your favorite torrent trackers
 name: jackett
-version: 11.8.15
+version: 11.8.16
 kubeVersion: ">=1.16.0-0"
 keywords:
   - jackett
@@ -15,7 +15,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.33
+    version: 4.5.34
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -26,4 +26,4 @@ appVersion: v0.21.1468
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.33
+      description: Upgraded `common` chart dependency to version 4.5.34
