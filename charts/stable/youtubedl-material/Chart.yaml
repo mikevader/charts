@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: youtubedl-material
-version: 4.4.20
+version: 4.4.21
 kubeVersion: ">=1.16.0-0"
 description: Self-hosted YouTube downloader built on Material Design
 keywords:
@@ -13,7 +13,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.33
+    version: 4.5.34
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
