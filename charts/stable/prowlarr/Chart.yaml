@@ -22,7 +22,7 @@ maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
 
-# renovate: image=lscr.io/linuxserver/prowlarr
+# renovate: image=linuxserver/prowlarr
 appVersion: 1.11.4
 
 annotations:
