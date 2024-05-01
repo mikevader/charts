@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: uptime-kuma
-version: 1.5.32
+version: 1.5.33
 kubeVersion: ">=1.16.0-0"
 description: A fancy self-hosted monitoring tool for your websites and applications
 type: application
@@ -16,16 +16,16 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.33
+    version: 4.5.34
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
 icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
 
 # renovate: image=louislam/uptime-kuma
-appVersion: 1.23.12
+appVersion: 1.23.13
 
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.33
+      description: Upgraded `common` chart dependency to version 4.5.34
