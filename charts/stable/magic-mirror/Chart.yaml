@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: magic-mirror
-version: 4.4.20
+version: 4.4.21
 kubeVersion: ">=1.16.0-0"
 description: magic-mirror helm package
 keywords:
@@ -13,7 +13,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.34
+    version: 4.5.35
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com

@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: flaresolverr
-version: 1.0.0
+version: 1.0.1
 kubeVersion: ">=1.16.0-0"
 description: FlareSolverr is a proxy server to bypass Cloudflare protection
 type: application
@@ -16,7 +16,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.34
+    version: 4.5.35
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com

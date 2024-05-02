@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: heimdall
-version: 8.4.24
+version: 8.4.25
 kubeVersion: ">=1.16.0-0"
 description: An Application dashboard and launcher
 type: application
@@ -14,7 +14,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.34
+    version: 4.5.35
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
