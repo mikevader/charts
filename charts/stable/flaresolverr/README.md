@@ -1,6 +1,6 @@
 # flaresolverr
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.2.8](https://img.shields.io/badge/AppVersion-v1.2.8-informational?style=flat-square)
+![Version: 1.2.0](https://img.shields.io/badge/Version-1.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.3.17](https://img.shields.io/badge/AppVersion-v3.3.17-informational?style=flat-square)
 
 FlareSolverr is a proxy server to bypass Cloudflare protection
 
@@ -43,7 +43,6 @@ N/A
 | env.TZ | string | `"Europe/Zurich"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"ghcr.io/flaresolverr/flaresolverr"` | image repository |
-| image.tag | string | `"v1.2.8"` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | service | object | See values.yaml | Configures service settings for the chart. |
 

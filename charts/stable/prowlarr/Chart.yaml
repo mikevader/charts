@@ -23,7 +23,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 
 # renovate: image=linuxserver/prowlarr
-appVersion: 1.11.4
+appVersion: 1.16.2
 
 annotations:
   artifacthub.io/changes: |-
