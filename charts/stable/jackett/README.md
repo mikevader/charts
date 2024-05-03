@@ -1,6 +1,6 @@
 # jackett
 
-![Version: 11.8.16](https://img.shields.io/badge/Version-11.8.16-informational?style=flat-square) ![AppVersion: v0.21.1468](https://img.shields.io/badge/AppVersion-v0.21.1468-informational?style=flat-square)
+![Version: 11.8.17](https://img.shields.io/badge/Version-11.8.17-informational?style=flat-square) ![AppVersion: v0.21.1468](https://img.shields.io/badge/AppVersion-v0.21.1468-informational?style=flat-square)
 
 API Support for your favorite torrent trackers
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.34 |
+| https://mikevader.github.io/charts | common | 4.5.35 |
 
 ## Installing the Chart
 
