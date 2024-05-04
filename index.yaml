@@ -6712,6 +6712,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.35
     apiVersion: v2
+    appVersion: 4.8.2
+    created: "2024-05-04T14:57:18.032761438Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.35
+    description: Flood is a monitoring service for various torrent clients
+    digest: 2da649f56c802e93e1367fc89183706251952813d92c6c472a95e2aa98406fac
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/flood
+    icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
+    keywords:
+    - flood
+    - rtorrent
+    - qbittorrent
+    - transmission
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: flood
+    sources:
+    - https://github.com/jesec/flood
+    - https://hub.docker.com/r/jesec/flood
+    urls:
+    - https://github.com/mikevader/charts/releases/download/flood-6.4.18/flood-6.4.18.tgz
+    version: 6.4.18
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.35
+    apiVersion: v2
     appVersion: 4.8.0
     created: "2024-05-03T23:07:49.788166359Z"
     dependencies:
@@ -23505,4 +23536,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-05-04T09:22:17.838534086Z"
+generated: "2024-05-04T14:57:18.035131912Z"
