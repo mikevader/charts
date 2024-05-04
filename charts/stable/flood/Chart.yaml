@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: flood
-version: 6.4.17
+version: 6.4.18
 kubeVersion: ">=1.16.0-0"
 description: Flood is a monitoring service for various torrent clients
 keywords:
@@ -23,7 +23,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
 
 # renovate: image=jesec/flood
-appVersion: 4.8.0
+appVersion: 4.8.2
 
 annotations:
   artifacthub.io/changes: |-
