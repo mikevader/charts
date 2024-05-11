@@ -3141,6 +3141,47 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 15.2.9
+    apiVersion: v2
+    appVersion: version-5.6.14
+    created: "2024-05-11T12:27:25.698036322Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.35
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.0.2
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.2.9
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.19.4
+    description: 'Firefly III: a personal finances manager'
+    digest: 92f066036d8b21e1e139113d29f8d2f74d63c328f6cff2f3a93ce8e976552be0
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii
+    icon: https://www.firefly-iii.org/assets/logo/color.png
+    keywords:
+    - firefly-iii
+    - firefly
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: firefly-iii
+    sources:
+    - https://github.com/firefly-iii/firefly-iii
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/firefly-iii-10.0.0/firefly-iii-10.0.0.tgz
+    version: 10.0.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `redis` chart dependency to version 18.19.4
     apiVersion: v2
     appVersion: version-5.6.14
@@ -23663,4 +23704,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-05-11T12:26:18.415495183Z"
+generated: "2024-05-11T12:27:25.844003827Z"
