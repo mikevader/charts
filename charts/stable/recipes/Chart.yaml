@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: recipes
-version: 6.6.26
+version: 6.6.27
 kubeVersion: ">=1.16.0-0"
 description: Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files.
 keywords:
