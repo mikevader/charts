@@ -22070,6 +22070,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.35
     apiVersion: v2
+    appVersion: 4.0.6
+    created: "2024-06-17T18:27:52.500292343Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.35
+    description: Transmission is a cross-platform BitTorrent client
+    digest: 2745bae1132b4ebeaf0c757c0ac61be6826e59e21320dc380215814820b0f4c5
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/transmission
+    icon: https://raw.githubusercontent.com/transmission/transmission/main/extras/transmission-1920.jpg
+    keywords:
+    - transmission
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: transmission
+    sources:
+    - https://github.com/transmission/transmission
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/transmission-8.4.18/transmission-8.4.18.tgz
+    version: 8.4.18
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.35
+    apiVersion: v2
     appVersion: 4.0.5
     created: "2024-05-03T23:07:51.27018098Z"
     dependencies:
@@ -24791,4 +24821,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-06-15T00:01:30.517927842Z"
+generated: "2024-06-17T18:27:52.501344029Z"
