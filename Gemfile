@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 group :test do
   gem 'm'
-  gem 'minitest', "5.23.1"
+  gem 'minitest', "5.24.0"
   gem 'minitest-implicit-subject'
   gem 'minitest-reporters', "1.6.1"
   gem 'pry', "0.14.2"
