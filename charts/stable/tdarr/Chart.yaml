@@ -23,7 +23,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 
 # renovate: image=haveagitgat/tdarr
-appVersion: 2.20.01
+appVersion: 2.21.01
 
 annotations:
   artifacthub.io/changes: |-
