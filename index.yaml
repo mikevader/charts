@@ -7100,6 +7100,37 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Upgraded `flaresolverr` image to version v3.3.20
+    apiVersion: v2
+    appVersion: v3.3.20
+    created: "2024-06-24T21:17:38.426597046Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.35
+    description: FlareSolverr is a proxy server to bypass Cloudflare protection
+    digest: 6b77ed5185719ba0be1449563497d2443ddc1e854650c63b3f5a106d90a9b2d2
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/flaresolverr
+    icon: https://raw.githubusercontent.com/FlareSolverr/FlareSolverr/master/resources/flaresolverr_logo.svg
+    keywords:
+    - sonarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: flaresolverr
+    sources:
+    - https://github.com/FlareSolverr/FlareSolverr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/flaresolverr-1.2.2/flaresolverr-1.2.2.tgz
+    version: 1.2.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.35
     apiVersion: v2
     appVersion: v3.3.17
@@ -24886,4 +24917,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-06-24T19:06:37.157153595Z"
+generated: "2024-06-24T21:17:38.427572931Z"
