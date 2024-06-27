@@ -45,7 +45,7 @@
     {
       "matchManagers": ["github-actions"],
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchUpdateTypes": ["minor", "patch"]
     },
     ///
@@ -54,7 +54,7 @@
     {
       "matchDatasources": ["docker"],
       "automerge": true,
-      "automergeType": "branch",
+      "automergeType": "pr",
       "matchUpdateTypes": ["minor", "patch"],
       "matchPackagePatterns":[
         "felddy/foundryvtt",
