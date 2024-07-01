@@ -18946,6 +18946,37 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/recipes-6.6.2/recipes-6.6.2.tgz
     version: 6.6.2
+  sabnzbd:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Update image to v3.7.0
+    apiVersion: v2
+    appVersion: v3.7.0
+    created: "2024-07-01T20:33:30.630653275Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.35
+    description: Free and easy binary newsreader
+    digest: 6a27f78bdff47eca64b1c9d98afce57e776d724f42222d8afa52ab8607473f9e
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/sabnzbd
+    icon: https://avatars1.githubusercontent.com/u/960698?s=400&v=4
+    keywords:
+    - sabnzbd
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: sabnzbd
+    sources:
+    - https://sabnzbd.org/
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/sabnzbd-1.0.0/sabnzbd-1.0.0.tgz
+    version: 1.0.0
   shinobi:
   - annotations:
       artifacthub.io/changes: |-
@@ -25261,4 +25292,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-07-01T20:30:16.245910214Z"
+generated: "2024-07-01T20:33:30.631741535Z"
