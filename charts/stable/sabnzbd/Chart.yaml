@@ -1,0 +1,30 @@
+---
+apiVersion: v2
+name: sabnzbd
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+description: Free and easy binary newsreader
+type: application
+keywords:
+  - sabnzbd
+  - usenet
+home: https://github.com/mikevader/charts/tree/master/charts/stable/sabnzbd
+sources:
+  - https://sabnzbd.org/
+  - https://github.com/mikevader/container-images/
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.5.35
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://avatars1.githubusercontent.com/u/960698?s=400&v=4
+
+# renovate: image:ghcr.io/mikevader/sabnzbd
+appVersion: v3.7.0
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Update image to v3.7.0
