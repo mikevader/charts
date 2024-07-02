@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: filebrowser
-version: 1.5.28
+version: 1.5.29
 kubeVersion: ">=1.16.0-0"
 description: filebrowser provides a file managing interface within a specified directory
 type: application
@@ -13,7 +13,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.35
+    version: 4.5.36
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com

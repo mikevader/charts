@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: error-pages
-version: 1.4.26
+version: 1.4.27
 kubeVersion: ">=1.16.0-0"
 description: Server error pages in the docker image
 type: application
@@ -14,7 +14,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.35
+    version: 4.5.36
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com

@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: wikijs
-version: 6.4.21
+version: 6.4.22
 kubeVersion: ">=1.16.0-0"
 description: Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!
 keywords:
@@ -14,7 +14,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.35
+    version: 4.5.36
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
