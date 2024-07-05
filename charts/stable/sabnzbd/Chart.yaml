@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: sabnzbd
-version: 1.0.0
+version: 1.0.1
 kubeVersion: ">=1.16.0-0"
 description: Free and easy binary newsreader
 type: application
@@ -15,7 +15,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.35
+    version: 4.5.36
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
@@ -27,4 +27,4 @@ appVersion: v3.7.0
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Update image to v3.7.0
+      description: Upgraded `common` chart dependency to version 4.5.36
