@@ -1,6 +1,6 @@
 # plex
 
-![Version: 6.6.30](https://img.shields.io/badge/Version-6.6.30-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.40.3.8555-fef15d30c](https://img.shields.io/badge/AppVersion-v1.40.3.8555--fef15d30c-informational?style=flat-square)
+![Version: 6.6.31](https://img.shields.io/badge/Version-6.6.31-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.40.3.8555-fef15d30c](https://img.shields.io/badge/AppVersion-v1.40.3.8555--fef15d30c-informational?style=flat-square)
 
 Plex Media Server
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.35 |
+| https://mikevader.github.io/charts | common | 4.5.36 |
 
 ## Installing the Chart
 
