@@ -50,7 +50,7 @@ jobs:
     needs:
     - lint
     name: Run unit tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -64,15 +64,16 @@ jobs:
 
     - name: Run tests
       run: |
-        helm plugin install https://github.com/vbehar/helm3-unittest --version v1.0.16
+        helm plugin install https://github.com/helm-unittest/helm-unittest.git --version v0.5.1
         cd helper-charts/common-test/
+        helm dep update
         helm unittest -f "tests/**/*_test.yaml" .
 
   install:
     needs:
     - lint
     name: Install charts
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Checkout
       uses: actions/checkout@v3
