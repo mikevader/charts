@@ -66,6 +66,7 @@ jobs:
       run: |
         helm plugin install https://github.com/helm-unittest/helm-unittest.git --version v0.5.1
         cd helper-charts/common-test/
+        helm dep update
         helm unittest -f "tests/**/*_test.yaml" .
 
   install:
