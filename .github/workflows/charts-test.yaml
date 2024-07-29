@@ -130,7 +130,7 @@ jobs:
       - name: Create k3d cluster
         uses: nolar/setup-k3d-k3s@v1
         with:
-          version: v1.26
+          version: v1.28
 
       - name: Remove node taints
         run: |
