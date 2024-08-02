@@ -1,6 +1,6 @@
 # error-pages
 
-![Version: 1.4.27](https://img.shields.io/badge/Version-1.4.27-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 2.27.0](https://img.shields.io/badge/AppVersion-2.27.0-informational?style=flat-square)
+![Version: 1.4.28](https://img.shields.io/badge/Version-1.4.28-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.2.0](https://img.shields.io/badge/AppVersion-3.2.0-informational?style=flat-square)
 
 Server error pages in the docker image
 
@@ -79,7 +79,7 @@ spec:
 |-----|------|---------|-------------|
 | env | object | See below | environment variables. See the [error-pages documentation](https://github.com/tarampampam/error-pages/wiki/HTTP-server) for more info. |
 | env.SHOW_DETAILS | string | `"false"` | Enable details on error pages |
-| env.TEMPLATE_NAME | string | `"l7-dark"` | Set the template |
+| env.TEMPLATE_NAME | string | `"ghost"` | Set the template |
 | env.TZ | string | `"UTC"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"ghcr.io/tarampampam/error-pages"` | image repository |
