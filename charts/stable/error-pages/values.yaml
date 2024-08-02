@@ -19,7 +19,7 @@ env:
   # -- Set the container timezone
   TZ: UTC
   # -- Set the template
-  TEMPLATE_NAME: l7-dark
+  TEMPLATE_NAME: ghost
   # -- Enable details on error pages
   SHOW_DETAILS: "false"
 
