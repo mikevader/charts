@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Label Size
-        uses: pascalgn/size-label-action@v0.5.2
+        uses: pascalgn/size-label-action@v0.5.5
         env:
           GITHUB_TOKEN: "${{ secrets.K8S_AT_HOME_TOKEN }}"
         with:
