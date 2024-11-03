@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: filebrowser
-version: 1.5.29
+version: 1.5.30
 kubeVersion: ">=1.16.0-0"
 description: filebrowser provides a file managing interface within a specified directory
 type: application
@@ -20,7 +20,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
 
 # renovate: image=filebrowser/filebrowser
-appVersion: v2.30.0
+appVersion: v2.31.2
 
 annotations:
   artifacthub.io/changes: |-
