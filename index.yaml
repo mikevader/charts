@@ -1602,6 +1602,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
+    appVersion: 3.3.0
+    created: "2024-11-03T12:58:52.344393116Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: Server error pages in the docker image
+    digest: 638b97e5ec3e1eb666e3a1d639d093738006fb015ba0b08ef5c82cae53ec51ec
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/error-pages
+    icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
+    keywords:
+    - traefik
+    - error-pages
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: error-pages
+    sources:
+    - https://github.com/tarampampam/error-pages
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/error-pages-1.4.29/error-pages-1.4.29.tgz
+    version: 1.4.29
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
     appVersion: 3.2.0
     created: "2024-08-02T13:03:36.010294768Z"
     dependencies:
@@ -2525,6 +2554,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/error-pages-1.2.2/error-pages-1.2.2.tgz
     version: 1.2.2
   filebrowser:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
+    appVersion: v2.31.2
+    created: "2024-11-03T12:58:52.418350545Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: 60c2d753c81877cf24c8537e6ebaa6c2a2dc791d1a2e80dec0b14362a89bb1ff
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-1.5.30/filebrowser-1.5.30.tgz
+    version: 1.5.30
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -16692,6 +16750,38 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
+    appVersion: 1.25.4
+    created: "2024-11-03T12:58:52.495307053Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: Indexer manager/proxy built on the popular arr net base stack to
+      integrate with your various PVR apps.
+    digest: 6e3dc48c032545b4cc439a020494eb9c202fd0d1bbd4e1d47c88aa9a9ba55210
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+    keywords:
+    - prowlarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/prowlarr-5.0.21/prowlarr-5.0.21.tgz
+    version: 5.0.21
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
     appVersion: 1.21.2
     created: "2024-08-02T20:16:09.63621862Z"
     dependencies:
@@ -20947,6 +21037,34 @@ entries:
         - kind: changed
           description: Upgraded image to version 0.27.0
     apiVersion: v2
+    appVersion: v0.27.2
+    created: "2024-11-03T12:58:52.578478844Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: An organizer for your other movies, written in Go
+    digest: e31278ba8ae89488fbd414804898cdd9007125b7097537416ec74871300a880c
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/stash
+    icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
+    keywords:
+    - porn
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: stash
+    sources:
+    - https://github.com/stashapp/stash
+    - https://hub.docker.com/r/stashapp/stash
+    urls:
+    - https://github.com/mikevader/charts/releases/download/stash-3.5.1/stash-3.5.1.tgz
+    version: 3.5.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded image to version 0.27.0
+    apiVersion: v2
     appVersion: v0.27.0
     created: "2024-09-27T22:00:23.57297385Z"
     dependencies:
@@ -24129,6 +24247,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
+    appVersion: 1.23.15
+    created: "2024-11-03T12:58:52.64606997Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 1e6bfeb900e8ec90f89f6db25570d71513c3c0dea2a615078f008df4fb69db61
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.5.36/uptime-kuma-1.5.36.tgz
+    version: 1.5.36
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
     appVersion: 1.23.13
     created: "2024-07-05T08:36:14.20710999Z"
     dependencies:
@@ -26486,4 +26635,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-11-01T08:09:13.401028786Z"
+generated: "2024-11-03T12:58:52.647689854Z"
