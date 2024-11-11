@@ -62,7 +62,7 @@ jobs:
           ref: ${{ inputs.checkoutCommit }}
 
       - name: Install Kubernetes tools
-        uses: yokawasa/action-setup-kube-tools@v0.11.1
+        uses: yokawasa/action-setup-kube-tools@v0.11.2
         with:
           setup-tools: |
             helmv3
@@ -114,7 +114,7 @@ jobs:
           ref: ${{ inputs.checkoutCommit }}
 
       - name: Install Kubernetes tools
-        uses: yokawasa/action-setup-kube-tools@v0.11.1
+        uses: yokawasa/action-setup-kube-tools@v0.11.2
         with:
           setup-tools: |
             helmv3
