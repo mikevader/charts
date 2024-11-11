@@ -6,6 +6,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
+    appVersion: v0.107.54
+    created: "2024-11-11T23:01:53.232978557Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: DNS proxy as ad-blocker for local network
+    digest: fda3f4e53d8d107edcfce26a44fa01cb436e1e894c7b89d27b028145b9e63262
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/adguard-home
+    icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+    keywords:
+    - adguard-home
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: adguard-home
+    sources:
+    - https://github.com/AdguardTeam/AdGuardHome
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/adguard-home-5.5.40/adguard-home-5.5.40.tgz
+    version: 5.5.40
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
     appVersion: v0.107.53
     created: "2024-11-01T06:11:29.153173123Z"
     dependencies:
@@ -9055,6 +9085,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/foundryvtt-3.4.2/foundryvtt-3.4.2.tgz
     version: 3.4.2
   heimdall:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
+    appVersion: 2.6.3
+    created: "2024-11-11T23:01:53.345850029Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: An Application dashboard and launcher
+    digest: 0efb932f59a9ef772c529df56232870629dc411f3cbdb5547eb5686e6e5bb076
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/heimdall-8.4.27/heimdall-8.4.27.tgz
+    version: 8.4.27
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -19012,6 +19071,37 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
     appVersion: 1.0.5.2
+    created: "2024-11-11T23:01:53.475108036Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: Recipes is a Django application to manage, tag and search recipes
+      using either built in models or external storage providers hosting PDF's, Images
+      or other files.
+    digest: 879233cbfe71e0646e31f3300b755a18e22a9003cfcc26fb7a1e81f07369cb0d
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/recipes
+    icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - cooking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: recipes
+    sources:
+    - https://github.com/vabene1111/recipes
+    - https://hub.docker.com/r/vabene1111/recipes
+    urls:
+    - https://github.com/mikevader/charts/releases/download/recipes-6.6.30/recipes-6.6.30.tgz
+    version: 6.6.30
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
+    appVersion: 1.0.5.2
     created: "2024-09-22T20:15:10.637872486Z"
     dependencies:
     - name: common
@@ -26635,4 +26725,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-11-03T12:58:52.647689854Z"
+generated: "2024-11-11T23:01:53.477080149Z"
