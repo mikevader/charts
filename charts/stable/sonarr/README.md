@@ -1,6 +1,6 @@
 # sonarr
 
-![Version: 16.3.20](https://img.shields.io/badge/Version-16.3.20-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.0.10.1567](https://img.shields.io/badge/AppVersion-v3.0.10.1567-informational?style=flat-square)
+![Version: 16.3.21](https://img.shields.io/badge/Version-16.3.21-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.0.10.1567](https://img.shields.io/badge/AppVersion-v3.0.10.1567-informational?style=flat-square)
 
 Smart PVR for newsgroup and bittorrent users
 
@@ -51,7 +51,7 @@ N/A
 | metrics.exporter.env.unknownQueueItems | bool | `false` | Set to true to enable gathering unknown queue items |
 | metrics.exporter.image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | metrics.exporter.image.repository | string | `"ghcr.io/onedr0p/exportarr"` | image repository |
-| metrics.exporter.image.tag | string | `"v1.6.0"` | image tag |
+| metrics.exporter.image.tag | string | `"v2.0.1"` | image tag |
 | metrics.prometheusRule | object | See values.yaml | Enable and configure Prometheus Rules for the chart under this key. |
 | metrics.prometheusRule.rules | list | See prometheusrules.yaml | Configure additionial rules for the chart under this key. |
 | metrics.serviceMonitor.interval | string | `"3m"` |  |
