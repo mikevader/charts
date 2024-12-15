@@ -7839,6 +7839,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
+    appVersion: 4.8.5
+    created: "2024-12-15T13:00:31.08223957Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: Flood is a monitoring service for various torrent clients
+    digest: 20632956489c5e8a507db92ac159a95d7f87f526480bb3e377ee59f8791a6f6e
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/flood
+    icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
+    keywords:
+    - flood
+    - rtorrent
+    - qbittorrent
+    - transmission
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: flood
+    sources:
+    - https://github.com/jesec/flood
+    - https://hub.docker.com/r/jesec/flood
+    urls:
+    - https://github.com/mikevader/charts/releases/download/flood-6.4.21/flood-6.4.21.tgz
+    version: 6.4.21
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
     appVersion: 4.8.4
     created: "2024-11-01T06:11:29.235795836Z"
     dependencies:
@@ -19467,6 +19498,37 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
     appVersion: 1.0.5.2
+    created: "2024-12-15T13:00:31.241097893Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: Recipes is a Django application to manage, tag and search recipes
+      using either built in models or external storage providers hosting PDF's, Images
+      or other files.
+    digest: 9067874163953c7960fa6dba0ee1aaddafcaade63e10fcd0dc9bca6794f7aacc
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/recipes
+    icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - cooking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: recipes
+    sources:
+    - https://github.com/vabene1111/recipes
+    - https://hub.docker.com/r/vabene1111/recipes
+    urls:
+    - https://github.com/mikevader/charts/releases/download/recipes-6.6.31/recipes-6.6.31.tgz
+    version: 6.6.31
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
+    appVersion: 1.0.5.2
     created: "2024-11-11T23:01:53.475108036Z"
     dependencies:
     - name: common
@@ -27181,4 +27243,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-12-15T12:59:53.676965178Z"
+generated: "2024-12-15T13:00:31.2422455Z"
