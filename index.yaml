@@ -1632,6 +1632,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
+    appVersion: 3.3.1
+    created: "2024-12-15T12:59:53.483933299Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: Server error pages in the docker image
+    digest: 32d327b425c53b1797d6243ccbaed306312a38c82719b2dbd23af3d51946af90
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/error-pages
+    icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
+    keywords:
+    - traefik
+    - error-pages
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: error-pages
+    sources:
+    - https://github.com/tarampampam/error-pages
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/error-pages-1.4.30/error-pages-1.4.30.tgz
+    version: 1.4.30
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
     appVersion: 3.3.0
     created: "2024-11-03T12:58:52.344393116Z"
     dependencies:
@@ -18661,6 +18690,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.5.36
     apiVersion: v2
+    appVersion: v5.15.1.9463
+    created: "2024-12-15T12:59:53.593521267Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: ad9cc2a31f7cd79aaac0b7668a7fdd457429d67c00aebcc76b20dec7ab663d01
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/radarr-16.4.12/radarr-16.4.12.tgz
+    version: 16.4.12
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
     appVersion: v5.14.0.9383
     created: "2024-11-13T15:37:43.529002647Z"
     dependencies:
@@ -22386,6 +22446,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/stash-3.4.2/stash-3.4.2.tgz
     version: 3.4.2
   tautulli:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.36
+    apiVersion: v2
+    appVersion: v2.15.0
+    created: "2024-12-15T12:59:53.675617761Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.5.36
+    description: A Python based monitoring and tracking tool for Plex Media Server
+    digest: 27da88938eb97596365b497db9f1a46f5b1af086b2125ee4c9ab138c1b96e319
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tautulli
+    icon: https://github.com/Tautulli/Tautulli/blob/master/data/interfaces/default/images/logo.png?raw=true
+    keywords:
+    - tautulli
+    - plex
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tautulli
+    sources:
+    - https://github.com/Tautulli/Tautulli
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tautulli-11.5.26/tautulli-11.5.26.tgz
+    version: 11.5.26
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -27092,4 +27181,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2024-12-15T12:58:45.321168702Z"
+generated: "2024-12-15T12:59:53.676965178Z"
