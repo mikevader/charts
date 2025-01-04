@@ -35,6 +35,7 @@ tests:
           path: metadata.annotations
           value:
             helm.sh/resource-policy: keep
+            argocd.argoproj.io/sync-options: Delete=false
       - documentIndex: *PersistentVolumeClaimDocument
         equal:
           path: metadata.labels

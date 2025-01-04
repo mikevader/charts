@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: common
-version: 4.5.36
+version: 4.6.0
 kubeVersion: ">=1.16.0-0"
 description: Function library for mikevader charts
 type: library
@@ -14,5 +14,9 @@ maintainers:
 
 annotations:
   artifacthub.io/changes: |-
+    - kind: added
+      description: add volume prune flags for argo cd
     - kind: changed
-      description: improve tests
+      description: update promtail
+    - kind: changed
+      description: update gluetun
