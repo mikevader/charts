@@ -26,6 +26,7 @@ metadata:
   annotations:
     {{- if $values.retain }}
     "helm.sh/resource-policy": keep
+    "argocd.argoproj.io/sync-options": Delete=false
     {{- end }}
     {{- with (merge ($values.annotations | default dict) (include "common.annotations" $ | fromYaml)) }}
     {{- toYaml . | nindent 4 }}
