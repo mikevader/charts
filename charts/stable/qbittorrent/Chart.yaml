@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: qbittorrent
-version: 13.5.31
+version: 13.6.0
 kubeVersion: ">=1.16.0-0"
 description: qBittorrent is a cross-platform free and open-source BitTorrent client
 keywords:
@@ -14,7 +14,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.36
+    version: 4.6.0
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com

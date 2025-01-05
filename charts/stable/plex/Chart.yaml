@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: plex
-version: 6.6.36
+version: 6.7.0
 kubeVersion: ">=1.16.0-0"
 description: Plex Media Server
 type: application
@@ -15,7 +15,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.36
+    version: 4.6.0
 maintainers:
   - name: mikevader
     email: mikevader@users.noreply.github.com
