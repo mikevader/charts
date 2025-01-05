@@ -27,4 +27,4 @@ appVersion: v1.41.3.9314-a0bfb8370
 annotations:
   artifacthub.io/changes: |- #added, changed, deprecated, removed, fixed and security
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.5.36
+      description: Upgraded `common` chart dependency to version 4.6.0
