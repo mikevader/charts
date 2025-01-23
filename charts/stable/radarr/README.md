@@ -1,6 +1,6 @@
 # radarr
 
-![Version: 16.4.10](https://img.shields.io/badge/Version-16.4.10-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v5.14.0.9383](https://img.shields.io/badge/AppVersion-v5.14.0.9383-informational?style=flat-square)
+![Version: 16.5.0](https://img.shields.io/badge/Version-16.5.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v5.16.3.9541](https://img.shields.io/badge/AppVersion-v5.16.3.9541-informational?style=flat-square)
 
 A fork of Sonarr to work with movies à la Couchpotato
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.36 |
+| https://mikevader.github.io/charts | common | 4.6.0 |
 
 ## Installing the Chart
 
@@ -51,7 +51,7 @@ N/A
 | metrics.exporter.env.unknownQueueItems | bool | `false` | Set to true to enable gathering unknown queue items |
 | metrics.exporter.image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | metrics.exporter.image.repository | string | `"ghcr.io/onedr0p/exportarr"` | image repository |
-| metrics.exporter.image.tag | string | `"v1.6.0"` | image tag |
+| metrics.exporter.image.tag | string | `"v2.0.1"` | image tag |
 | metrics.prometheusRule | object | See values.yaml | Enable and configure Prometheus Rules for the chart under this key. |
 | metrics.prometheusRule.rules | list | See prometheusrules.yaml | Configure additionial rules for the chart under this key. |
 | metrics.serviceMonitor.interval | string | `"3m"` |  |

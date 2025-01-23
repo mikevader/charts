@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 13.5.31](https://img.shields.io/badge/Version-13.5.31-informational?style=flat-square) ![AppVersion: v4.6.7](https://img.shields.io/badge/AppVersion-v4.6.7-informational?style=flat-square)
+![Version: 13.6.0](https://img.shields.io/badge/Version-13.6.0-informational?style=flat-square) ![AppVersion: v4.6.7](https://img.shields.io/badge/AppVersion-v4.6.7-informational?style=flat-square)
 
 qBittorrent is a cross-platform free and open-source BitTorrent client
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.5.36 |
+| https://mikevader.github.io/charts | common | 4.6.0 |
 
 ## Installing the Chart
 
