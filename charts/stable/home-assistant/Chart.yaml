@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: home-assistant
-version: 23.1.6
+version: 23.2.0
 kubeVersion: ">=1.16.0-0"
 description: Home Assistant
 keywords:
@@ -16,7 +16,7 @@ sources:
 dependencies:
   - name: common
     repository: https://mikevader.github.io/charts
-    version: 4.5.36
+    version: 4.6.0
   - name: postgresql
     version: 15.5.38
     repository: https://charts.bitnami.com/bitnami
@@ -40,6 +40,4 @@ appVersion: 2024.6.4
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `postgresql` chart dependency to version 15.5.38
-    - kind: changed
-      description: Upgraded `influxdb` chart dependency to version 6.3.23
+      description: Upgraded `common` chart dependency to version 4.6.0
