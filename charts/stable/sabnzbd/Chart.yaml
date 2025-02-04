@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: sabnzbd
-version: 1.1.0
+version: 2.0.0
 kubeVersion: ">=1.16.0-0"
 description: Free and easy binary newsreader
 type: application
@@ -21,10 +21,10 @@ maintainers:
     email: mikevader@users.noreply.github.com
 icon: https://avatars1.githubusercontent.com/u/960698?s=400&v=4
 
-# renovate: image:ghcr.io/mikevader/sabnzbd
-appVersion: v3.7.0
+# renovate: image:ghcr.io/hotio/sabnzbd
+appVersion: release-4.4.1
 
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.6.0
+      description: Migrate to hotio image

@@ -7,7 +7,7 @@
 
 image:
   # -- image repository
-  repository: ghcr.io/mikevader/sabnzbd
+  repository: ghcr.io/hotio/sabnzbd
   # -- image tag
   tag:
   # -- image pull policy
@@ -39,10 +39,6 @@ ingress:
 persistence:
   config:
     enabled: false
-
-  media:
-    enabled: false
-    mountPath: /media
 
   downloads:
     enabled: false
