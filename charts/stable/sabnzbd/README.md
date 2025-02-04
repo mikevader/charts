@@ -1,6 +1,6 @@
 # sabnzbd
 
-![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v3.7.0](https://img.shields.io/badge/AppVersion-v3.7.0-informational?style=flat-square)
+![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: release-4.4.1](https://img.shields.io/badge/AppVersion-release--4.4.1-informational?style=flat-square)
 
 Free and easy binary newsreader
 
@@ -44,7 +44,7 @@ To address this issue, you can set an environment variable named `HOST_WHITELIST
 | env | object | See below | environment variables. |
 | env.TZ | string | `"Europe/Zurich"` | Set the container timezone |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"ghcr.io/mikevader/sabnzbd"` | image repository |
+| image.repository | string | `"ghcr.io/hotio/sabnzbd"` | image repository |
 | image.tag | string | `nil` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | persistence | object | See values.yaml | Configure persistence settings for the chart under this key. |
