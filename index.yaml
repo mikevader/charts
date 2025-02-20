@@ -2731,6 +2731,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: v2.32.0
+    created: "2025-02-20T20:47:29.256398451Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: 8e2f78b11eba0bc5fe835eeb14871d0db5cf4076335ff0b47638d22fb7ddd490
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-1.6.1/filebrowser-1.6.1.tgz
+    version: 1.6.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: v2.31.2
     created: "2025-01-23T09:06:09.693634727Z"
     dependencies:
@@ -28433,4 +28462,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-02-04T23:52:24.762403657Z"
+generated: "2025-02-20T20:47:29.257585245Z"
