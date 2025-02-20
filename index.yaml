@@ -6,6 +6,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: v0.107.56
+    created: "2025-02-20T20:48:31.262425993Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: DNS proxy as ad-blocker for local network
+    digest: 41ca2fcbe7eff77788fdbd4ecde5d87de40e08a450aa6f0b9616928f1e8d68a9
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/adguard-home
+    icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+    keywords:
+    - adguard-home
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: adguard-home
+    sources:
+    - https://github.com/AdguardTeam/AdGuardHome
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/adguard-home-5.6.1/adguard-home-5.6.1.tgz
+    version: 5.6.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: v0.107.55
     created: "2025-01-23T09:06:09.528621146Z"
     dependencies:
@@ -8077,6 +8107,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/flaresolverr-1.0.0/flaresolverr-1.0.0.tgz
     version: 1.0.0
   flood:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: 4.9.3
+    created: "2025-02-20T20:48:31.376802221Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Flood is a monitoring service for various torrent clients
+    digest: a4124a2214d6a4529b7ebdbfc4f0514b0697f8aa69562fdea94a44fb765499c2
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/flood
+    icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
+    keywords:
+    - flood
+    - rtorrent
+    - qbittorrent
+    - transmission
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: flood
+    sources:
+    - https://github.com/jesec/flood
+    - https://hub.docker.com/r/jesec/flood
+    urls:
+    - https://github.com/mikevader/charts/releases/download/flood-6.5.1/flood-6.5.1.tgz
+    version: 6.5.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -28462,4 +28523,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-02-20T20:47:29.257585245Z"
+generated: "2025-02-20T20:48:31.379279526Z"
