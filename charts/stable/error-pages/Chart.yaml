@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: error-pages
-version: 1.5.0
+version: 1.5.1
 kubeVersion: ">=1.16.0-0"
 description: Server error pages in the docker image
 type: application
@@ -21,7 +21,7 @@ maintainers:
 icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
 
 # renovate: image=tarampampam/error-pages
-appVersion: 3.3.1
+appVersion: 3.3.2
 
 annotations:
   artifacthub.io/changes: |-
