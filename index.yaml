@@ -16455,6 +16455,40 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: 1.34.0
+    created: "2025-04-12T09:15:20.861674Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Overseerr is a free and open source software application for managing
+      requests for your media library. It integrates with your existing services such
+      as Sonarr, Radarr and Plex!
+    digest: bd00269735eb1d303a9d0df1aff5f53bcbd81fc57ff051d10b7201e3be678d65
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/overseerr
+    icon: https://i.imgur.com/TMoEG7g.png
+    keywords:
+    - overseerr
+    - plex
+    - sonarr
+    - radarr
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: overseerr
+    sources:
+    - https://github.com/sct/overseerr
+    - https://hub.docker.com/r/sctx/overseerr
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/overseerr-1.1.1/overseerr-1.1.1.tgz
+    version: 1.1.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: 1.33.2
     created: "2025-01-23T09:06:10.526261067Z"
     dependencies:
@@ -17998,6 +18032,38 @@ entries:
     - https://github.com/mikevader/charts/releases/download/plex-6.5.0/plex-6.5.0.tgz
     version: 6.5.0
   prowlarr:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: 1.33.3
+    created: "2025-04-12T09:15:20.946412519Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Indexer manager/proxy built on the popular arr net base stack to
+      integrate with your various PVR apps.
+    digest: 5a232d2a4c5d5cb0eb8f309e51000dfa892e92a4cbc4bc07ec04075ca0cfcf17
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+    keywords:
+    - prowlarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/prowlarr-5.1.3/prowlarr-5.1.3.tgz
+    version: 5.1.3
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -19763,6 +19829,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/qbittorrent-13.5.2/qbittorrent-13.5.2.tgz
     version: 13.5.2
   radarr:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: v5.21.1.9799
+    created: "2025-04-12T09:15:21.01772502Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: 2536db751b2721fdbc4dbd67daa43c8c54a48ab26d7ad244eda81adaacca3393
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/radarr-16.5.4/radarr-16.5.4.tgz
+    version: 16.5.4
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -28983,4 +29080,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-03-25T22:10:41.156347501Z"
+generated: "2025-04-12T09:15:21.112204072Z"
