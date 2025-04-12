@@ -21,7 +21,7 @@ maintainers:
     email: mikevader@users.noreply.github.com
 icon: https://avatars1.githubusercontent.com/u/960698?s=400&v=4
 
-# renovate: image:ghcr.io/hotio/sabnzbd
+# renovate: image=ghcr.io/hotio/sabnzbd
 appVersion: release-4.4.1
 
 annotations:
