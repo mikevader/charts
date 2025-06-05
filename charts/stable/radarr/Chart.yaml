@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: radarr
-version: 16.5.4
+version: 16.5.5
 kubeVersion: ">=1.16.0-0"
 description: A fork of Sonarr to work with movies à la Couchpotato
 type: application
@@ -23,7 +23,7 @@ maintainers:
 icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
 
 # renovate: image=ghcr.io/mikevader/radarr
-appVersion: v5.21.1.9799
+appVersion: v5.25.0.10024
 
 annotations:
   artifacthub.io/changes: |-
