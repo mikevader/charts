@@ -19894,6 +19894,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: v5.25.0.10024
+    created: "2025-06-05T13:03:45.226168089Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: 32d592dbcafb9099389ce072b1370d1078b32ce05a4709720e76fc5fd8821653
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/radarr-16.5.5/radarr-16.5.5.tgz
+    version: 16.5.5
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: v5.21.1.9799
     created: "2025-04-12T09:15:21.01772502Z"
     dependencies:
@@ -29169,4 +29200,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-06-05T12:04:12.079773923Z"
+generated: "2025-06-05T13:03:45.227290472Z"
