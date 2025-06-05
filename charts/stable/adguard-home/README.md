@@ -1,6 +1,6 @@
 # adguard-home
 
-![Version: 5.6.2](https://img.shields.io/badge/Version-5.6.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.107.57](https://img.shields.io/badge/AppVersion-v0.107.57-informational?style=flat-square)
+![Version: 5.6.3](https://img.shields.io/badge/Version-5.6.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v0.107.62](https://img.shields.io/badge/AppVersion-v0.107.62-informational?style=flat-square)
 
 DNS proxy as ad-blocker for local network
 
