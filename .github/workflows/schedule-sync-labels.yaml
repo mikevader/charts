@@ -13,7 +13,7 @@ jobs:
     if: github.repository == 'mikevader/charts'
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           token: ${{ secrets.K8S_AT_HOME_TOKEN }}
 
