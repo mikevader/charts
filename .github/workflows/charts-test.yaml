@@ -130,7 +130,8 @@ jobs:
       - name: Create k3d cluster
         uses: nolar/setup-k3d-k3s@v1
         with:
-          version: v1.30
+          version: v1.31
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Remove node taints
         run: |
