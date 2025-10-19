@@ -6,6 +6,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: v0.107.67
+    created: "2025-10-19T14:09:13.541284127Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: DNS proxy as ad-blocker for local network
+    digest: 7dcfd904e7dcfa87dede2ff4bf59281b05f93bead89867469ebbab6399087a42
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/adguard-home
+    icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+    keywords:
+    - adguard-home
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: adguard-home
+    sources:
+    - https://github.com/AdguardTeam/AdGuardHome
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/adguard-home-5.6.4/adguard-home-5.6.4.tgz
+    version: 5.6.4
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: v0.107.62
     created: "2025-06-05T15:01:00.026771042Z"
     dependencies:
@@ -17031,6 +17061,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: v1.42.2.10156-f737b826c
+    created: "2025-10-19T14:09:13.653587089Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Plex Media Server
+    digest: 0d26905454ca516f55bfa98c456e0a844acadf16f7766334ebd01e4cd8e747ec
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: plex
+    sources:
+    - https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/plex-6.7.5/plex-6.7.5.tgz
+    version: 6.7.5
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: v1.41.7.9823-59f304c16
     created: "2025-06-05T12:03:41.539070098Z"
     dependencies:
@@ -20054,6 +20114,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/qbittorrent-13.5.2/qbittorrent-13.5.2.tgz
     version: 13.5.2
   radarr:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: v5.28.0.10274
+    created: "2025-10-19T14:09:13.775866456Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: A fork of Sonarr to work with movies à la Couchpotato
+    digest: b708a5955abb1c8bbc12f6968f2f943eff58bc555f175a40c696ea34a9e34075
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/radarr
+    icon: https://github.com/Radarr/Radarr/blob/aphrodite/Logo/512.png?raw=true
+    keywords:
+    - radarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: radarr
+    sources:
+    - https://github.com/Radarr/Radarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/radarr-16.5.6/radarr-16.5.6.tgz
+    version: 16.5.6
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -24327,6 +24418,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/stash-3.4.2/stash-3.4.2.tgz
     version: 3.4.2
   tautulli:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: v2.16.0
+    created: "2025-10-19T14:09:13.890730252Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: A Python based monitoring and tracking tool for Plex Media Server
+    digest: 2b3101bcde93baca7f83de85207ed46ff85a810339f98a5039455be80091dcc3
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tautulli
+    icon: https://github.com/Tautulli/Tautulli/blob/master/data/interfaces/default/images/logo.png?raw=true
+    keywords:
+    - tautulli
+    - plex
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tautulli
+    sources:
+    - https://github.com/Tautulli/Tautulli
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tautulli-11.6.3/tautulli-11.6.3.tgz
+    version: 11.6.3
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -29365,4 +29485,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-10-19T13:31:44.721175268Z"
+generated: "2025-10-19T14:09:13.892599294Z"
