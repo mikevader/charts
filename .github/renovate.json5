@@ -1,23 +1,23 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    "local>mikevader/renovate-config"
+    'local>mikevader/renovate-config',
   ],
   prConcurrentLimit: 5,
   'helm-values': {
     enabled: true,
   },
   helmv3: {
-    fileMatch: [
-      'charts/.+/Chart\\.yaml$',
+    managerFilePatterns: [
+      '/charts/.+/Chart\\.yaml$/',
     ],
   },
   customManagers: [
     {
       customType: 'regex',
       datasourceTemplate: 'docker',
-      fileMatch: [
-        'charts/.+/Chart\\.yaml$',
+      managerFilePatterns: [
+        '/charts/.+/Chart\\.yaml$/',
       ],
       matchStrings: [
         '#\\s?renovate: image=(?<depName>.*?)\\s?appVersion:\\s?\\"?(?<currentValue>[\\w+\\.\\-]*)\\"?',
