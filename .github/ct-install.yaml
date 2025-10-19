@@ -2,7 +2,6 @@ remote: origin
 target-branch: master
 helm-extra-args: --timeout 600s
 chart-dirs:
-  - charts/library
   - charts/stable
 excluded-charts:
   - charts/stable/foundryvtt # complex to download foundryvtt binaries (credentials required)
