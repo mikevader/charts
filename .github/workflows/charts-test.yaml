@@ -42,7 +42,11 @@ jobs:
           echo "charts=${OUTPUT_JSON}" >> "$GITHUB_OUTPUT"
           if [[ $(echo ${OUTPUT_JSON} | jq -c '. | length') -gt 0 ]]; then
             echo "detected=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "detected=false" >> "$GITHUB_OUTPUT"
           fi
+          echo "Detected changed charts: ${OUTPUT_JSON}"
+          
 
   unittest:
     needs:
