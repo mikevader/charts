@@ -20,7 +20,7 @@
         '/charts/.+/Chart\\.yaml$/',
       ],
       matchStrings: [
-        '# renovate: image=(?<depName>.*?)(?: versioning=(?<versioning>.*?))?\\s?appVersion:\\s?\\"?(?<currentValue>[\\w+\\.\\-]*)\\"?',
+        '^# renovate: image=(?<depName>.*?)(?: versioning=(?<versioning>.*?))?\\s?appVersion:\\s?\\"?(?<currentValue>[\\w+\\.\\-]*?)\\"?$',
       ],
       versioningTemplate: '{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}'
     },
