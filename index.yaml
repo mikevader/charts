@@ -21328,6 +21328,37 @@ entries:
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
     appVersion: 1.0.5.2
+    created: "2025-10-29T08:35:29.900291047Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Recipes is a Django application to manage, tag and search recipes
+      using either built in models or external storage providers hosting PDF's, Images
+      or other files.
+    digest: 6f930162bd6570b4b09dafd899cff058a713d4f68ec10d51da9a6c48bca21e17
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/recipes
+    icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - cooking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: recipes
+    sources:
+    - https://github.com/vabene1111/recipes
+    - https://hub.docker.com/r/vabene1111/recipes
+    urls:
+    - https://github.com/mikevader/charts/releases/download/recipes-6.7.2/recipes-6.7.2.tgz
+    version: 6.7.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: 1.0.5.2
     created: "2025-03-02T15:19:58.897309484Z"
     dependencies:
     - name: common
@@ -29728,4 +29759,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-10-29T08:33:45.867894321Z"
+generated: "2025-10-29T08:35:29.901881233Z"
