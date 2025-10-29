@@ -18,7 +18,7 @@ sidecar:
     # -- nginx sidecar image repository
     repository: nginx
     # -- nginx sidecar image tag
-    tag: 1.27.4
+    tag: 1.29.3
     # -- nginx sidecar image pull policy
     pullPolicy: IfNotPresent
   config:
