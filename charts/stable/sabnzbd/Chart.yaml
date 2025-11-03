@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: sabnzbd
-version: 2.0.0
+version: 2.1.0
 kubeVersion: ">=1.16.0-0"
 description: Free and easy binary newsreader
 type: application
@@ -22,9 +22,9 @@ maintainers:
 icon: https://avatars1.githubusercontent.com/u/960698?s=400&v=4
 
 # renovate: datasource=docker packageName=ghcr.io/hotio/sabnzbd versioning=loose
-appVersion: release-4.4.1
+appVersion: release-4.5.5
 
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Migrate to hotio image
+      description: Update to 4.5.5
