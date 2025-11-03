@@ -22432,6 +22432,36 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: Update to 4.5.5
+    apiVersion: v2
+    appVersion: release-4.5.5
+    created: "2025-11-03T18:57:38.56530559Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Free and easy binary newsreader
+    digest: 25029a3a19336764c96de3d4d9038f47cf534a2dc3a1f4cf9fb9147790bd296e
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/sabnzbd
+    icon: https://avatars1.githubusercontent.com/u/960698?s=400&v=4
+    keywords:
+    - sabnzbd
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: sabnzbd
+    sources:
+    - https://sabnzbd.org/
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/sabnzbd-2.1.0/sabnzbd-2.1.0.tgz
+    version: 2.1.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Migrate to hotio image
     apiVersion: v2
     appVersion: release-4.4.1
@@ -29873,4 +29903,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-10-31T12:08:24.193012706Z"
+generated: "2025-11-03T18:57:38.566556681Z"
