@@ -1,6 +1,6 @@
 # sabnzbd
 
-![Version: 2.0.0](https://img.shields.io/badge/Version-2.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: release-4.4.1](https://img.shields.io/badge/AppVersion-release--4.4.1-informational?style=flat-square)
+![Version: 2.1.0](https://img.shields.io/badge/Version-2.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: release-4.5.5](https://img.shields.io/badge/AppVersion-release--4.5.5-informational?style=flat-square)
 
 Free and easy binary newsreader
 
