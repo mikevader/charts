@@ -32,7 +32,7 @@ jobs:
           python-version: 3.13.0
 
       - name: Set up chart-testing
-        uses: helm/chart-testing-action@v2.7.0
+        uses: helm/chart-testing-action@v2.8.0
 
       - name: Run chart-testing (list-changed)
         id: list-changed
@@ -96,7 +96,7 @@ jobs:
           python-version: 3.13.0
 
       - name: Set up chart-testing
-        uses: helm/chart-testing-action@v2.7.0
+        uses: helm/chart-testing-action@v2.8.0
 
       - name: Create k3d cluster
         uses: nolar/setup-k3d-k3s@v1
