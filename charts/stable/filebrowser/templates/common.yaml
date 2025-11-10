@@ -1,8 +1,8 @@
 {{/* Append the configMap volume to the volumes */}}
 {{- define "filebrowser.configVolume" -}}
 enabled: "true"
-mountPath: "/.filebrowser.json"
-subPath: ".filebrowser.json"
+mountPath: "/config/settings.json"
+subPath: "settings.json"
 type: "custom"
 volumeSpec:
   configMap:
