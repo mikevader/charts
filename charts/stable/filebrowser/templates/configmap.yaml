@@ -7,5 +7,5 @@ metadata:
   labels:
     {{- include "common.labels" . | nindent 4 }}
 data:
-  .filebrowser.json: |
+  settings.json: |
     {{- tpl .Values.config $ | nindent 4 }}
