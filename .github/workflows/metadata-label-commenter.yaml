@@ -21,7 +21,7 @@ jobs:
     name: Label commenter
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           token: ${{ secrets.K8S_AT_HOME_TOKEN }}
           ref: master
