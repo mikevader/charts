@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: stash
-version: 3.7.0
+version: 3.7.1
 kubeVersion: ">=1.16.0-0"
 description: An organizer for your other movies, written in Go
 keywords:
@@ -20,7 +20,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
 
 # renovate: image=stashapp/stash
-appVersion: v0.29.1
+appVersion: v0.29.3
 
 annotations:
   artifacthub.io/changes: |-
