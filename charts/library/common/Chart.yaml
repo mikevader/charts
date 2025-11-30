@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: common
-version: 4.6.0
+version: 4.6.1
 kubeVersion: ">=1.16.0-0"
 description: Function library for mikevader charts
 type: library
