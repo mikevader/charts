@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           persist-credentials: false
           fetch-depth: 0
@@ -47,7 +47,7 @@ jobs:
       PAT_TOKEN: ${{ secrets.K8S_AT_HOME_TOKEN }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           token: ${{ secrets.K8S_AT_HOME_TOKEN || github.token }}
           fetch-depth: 0
