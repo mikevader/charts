@@ -1890,6 +1890,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: 3.8.0
+    created: "2025-12-04T18:31:15.118417896Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Server error pages in the docker image
+    digest: a2e1a3dbb09431da604020bcd232acaf4531c21f3cddab75455c00c8191441ab
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/error-pages
+    icon: https://hsto.org/webt/rm/9y/ww/rm9ywwx3gjv9agwkcmllhsuyo7k.png
+    keywords:
+    - traefik
+    - error-pages
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: error-pages
+    sources:
+    - https://github.com/tarampampam/error-pages
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/error-pages-1.5.4/error-pages-1.5.4.tgz
+    version: 1.5.4
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: 3.7.1
     created: "2025-11-03T19:25:48.281517359Z"
     dependencies:
@@ -8299,6 +8328,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/firefly-iii-0.2.2/firefly-iii-0.2.2.tgz
     version: 0.2.2
   flaresolverr:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: v3.4.6
+    created: "2025-12-04T18:31:15.235254738Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: FlareSolverr is a proxy server to bypass Cloudflare protection
+    digest: 33029da70ed7adee4ea558f05e21de0dbb74426625ee7a71b22eecc01db97165
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/flaresolverr
+    icon: https://raw.githubusercontent.com/FlareSolverr/FlareSolverr/master/resources/flaresolverr_logo.svg
+    keywords:
+    - sonarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: flaresolverr
+    sources:
+    - https://github.com/FlareSolverr/FlareSolverr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/flaresolverr-1.3.4/flaresolverr-1.3.4.tgz
+    version: 1.3.4
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -18836,6 +18896,38 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: 2.3.0
+    created: "2025-12-04T18:31:15.34816215Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Indexer manager/proxy built on the popular arr net base stack to
+      integrate with your various PVR apps.
+    digest: c63fcd34a8c417790f2e86b566e6d734b97f788b9bb1a3ef4af607fa16f5c91d
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/prowlarr
+    icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+    keywords:
+    - prowlarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: prowlarr
+    sources:
+    - https://github.com/Prowlarr/Prowlarr
+    - https://github.com/mikevader/container-images
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/prowlarr-5.1.7/prowlarr-5.1.7.tgz
+    version: 5.1.7
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: 2.1.5
     created: "2025-10-29T08:33:45.750141819Z"
     dependencies:
@@ -24170,6 +24262,34 @@ entries:
     - https://github.com/mikevader/charts/releases/download/sonarr-16.3.3/sonarr-16.3.3.tgz
     version: 16.3.3
   stash:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `stash` to version 0.29.1
+    apiVersion: v2
+    appVersion: v0.29.3
+    created: "2025-12-04T18:31:15.528556182Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: An organizer for your other movies, written in Go
+    digest: d9ccfd601a9e12c6d89301916641f72bc415c64c6cb05633325e4c369999596b
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/stash
+    icon: https://raw.githubusercontent.com/stashapp/website/master/images/stash.svg
+    keywords:
+    - porn
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: stash
+    sources:
+    - https://github.com/stashapp/stash
+    - https://hub.docker.com/r/stashapp/stash
+    urls:
+    - https://github.com/mikevader/charts/releases/download/stash-3.7.1/stash-3.7.1.tgz
+    version: 3.7.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -30369,4 +30489,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-12-04T18:30:06.273079057Z"
+generated: "2025-12-04T18:31:15.530639299Z"
