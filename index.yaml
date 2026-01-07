@@ -3051,6 +3051,35 @@ entries:
         - kind: fixed
           description: Fixes a bug where the config files is mounted incorrectly
     apiVersion: v2
+    appVersion: v2.53.1
+    created: "2026-01-07T23:38:24.741064302Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: 70e26cadece15d1e7a3500496aed52dfa2660d3ce92a233d651bbb7fa4d4f481
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-2.0.2/filebrowser-2.0.2.tgz
+    version: 2.0.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: fixed
+          description: Fixes a bug where the config files is mounted incorrectly
+    apiVersion: v2
     appVersion: v2.52.0
     created: "2025-12-18T11:22:35.314984311Z"
     dependencies:
@@ -30648,4 +30677,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2025-12-18T11:22:35.619727641Z"
+generated: "2026-01-07T23:38:24.742375929Z"
