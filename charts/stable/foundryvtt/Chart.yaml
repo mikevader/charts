@@ -20,7 +20,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
 
 # renovate: image=felddy/foundryvtt
-appVersion: 12.327.0
+appVersion: 12.343.0
 
 
 annotations:
