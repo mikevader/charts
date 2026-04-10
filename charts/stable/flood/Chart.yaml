@@ -23,7 +23,7 @@ maintainers:
 icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
 
 # renovate: image=jesec/flood
-appVersion: 4.11.0
+appVersion: 4.13.0
 
 annotations:
   artifacthub.io/changes: |-
