@@ -84,7 +84,7 @@
       ],
       postUpgradeTasks: {
         commands: [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
+          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '.' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
         ],
         fileFilters: [
           '**/Chart.yaml',
@@ -105,7 +105,7 @@
       ],
       postUpgradeTasks: {
         commands: [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
+          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '.' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
         ],
         fileFilters: [
           '**/Chart.yaml',
@@ -126,7 +126,7 @@
       ],
       postUpgradeTasks: {
         commands: [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '[.\"]' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
+          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '.' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
         ],
         fileFilters: [
           '**/Chart.yaml',
