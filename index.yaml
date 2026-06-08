@@ -17995,6 +17995,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: v1.43.2.10687-563d026ea
+    created: "2026-06-08T17:12:03.886484185Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Plex Media Server
+    digest: 94d698963fac07b92bf05b66a2bf0ea698ad3921561930ae8e0f58af664e8c36
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+    keywords:
+    - plex
+    - plex-media-server
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: plex
+    sources:
+    - https://github.com/mikevader/charts/tree/master/charts/stable/plex
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/plex-6.8.0/plex-6.8.0.tgz
+    version: 6.8.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: v1.42.2.10156-f737b826c
     created: "2025-10-19T14:09:13.653587089Z"
     dependencies:
@@ -30935,4 +30965,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-06-08T17:11:28.192233649Z"
+generated: "2026-06-08T17:12:03.887937157Z"
