@@ -79,18 +79,16 @@
         'major',
       ],
       bumpVersion: 'major',
+      bumpVersions: [
+        {
+          filePatterns: ["{{packageFileDir}}/Chart.{yaml,yml}"],
+          matchStrings: ["version:\\s(?<version>[^\\s]+)"],
+          bumpType: "major"
+        }
+      ],
       labels: [
         'type/major',
       ],
-      postUpgradeTasks: {
-        commands: [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '.' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
-        ],
-        fileFilters: [
-          '**/Chart.yaml',
-        ],
-        executionMode: 'branch',
-      },
     },
     {
       matchDatasources: [
@@ -100,18 +98,16 @@
         'minor',
       ],
       bumpVersion: 'minor',
+      bumpVersions: [
+        {
+          filePatterns: ["{{packageFileDir}}/Chart.{yaml,yml}"],
+          matchStrings: ["version:\\s(?<version>[^\\s]+)"],
+          bumpType: "minor"
+        }
+      ],
       labels: [
         'type/minor',
       ],
-      postUpgradeTasks: {
-        commands: [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '.' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
-        ],
-        fileFilters: [
-          '**/Chart.yaml',
-        ],
-        executionMode: 'branch',
-      },
     },
     {
       matchDatasources: [
@@ -121,18 +117,16 @@
         'patch',
       ],
       bumpVersion: 'patch',
+      bumpVersions: [
+        {
+          filePatterns: ["{{packageFileDir}}/Chart.{yaml,yml}"],
+          matchStrings: ["version:\\s(?<version>[^\\s]+)"],
+          bumpType: "patch"
+        }
+      ],
       labels: [
         'type/patch',
       ],
-      postUpgradeTasks: {
-        commands: [
-          "sed -i \"s/^version:.*/version: $(grep '^version:' {{{packageFileDir}}}/Chart.yaml | awk '{print $2}' | awk -F '.' '{$NF = $NF + 1;} 1' | sed 's/ /./g')/\" {{{packageFileDir}}}/Chart.yaml",
-        ],
-        fileFilters: [
-          '**/Chart.yaml',
-        ],
-        executionMode: 'branch',
-      },
     },
     {
       matchDatasources: [
