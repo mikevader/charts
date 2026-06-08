@@ -1,6 +1,6 @@
 # plex
 
-![Version: 6.7.4](https://img.shields.io/badge/Version-6.7.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.41.7.9823-59f304c16](https://img.shields.io/badge/AppVersion-v1.41.7.9823--59f304c16-informational?style=flat-square)
+![Version: 6.8.0](https://img.shields.io/badge/Version-6.8.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v1.43.2.10687-563d026ea](https://img.shields.io/badge/AppVersion-v1.43.2.10687--563d026ea-informational?style=flat-square)
 
 Plex Media Server
 
