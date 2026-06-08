@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: sonarr
-version: 16.4.1
+version: 16.4.2
 kubeVersion: ">=1.16.0-0"
 description: Smart PVR for newsgroup and bittorrent users
 type: application
@@ -23,7 +23,7 @@ maintainers:
 icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
 
 # renovate: image=ghcr.io/mikevader/sonarr
-appVersion: v4.0.16.2944
+appVersion: v4.0.17.2952
 
 annotations:
   artifacthub.io/changes: |-
