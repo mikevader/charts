@@ -1361,6 +1361,30 @@ entries:
         - kind: changed
           description: update gluetun
     apiVersion: v2
+    created: "2026-06-08T19:30:28.893829282Z"
+    description: Function library for mikevader charts
+    digest: 7fb5c8257b61275a24a72fdf9c133a27c6794b894df0544ee56e3f8ecd557fb7
+    home: https://github.com/mikevader/charts/tree/master/charts/library/common
+    keywords:
+    - common
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: common
+    type: library
+    urls:
+    - https://github.com/mikevader/charts/releases/download/common-4.7.0/common-4.7.0.tgz
+    version: 4.7.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: add volume prune flags for argo cd
+        - kind: changed
+          description: update promtail
+        - kind: changed
+          description: update gluetun
+    apiVersion: v2
     created: "2025-11-30T15:38:47.582245715Z"
     description: Function library for mikevader charts
     digest: 66ee4b45b2e05fa78bb015858784a260a34f469ba2067f7e8e860eb1a06cdfc0
@@ -4265,6 +4289,49 @@ entries:
     - https://github.com/mikevader/charts/releases/download/filebrowser-1.4.2/filebrowser-1.4.2.tgz
     version: 1.4.2
   firefly-iii:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 24.0.4
+        - kind: changed
+          description: Upgraded `redis` chart dependency to version 24.1.8
+    apiVersion: v2
+    appVersion: version-5.6.14
+    created: "2026-06-08T19:30:29.031498977Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.0.4
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 15.5.38
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.1.8
+    description: 'Firefly III: a personal finances manager'
+    digest: 11845d45371b7c9033d80a6b10c58e6fa7140bdcbaa3e3a229f7529c5d850e9a
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/firefly-iii
+    icon: https://www.firefly-iii.org/assets/logo/color.png
+    keywords:
+    - firefly-iii
+    - firefly
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: firefly-iii
+    sources:
+    - https://github.com/firefly-iii/firefly-iii
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/firefly-iii-13.0.1/firefly-iii-13.0.1.tgz
+    version: 13.0.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -11358,6 +11425,51 @@ entries:
     - https://github.com/mikevader/charts/releases/download/heimdall-8.4.2/heimdall-8.4.2.tgz
     version: 8.4.2
   home-assistant:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 18.2.9
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 24.0.4
+    apiVersion: v2
+    appVersion: 2026.1.1
+    created: "2026-06-08T19:30:29.219312997Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.2.9
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.0.4
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.6.16
+    description: Home Assistant
+    digest: d8b21af6088d3977ab6d01efecb3c9f0a5cb559b81c4499075a29949316ce18f
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-25.1.1/home-assistant-25.1.1.tgz
+    version: 25.1.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -31242,4 +31354,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-06-08T19:05:23.785957274Z"
+generated: "2026-06-08T19:30:29.220725088Z"
