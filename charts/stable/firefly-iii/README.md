@@ -1,6 +1,6 @@
 # firefly-iii
 
-![Version: 13.0.0](https://img.shields.io/badge/Version-13.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: version-5.6.14](https://img.shields.io/badge/AppVersion-version--5.6.14-informational?style=flat-square)
+![Version: 13.1.0](https://img.shields.io/badge/Version-13.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: version-5.6.14](https://img.shields.io/badge/AppVersion-version--5.6.14-informational?style=flat-square)
 
 Firefly III: a personal finances manager
 
@@ -16,9 +16,9 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | mariadb | 24.0.2 |
+| https://charts.bitnami.com/bitnami | mariadb | 24.0.4 |
 | https://charts.bitnami.com/bitnami | postgresql | 15.5.38 |
-| https://charts.bitnami.com/bitnami | redis | 24.1.0 |
+| https://charts.bitnami.com/bitnami | redis | 24.1.8 |
 | https://mikevader.github.io/charts | common | 4.6.0 |
 
 ## Installing the Chart
@@ -46,7 +46,7 @@ N/A
 | cronjobs.recurring.failedJobsHistoryLimit | int | `1` | How many pods to keep around for failed jobs |
 | cronjobs.recurring.image.pullPolicy | string | `"IfNotPresent"` |  |
 | cronjobs.recurring.image.repository | string | `"curlimages/curl"` |  |
-| cronjobs.recurring.image.tag | string | `"8.17.0"` |  |
+| cronjobs.recurring.image.tag | string | `"8.20.0"` |  |
 | cronjobs.recurring.imagePullSecrets | list | `[]` |  |
 | cronjobs.recurring.nodeSelector | object | `{}` |  |
 | cronjobs.recurring.podAnnotations | object | `{}` |  |
