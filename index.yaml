@@ -3265,6 +3265,35 @@ entries:
         - kind: fixed
           description: Fixes a bug where the config files is mounted incorrectly
     apiVersion: v2
+    appVersion: v2.63.23
+    created: "2026-08-05T18:24:08.957220611Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: filebrowser provides a file managing interface within a specified
+      directory
+    digest: 89ee91a2b249e62dc9c9ab34136c632649ac19586a45ac388c62dc9c14c161a4
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/filebrowser
+    icon: https://raw.githubusercontent.com/filebrowser/logo/master/icon.png
+    keywords:
+    - filebrowser
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: filebrowser
+    sources:
+    - https://github.com/filebrowser/filebrowser
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/filebrowser-2.1.2/filebrowser-2.1.2.tgz
+    version: 2.1.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: fixed
+          description: Fixes a bug where the config files is mounted incorrectly
+    apiVersion: v2
     appVersion: v2.63.18
     created: "2026-07-05T13:45:55.95625433Z"
     dependencies:
@@ -10874,6 +10903,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/foundryvtt-3.4.2/foundryvtt-3.4.2.tgz
     version: 3.4.2
   heimdall:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: 2.8.1
+    created: "2026-08-05T18:24:09.074360566Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: An Application dashboard and launcher
+    digest: b18abcd8e4bc74e3f22d744d5bc233be0283c119b297f6f270b6974dc9c34320
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/heimdall-8.6.0/heimdall-8.6.0.tgz
+    version: 8.6.0
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -27520,6 +27578,39 @@ entries:
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
     appVersion: 2.84.01
+    created: "2026-08-05T18:24:09.218333664Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Tdarr is a self hosted web-app for automating media library transcode/remux
+      management and making sure your files are exactly how you need them to be in
+      terms of codecs/streams/containers etc.
+    digest: dba78049f49d972e8bd6443ca5c813fc497657da2fa04f4fb7b53db11f96a80c
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/tdarr
+    icon: https://s7.gifyu.com/images/GifCroppedTran.gif
+    keywords:
+    - transcoding
+    - remux
+    - media
+    - video
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: tdarr
+    sources:
+    - https://www.github.com/HaveAGitGat/Tdarr
+    - https://hub.docker.com/r/haveagitgat/tdarr/
+    - https://tdarr.io/docs/
+    urls:
+    - https://github.com/mikevader/charts/releases/download/tdarr-4.10.0/tdarr-4.10.0.tgz
+    version: 4.10.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: 2.84.01
     created: "2026-07-27T15:42:27.764183917Z"
     dependencies:
     - name: common
@@ -31813,4 +31904,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-07-27T15:42:27.765888038Z"
+generated: "2026-08-05T18:24:09.220082501Z"
