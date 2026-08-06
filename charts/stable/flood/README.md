@@ -1,6 +1,6 @@
 # flood
 
-![Version: 6.6.0](https://img.shields.io/badge/Version-6.6.0-informational?style=flat-square) ![AppVersion: 4.15.0](https://img.shields.io/badge/AppVersion-4.15.0-informational?style=flat-square)
+![Version: 6.7.0](https://img.shields.io/badge/Version-6.7.0-informational?style=flat-square) ![AppVersion: 4.16.1](https://img.shields.io/badge/AppVersion-4.16.1-informational?style=flat-square)
 
 Flood is a monitoring service for various torrent clients
 
