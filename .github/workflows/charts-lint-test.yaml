@@ -25,7 +25,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v4
         with:
-          version: v3.21.3
+          version: v4.2.3
 
       - uses: actions/setup-python@v6
         with:
@@ -67,7 +67,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v4
         with:
-          version: v3.21.3
+          version: v4.2.3
       - name: Run tests
         run: |
           helm plugin install https://github.com/helm-unittest/helm-unittest.git --version v0.7.1
@@ -89,7 +89,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v4
         with:
-          version: v3.21.3
+          version: v4.2.3
 
       - uses: actions/setup-python@v6
         with:
