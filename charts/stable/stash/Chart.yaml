@@ -25,4 +25,4 @@ appVersion: v0.31.1
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `stash` to version 0.31.1
+      description: Upgraded `common` chart dependency to version 4.6.1
