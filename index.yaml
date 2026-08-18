@@ -11879,6 +11879,51 @@ entries:
         - kind: changed
           description: Upgraded `mariadb` chart dependency to version 24.0.4
     apiVersion: v2
+    appVersion: 2026.8.2
+    created: "2026-08-18T23:25:13.364769244Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.2.9
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.0.4
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.6.16
+    description: Home Assistant
+    digest: 359e144c8ff791a9ff6cfeb9fc966aa67825f7d706c8f062b9ec577746b0ed4c
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-25.3.0/home-assistant-25.3.0.tgz
+    version: 25.3.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 18.2.9
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 24.0.4
+    apiVersion: v2
     appVersion: 2026.7.0
     created: "2026-07-01T19:02:24.13400006Z"
     dependencies:
@@ -32155,4 +32200,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-08-17T20:33:09.598461666Z"
+generated: "2026-08-18T23:25:13.367070544Z"
