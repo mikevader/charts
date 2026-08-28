@@ -11879,6 +11879,51 @@ entries:
         - kind: changed
           description: Upgraded `mariadb` chart dependency to version 24.0.4
     apiVersion: v2
+    appVersion: 2026.8.3
+    created: "2026-08-28T18:09:10.878823118Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.2.9
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.0.4
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.6.16
+    description: Home Assistant
+    digest: 10a0a15df4abbd1e49ecd9026ec642405330bef337077e639d43c0fc7214ed2b
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-25.3.1/home-assistant-25.3.1.tgz
+    version: 25.3.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 18.2.9
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 24.0.4
+    apiVersion: v2
     appVersion: 2026.8.2
     created: "2026-08-18T23:25:13.364769244Z"
     dependencies:
@@ -23194,6 +23239,37 @@ entries:
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
     appVersion: 1.0.5.2
+    created: "2026-08-28T18:09:11.067799003Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Recipes is a Django application to manage, tag and search recipes
+      using either built in models or external storage providers hosting PDF's, Images
+      or other files.
+    digest: 6944101552b8eec3ac6113ae79ce5af96491bbac2d02e6e4a7918db0cbe0fb68
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/recipes
+    icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - cooking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: recipes
+    sources:
+    - https://github.com/vabene1111/recipes
+    - https://hub.docker.com/r/vabene1111/recipes
+    urls:
+    - https://github.com/mikevader/charts/releases/download/recipes-6.8.0/recipes-6.8.0.tgz
+    version: 6.8.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: 1.0.5.2
     created: "2025-12-18T11:22:35.617985904Z"
     dependencies:
     - name: common
@@ -29628,6 +29704,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
+    appVersion: 2.5.3
+    created: "2026-08-28T18:09:11.25994929Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: ea8dda14113dd70005e008f708d706878b18a228adc96b8fd39235c825152ea2
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.8.1/uptime-kuma-1.8.1.tgz
+    version: 1.8.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
     appVersion: 2.5.0
     created: "2026-08-06T06:31:04.994456665Z"
     dependencies:
@@ -32260,4 +32367,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-08-28T13:03:07.53116554Z"
+generated: "2026-08-28T18:09:11.263520009Z"
