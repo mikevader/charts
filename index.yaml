@@ -24994,6 +24994,37 @@ entries:
           description: Upgraded `common` chart dependency to version 4.6.0
     apiVersion: v2
     appVersion: v4.0.17.2952
+    created: "2026-08-28T11:14:46.487658564Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.6.0
+    description: Smart PVR for newsgroup and bittorrent users
+    digest: cc746e980faccdc185816c503edb67171ca3d94c70eed30ea92c2b04216be0b9
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/sonarr
+    icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
+    keywords:
+    - sonarr
+    - torrent
+    - usenet
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: sonarr
+    sources:
+    - https://github.com/Sonarr/Sonarr
+    - https://github.com/mikevader/container-images/
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/sonarr-16.5.0/sonarr-16.5.0.tgz
+    version: 16.5.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.6.0
+    apiVersion: v2
+    appVersion: v4.0.17.2952
     created: "2026-06-08T17:11:28.190858266Z"
     dependencies:
     - name: common
@@ -32200,4 +32231,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-08-18T23:25:13.367070544Z"
+generated: "2026-08-28T11:14:46.488832633Z"
