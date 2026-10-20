@@ -1,6 +1,6 @@
 # qbittorrent
 
-![Version: 13.6.0](https://img.shields.io/badge/Version-13.6.0-informational?style=flat-square) ![AppVersion: v4.6.7](https://img.shields.io/badge/AppVersion-v4.6.7-informational?style=flat-square)
+![Version: 13.8.0](https://img.shields.io/badge/Version-13.8.0-informational?style=flat-square) ![AppVersion: v4.6.7](https://img.shields.io/badge/AppVersion-v4.6.7-informational?style=flat-square)
 
 qBittorrent is a cross-platform free and open-source BitTorrent client
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.6.0 |
+| https://mikevader.github.io/charts | common | 4.10.0 |
 
 ## Installing the Chart
 
@@ -52,7 +52,7 @@ N/A
 | metrics.exporter.env.user | string | `"admin"` | qbittorrent username update value after configuring qbittorrent |
 | metrics.exporter.image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | metrics.exporter.image.repository | string | `"esanchezm/prometheus-qbittorrent-exporter"` | image repository |
-| metrics.exporter.image.tag | string | `"v1.6.0"` | image tag |
+| metrics.exporter.image.tag | string | `"v1.7.0"` | image tag |
 | metrics.prometheusRule | object | See values.yaml | Enable and configure Prometheus Rules for the chart under this key. |
 | metrics.prometheusRule.rules | list | See prometheusrules.yaml | Configure additionial rules for the chart under this key. |
 | metrics.serviceMonitor.interval | string | `"15s"` |  |

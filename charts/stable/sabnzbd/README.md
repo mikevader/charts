@@ -1,6 +1,6 @@
 # sabnzbd
 
-![Version: 2.2.0](https://img.shields.io/badge/Version-2.2.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: release-5.0.4](https://img.shields.io/badge/AppVersion-release--5.0.4-informational?style=flat-square)
+![Version: 2.3.0](https://img.shields.io/badge/Version-2.3.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: release-5.0.4](https://img.shields.io/badge/AppVersion-release--5.0.4-informational?style=flat-square)
 
 Free and easy binary newsreader
 
@@ -17,7 +17,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://mikevader.github.io/charts | common | 4.6.0 |
+| https://mikevader.github.io/charts | common | 4.10.0 |
 
 ## Installing the Chart
 
