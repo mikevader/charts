@@ -9676,6 +9676,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.10.0
     apiVersion: v2
+    appVersion: 4.16.3
+    created: "2026-10-21T19:34:58.85290358Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: Flood is a monitoring service for various torrent clients
+    digest: c68452098d20dcdce580638e53a41abced7fcfa8113387bbca4e83937c95981d
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/flood
+    icon: https://raw.githubusercontent.com/jesec/flood/master/flood.svg
+    keywords:
+    - flood
+    - rtorrent
+    - qbittorrent
+    - transmission
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: flood
+    sources:
+    - https://github.com/jesec/flood
+    - https://hub.docker.com/r/jesec/flood
+    urls:
+    - https://github.com/mikevader/charts/releases/download/flood-6.8.1/flood-6.8.1.tgz
+    version: 6.8.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
     appVersion: 4.16.1
     created: "2026-10-20T07:49:13.924679724Z"
     dependencies:
@@ -11375,6 +11406,35 @@ entries:
     - https://github.com/mikevader/charts/releases/download/foundryvtt-3.4.2/foundryvtt-3.4.2.tgz
     version: 3.4.2
   heimdall:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
+    appVersion: 2.8.3
+    created: "2026-10-21T19:34:59.046501145Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: An Application dashboard and launcher
+    digest: 0dcefff5014749c8f0c2882183e62c0811fa3083a38c96b5ae7e0c60d71e600d
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/heimdall
+    icon: https://i.imgur.com/mM4tcO5.png
+    keywords:
+    - heimdall
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: heimdall
+    sources:
+    - https://hub.docker.com/r/linuxserver/heimdall/
+    - https://github.com/linuxserver/heimdall
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/heimdall-8.7.1/heimdall-8.7.1.tgz
+    version: 8.7.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -33521,4 +33581,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-10-21T19:34:08.869272593Z"
+generated: "2026-10-21T19:34:59.048054698Z"
