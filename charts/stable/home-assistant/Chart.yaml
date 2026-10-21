@@ -40,6 +40,4 @@ appVersion: 2026.8.3
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `postgresql` chart dependency to version 18.12.4
-    - kind: changed
-      description: Upgraded `mariadb` chart dependency to version 24.2.0
+      description: Upgraded `postgresql` chart dependency to version 18.12.14
