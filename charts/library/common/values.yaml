@@ -81,7 +81,8 @@ serviceAccount:
   name: ""
 
 # -- Specifies whether a service account token should be automatically mounted.
-automountServiceAccountToken: true
+# Secure default: disabled. Set to `true` only for apps that talk to the Kubernetes API.
+automountServiceAccountToken: false
 
 # -- Use this to populate a secret with the values you specify.
 # Be aware that these values are not encrypted by default, and could therefore visible
@@ -160,11 +161,33 @@ dnsConfig: {}
 # [[ref]](https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/#accessing-the-service)
 enableServiceLinks: true
 
-# -- Configure the Security Context for the Pod
-podSecurityContext: {}
+# -- Configure the Security Context for the Pod.
+# Secure defaults compatible with the Pod Security Standard "restricted".
+# Values set by a chart or by the user are merged on top of these defaults,
+# so opting out works per key, e.g. `runAsNonRoot: false` for images that must start as root.
+# @default -- See below
+podSecurityContext:
+  # -- Refuse to start containers that would run as root (UID 0)
+  runAsNonRoot: true
+  # -- Apply the container runtime's default seccomp profile
+  seccompProfile:
+    type: RuntimeDefault
 
-# -- Configure the Security Context for the main container
-securityContext: {}
+# -- Configure the Security Context for the main container.
+# Secure defaults compatible with the Pod Security Standard "restricted".
+# Values set by a chart or by the user are merged on top of these defaults,
+# so opting out works per key, e.g. `readOnlyRootFilesystem: false`
+# or `capabilities: {add: [NET_BIND_SERVICE]}`.
+# @default -- See below
+securityContext:
+  # -- Prevent processes from gaining more privileges than their parent (setuid binaries, etc.)
+  allowPrivilegeEscalation: false
+  # -- Mount the container image read-only. `/tmp` is provided as emptyDir (see `persistence.tmp`).
+  readOnlyRootFilesystem: true
+  capabilities:
+    # -- Drop all Linux capabilities
+    drop:
+      - ALL
 
 # -- Configure the lifecycle for the main container
 lifecycle: {}
@@ -401,6 +424,17 @@ persistence:
 
     # -- Set to true to retain the PVC upon `helm uninstall`
     retain: false
+
+  # -- Writable `/tmp` for the main container, required because of
+  # `securityContext.readOnlyRootFilesystem: true`.
+  # Disable it if the image ships content in `/tmp` or the app mounts its own `/tmp`.
+  # @default -- See below
+  tmp:
+    enabled: true
+    type: emptyDir
+    mountPath: /tmp
+    # -- Optional size limit for `/tmp`
+    sizeLimit:  # 1Gi
 
   # -- Create an emptyDir volume to share between all containers
   # [[ref]]https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)

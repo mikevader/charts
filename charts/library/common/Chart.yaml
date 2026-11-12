@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: common
-version: 4.10.0
+version: 5.0.0
 kubeVersion: ">=1.16.0-0"
 description: Function library for mikevader charts
 type: library
@@ -14,9 +14,9 @@ maintainers:
 
 annotations:
   artifacthub.io/changes: |-
+    - kind: security
+      description: "BREAKING: secure defaults for podSecurityContext (runAsNonRoot, seccomp RuntimeDefault) and securityContext (no privilege escalation, read-only root filesystem, drop ALL capabilities)"
+    - kind: security
+      description: "BREAKING: automountServiceAccountToken now defaults to false"
     - kind: added
-      description: add volume prune flags for argo cd
-    - kind: changed
-      description: update promtail
-    - kind: changed
-      description: update gluetun
+      description: writable /tmp emptyDir enabled by default (persistence.tmp)
