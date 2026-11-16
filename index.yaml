@@ -6,6 +6,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.10.0
     apiVersion: v2
+    appVersion: v0.107.80
+    created: "2026-11-16T11:39:53.054685071Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: DNS proxy as ad-blocker for local network
+    digest: 139b687bdcb2ec672f5d2817dcb1bc74f72c1966780888cf3debb6e8f707cc94
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/adguard-home
+    icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+    keywords:
+    - adguard-home
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: adguard-home
+    sources:
+    - https://github.com/AdguardTeam/AdGuardHome
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/adguard-home-5.7.1/adguard-home-5.7.1.tgz
+    version: 5.7.1
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
     appVersion: v0.107.79
     created: "2026-10-20T07:49:13.129946904Z"
     dependencies:
@@ -1442,6 +1472,30 @@ entries:
     - https://github.com/mikevader/charts/releases/download/adguard-home-5.5.2/adguard-home-5.5.2.tgz
     version: 5.5.2
   common:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: add volume prune flags for argo cd
+        - kind: changed
+          description: update promtail
+        - kind: changed
+          description: update gluetun
+    apiVersion: v2
+    created: "2026-11-16T11:39:53.234451692Z"
+    description: Function library for mikevader charts
+    digest: e41828163b475f9a8c58880b31f7dc68c312be4c5fd109b0503d1aadedceb236
+    home: https://github.com/mikevader/charts/tree/master/charts/library/common
+    keywords:
+    - common
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: common
+    type: library
+    urls:
+    - https://github.com/mikevader/charts/releases/download/common-4.11.0/common-4.11.0.tgz
+    version: 4.11.0
   - annotations:
       artifacthub.io/changes: |-
         - kind: added
@@ -30989,6 +31043,37 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.10.0
     apiVersion: v2
+    appVersion: 2.5.11
+    created: "2026-11-16T11:39:53.465615652Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: A fancy self-hosted monitoring tool for your websites and applications
+    digest: 9f98450784653061f102c01398d36ef5fc5c364aa11bf128fde627d01eb28f1c
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/uptime-kuma
+    icon: https://github.com/louislam/uptime-kuma/raw/master/public/icon.svg
+    keywords:
+    - uptime-kuma
+    - status
+    - status-page
+    - monitoring
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: uptime-kuma
+    sources:
+    - https://github.com/louislam/uptime-kuma
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/uptime-kuma-1.9.2/uptime-kuma-1.9.2.tgz
+    version: 1.9.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
     appVersion: 2.5.6
     created: "2026-10-21T19:34:08.867113882Z"
     dependencies:
@@ -33772,4 +33857,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-16T11:37:45.774138356Z"
+generated: "2026-11-16T11:39:53.467886165Z"
