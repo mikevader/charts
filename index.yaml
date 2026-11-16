@@ -12497,6 +12497,51 @@ entries:
         - kind: changed
           description: Upgraded `mariadb` chart dependency to version 24.2.0
     apiVersion: v2
+    appVersion: 2026.11.1
+    created: "2026-11-16T19:15:45.932239618Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.12.4
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 24.2.0
+    - condition: influxdb.enabled
+      name: influxdb
+      repository: https://charts.bitnami.com/bitnami
+      version: 6.6.16
+    description: Home Assistant
+    digest: 1ffb8f6f32c6d7994ba18cfce0d869ea7de6910de8ebc50fc447045b81d96f74
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Home_Assistant_Logo.svg/519px-Home_Assistant_Logo.svg.png
+    keywords:
+    - home-assistant
+    - hass
+    - homeassistant
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: home-assistant
+    sources:
+    - https://github.com/home-assistant/home-assistant
+    - https://github.com/cdr/code-server
+    - https://github.com/mikevader/charts/tree/master/charts/stable/home-assistant
+    urls:
+    - https://github.com/mikevader/charts/releases/download/home-assistant-25.6.0/home-assistant-25.6.0.tgz
+    version: 25.6.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `postgresql` chart dependency to version 18.12.4
+        - kind: changed
+          description: Upgraded `mariadb` chart dependency to version 24.2.0
+    apiVersion: v2
     appVersion: 2026.8.3
     created: "2026-10-21T07:35:37.667132196Z"
     dependencies:
@@ -22084,6 +22129,35 @@ entries:
           description: Upgraded `common` chart dependency to version 4.10.0
     apiVersion: v2
     appVersion: v4.6.7
+    created: "2026-11-16T19:15:46.064782628Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: qBittorrent is a cross-platform free and open-source BitTorrent client
+    digest: 75ff9e9c336ac11f5df365c29d8fa448b6111799cba364338c7ecc9418c8d97b
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/qbittorrent
+    icon: https://cloud.githubusercontent.com/assets/14862437/23586868/89ef2922-01c4-11e7-869c-52aafcece17f.png
+    keywords:
+    - qbittorrent
+    - torrrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: qbittorrent
+    sources:
+    - https://github.com/qbittorrent/qBittorrent
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/qbittorrent-13.9.0/qbittorrent-13.9.0.tgz
+    version: 13.9.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
+    appVersion: v4.6.7
     created: "2026-10-20T07:49:15.201584848Z"
     dependencies:
     - name: common
@@ -24246,6 +24320,37 @@ entries:
     - https://github.com/mikevader/charts/releases/download/radarr-16.3.3/radarr-16.3.3.tgz
     version: 16.3.3
   recipes:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
+    appVersion: 1.0.5.2
+    created: "2026-11-16T19:15:46.183970479Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: Recipes is a Django application to manage, tag and search recipes
+      using either built in models or external storage providers hosting PDF's, Images
+      or other files.
+    digest: d2e5ff26b7528c8ae7cd415d38cd9e2875de6569c3848be4f47f5553445b1c60
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/recipes
+    icon: https://raw.githubusercontent.com/vabene1111/recipes/develop/docs/logo_color.svg
+    keywords:
+    - recipes
+    - cooking
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: recipes
+    sources:
+    - https://github.com/vabene1111/recipes
+    - https://hub.docker.com/r/vabene1111/recipes
+    urls:
+    - https://github.com/mikevader/charts/releases/download/recipes-6.9.1/recipes-6.9.1.tgz
+    version: 6.9.1
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
@@ -33919,4 +34024,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-16T19:12:12.537776371Z"
+generated: "2026-11-16T19:15:46.321302016Z"
