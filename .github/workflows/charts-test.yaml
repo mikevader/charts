@@ -65,15 +65,13 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
-      - name: Install Kubernetes tools
-        uses: yokawasa/action-setup-kube-tools@v0.14.1
+      - name: Install Helm
+        uses: azure/setup-helm@v5
         with:
-          setup-tools: |
-            helmv3
-          helm: "3.16.1"
+          version: v4.3.1
 
       - name: Prep Helm
-        run: helm plugin install https://github.com/helm-unittest/helm-unittest.git
+        run: helm plugin install https://github.com/helm-unittest/helm-unittest.git --verify=false
 
       - name: Run chart-testing (install)
         if: ${{ !contains(matrix.chart, 'library') }}
@@ -117,12 +115,10 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
-      - name: Install Kubernetes tools
-        uses: yokawasa/action-setup-kube-tools@v0.14.1
+      - name: Install Helm
+        uses: azure/setup-helm@v5
         with:
-          setup-tools: |
-            helmv3
-          helm: "3.16.1"
+          version: v4.3.1
 
       - uses: actions/setup-python@v7
         with:
