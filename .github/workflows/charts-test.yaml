@@ -44,7 +44,7 @@ jobs:
         run: |
           # ct list-changed already skips the excluded-charts from ct-install.yaml
           CHARTS=$(ct list-changed --config .github/ct-install.yaml)
-          OUTPUT_JSON=$(echo "${CHARTS}" | jq -R -s -c 'split("\n")[:-1]')
+          OUTPUT_JSON=$(echo "${CHARTS}" | jq -R -s -c 'split("\n") | map(select(length > 0))')
           # Changes under helper-charts/ (common library tests) run the library tests,
           # unless a library chart change already does.
           if [[ "${HELPER_CHARTS_CHANGED}" == "true" ]]; then
