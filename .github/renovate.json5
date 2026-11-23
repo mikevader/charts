@@ -246,5 +246,19 @@
         '!common',
       ],
     },
+    {
+      // Freshly pushed tags can be incomplete (e.g. a multi-arch index without
+      // platform manifests) or get pulled again, so let them settle first.
+      // Registries without release timestamps (GHCR, Quay, ...) are not held back.
+      matchDatasources: [
+        'docker',
+      ],
+      matchPackageNames: [
+        '!/^ghcr.io/mikevader/.*/',
+      ],
+      minimumReleaseAge: '3 days',
+      minimumReleaseAgeBehaviour: 'timestamp-optional',
+      internalChecksFilter: 'strict',
+    },
   ],
 }
