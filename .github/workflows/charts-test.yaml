@@ -9,6 +9,11 @@ on:
       chartChangesDetected:
         required: true
         type: string
+      helperChartsChanged:
+        description: "Whether files under helper-charts/ changed; runs the common library tests"
+        required: false
+        type: string
+        default: "false"
 
 jobs:
   generate-install-matrix:
@@ -33,11 +38,18 @@ jobs:
 
       - name: Run chart-testing (list-changed)
         id: list-changed
-        if: inputs.chartChangesDetected == 'true'
+        if: inputs.chartChangesDetected == 'true' || inputs.helperChartsChanged == 'true'
+        env:
+          HELPER_CHARTS_CHANGED: ${{ inputs.helperChartsChanged }}
         run: |
           # ct list-changed already skips the excluded-charts from ct-install.yaml
           CHARTS=$(ct list-changed --config .github/ct-install.yaml)
           OUTPUT_JSON=$(echo "${CHARTS}" | jq -R -s -c 'split("\n")[:-1]')
+          # Changes under helper-charts/ (common library tests) run the library tests,
+          # unless a library chart change already does.
+          if [[ "${HELPER_CHARTS_CHANGED}" == "true" ]]; then
+            OUTPUT_JSON=$(echo "${OUTPUT_JSON}" | jq -c 'if any(.[]; contains("library")) then . else . + ["helper-charts/common-test"] end')
+          fi
           echo "charts=${OUTPUT_JSON}" >> "$GITHUB_OUTPUT"
           if [[ $(echo ${OUTPUT_JSON} | jq -c '. | length') -gt 0 ]]; then
             echo "detected=true" >> "$GITHUB_OUTPUT"
@@ -73,11 +85,11 @@ jobs:
         run: helm plugin install https://github.com/helm-unittest/helm-unittest.git --verify=false
 
       - name: Run chart-testing (install)
-        if: ${{ !contains(matrix.chart, 'library') }}
+        if: ${{ !(contains(matrix.chart, 'library') || startsWith(matrix.chart, 'helper-charts/')) }}
         run: helm unittest -f "tests/**/*_test.yaml" ${{ matrix.chart }}
 
       - name: Run library-chart-testing (install)
-        if: ${{ contains(matrix.chart, 'library') }}
+        if: ${{ contains(matrix.chart, 'library') || startsWith(matrix.chart, 'helper-charts/') }}
         run: |
           helm dep update helper-charts/common-test
           helm unittest -f "tests/**/*_test.yaml" helper-charts/common-test
@@ -137,11 +149,11 @@ jobs:
           kubectl taint --all=true nodes node.cloudprovider.kubernetes.io/uninitialized- || true
 
       - name: Run chart-testing (install)
-        if: ${{ !contains(matrix.chart, 'library') }}
+        if: ${{ !(contains(matrix.chart, 'library') || startsWith(matrix.chart, 'helper-charts/')) }}
         run: ct install --config .github/ct-install.yaml --charts ${{ matrix.chart }}
 
       - name: Run library-chart-testing (install)
-        if: ${{ contains(matrix.chart, 'library') }}
+        if: ${{ contains(matrix.chart, 'library') || startsWith(matrix.chart, 'helper-charts/') }}
         run: ct install --config .github/ct-install-library.yaml --charts helper-charts/common-test
 
   # Summarize matrix https://github.community/t/status-check-for-a-matrix-jobs/127354/7

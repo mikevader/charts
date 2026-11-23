@@ -11,6 +11,9 @@ outputs:
   addedOrModifiedCharts:
     description: "A list of the charts changed"
     value: ${{ steps.filter-charts.outputs.addedOrModified }}
+  helperChartsChanged:
+    description: "Whether or not files under helper-charts/ (e.g. the common library tests) have been changed"
+    value: ${{ steps.filter.outputs.helperCharts }}
 
 runs:
   using: "composite"
@@ -23,6 +26,8 @@ runs:
         filters: |
           addedOrModified:
             - added|modified: 'charts/*/**'
+          helperCharts:
+            - added|modified: 'helper-charts/**'
 
     - name: Collect changed charts
       if: |

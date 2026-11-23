@@ -18,6 +18,9 @@ on:
       addedOrModifiedCharts:
         description: "A list of the charts changed in this PR"
         value: ${{ jobs.pr-changes.outputs.addedOrModifiedCharts }}
+      helperChartsChanged:
+        description: "Does the PR change files under helper-charts/?"
+        value: ${{ jobs.pr-changes.outputs.helperChartsChanged }}
 
 jobs:
   pr-metadata:
@@ -51,6 +54,7 @@ jobs:
       addedOrModified: ${{ steps.collect-changes.outputs.changesDetected }}
       addedOrModifiedFiles: ${{ steps.collect-changes.outputs.addedOrModifiedFiles }}
       addedOrModifiedCharts: ${{ steps.collect-changes.outputs.addedOrModifiedCharts }}
+      helperChartsChanged: ${{ steps.collect-changes.outputs.helperChartsChanged }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7

@@ -17,17 +17,17 @@ concurrency:
 
 jobs:
   pr-metadata:
-    uses: mikevader/charts/.github/workflows/pr-metadata.yaml@master
+    uses: ./.github/workflows/pr-metadata.yaml
 
   pre-commit-check:
-    uses: mikevader/charts/.github/workflows/pre-commit-check.yaml@master
+    uses: ./.github/workflows/pre-commit-check.yaml
     needs:
       - pr-metadata
     with:
       modifiedFiles: ${{ needs.pr-metadata.outputs.addedOrModifiedFiles }}
 
   charts-changelog:
-    uses: mikevader/charts/.github/workflows/charts-changelog.yaml@master
+    uses: ./.github/workflows/charts-changelog.yaml
     needs:
       - pr-metadata
       - pre-commit-check
@@ -36,7 +36,7 @@ jobs:
       modifiedCharts: ${{ needs.pr-metadata.outputs.addedOrModifiedCharts }}
 
   charts-lint:
-    uses: mikevader/charts/.github/workflows/charts-lint.yaml@master
+    uses: ./.github/workflows/charts-lint.yaml
     needs:
       - pr-metadata
       - charts-changelog
@@ -45,10 +45,11 @@ jobs:
       chartChangesDetected: ${{ needs.pr-metadata.outputs.addedOrModified }}
 
   charts-test:
-    uses: mikevader/charts/.github/workflows/charts-test.yaml@master
+    uses: ./.github/workflows/charts-test.yaml
     needs:
       - pr-metadata
       - charts-changelog
     with:
       checkoutCommit: ${{ needs.charts-changelog.outputs.commitHash }}
       chartChangesDetected: ${{ needs.pr-metadata.outputs.addedOrModified }}
+      helperChartsChanged: ${{ needs.pr-metadata.outputs.helperChartsChanged }}
