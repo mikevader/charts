@@ -40,4 +40,4 @@ appVersion: 2026.11.2
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: Upgraded `postgresql` chart dependency to version 18.12.20
+      description: Upgraded `postgresql` chart dependency to version 18.12.25
