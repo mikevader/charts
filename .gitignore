@@ -9,9 +9,14 @@
 # Helm resources
 charts/**/Chart.lock
 charts/**/charts
+helper-charts/**/Chart.lock
+helper-charts/**/charts
 
 # Other rsources
 .env
 .envrc
 Gemfile.lock
 angel.yaml
+
+# macOS
+.DS_Store
