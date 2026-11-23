@@ -10720,6 +10720,40 @@ entries:
   - annotations:
       artifacthub.io/changes: |-
         - kind: changed
+          description: "**Breaking:** Upgraded felddy/foundryvtt from v12 to v14 (Foundry VTT 14.370). Back up `/data` first; Foundry migrates worlds on first start."
+        - kind: changed
+          description: "**Breaking:** The container runs as the non-root user `node` (1000:1000) since v13 and no longer chowns `/data` (v12 used 421:421). The chart now sets `podSecurityContext` (runAsUser/runAsGroup/fsGroup 1000, fsGroupChangePolicy OnRootMismatch) so existing volumes stay writable."
+        - kind: removed
+          description: Upstream dropped the linux/arm/v6 and linux/arm/v7 images.
+        - kind: added
+          description: Documented `FOUNDRY_TELEMETRY`, which should be set explicitly since v14.
+    apiVersion: v2
+    appVersion: 14.370.1
+    created: "2026-11-23T23:02:04.229470065Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: An easy-to-deploy Dockerized Foundry Virtual Tabletop server
+    digest: 51d6c89b0608c332dd288bf46d3b5e9078e3cbaf8073107a17ba85e932555653
+    home: https://github.com/felddy/foundryvtt-docker
+    icon: https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png
+    keywords:
+    - foundryvtt
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: foundryvtt
+    sources:
+    - https://github.com/felddy/foundryvtt-docker
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/foundryvtt-4.0.0/foundryvtt-4.0.0.tgz
+    version: 4.0.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
           description: Upgraded `common` chart dependency to version 4.10.0
     apiVersion: v2
     appVersion: 12.343.0
@@ -34311,4 +34345,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-23T21:06:48.978241575Z"
+generated: "2026-11-23T23:02:04.372549699Z"
