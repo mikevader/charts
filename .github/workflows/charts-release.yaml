@@ -78,6 +78,21 @@ jobs:
           git config user.name "mikevader[bot]"
           git config user.email "mikevader[bot]@users.noreply.github.com"
 
+      # GitHub's generated notes list every PR between two tags, including ones for other charts.
+      # Build chart-scoped notes for every chart whose version has not been released yet; chart-releaser
+      # reads them from the packaged chart via CR_RELEASE_NOTES_FILE.
+      - name: Generate chart-scoped release notes
+        run: |
+          for chart in charts/*/*/; do
+            chart="${chart%/}"
+            [ -f "${chart}/Chart.yaml" ] || continue
+            tag="$(yq '.name' "${chart}/Chart.yaml")-$(yq '.version' "${chart}/Chart.yaml")"
+            if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+              continue
+            fi
+            ./.github/scripts/gen-release-notes.sh "${chart}"
+          done
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.9.0
         with:
@@ -85,7 +100,8 @@ jobs:
         env:
           CR_TOKEN: "${{ secrets.K8S_AT_HOME_TOKEN }}"
           CR_SKIP_EXISTING: "true"
-          CR_GENERATE_RELEASE_NOTES: "true"
+          CR_GENERATE_RELEASE_NOTES: "false"
+          CR_RELEASE_NOTES_FILE: RELEASE-NOTES.md
 
   generate-summary:
     name: Auto-generate charts summary
