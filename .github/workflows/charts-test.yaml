@@ -29,7 +29,7 @@ jobs:
           ref: ${{ inputs.checkoutCommit }}
 
       - name: Set up chart-testing
-        uses: helm/chart-testing-action@v2.8.0
+        uses: helm/chart-testing-action@v2.9.0
 
       - name: Run chart-testing (list-changed)
         id: list-changed
@@ -65,15 +65,13 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
-      - name: Install Kubernetes tools
-        uses: yokawasa/action-setup-kube-tools@v0.14.1
+      - name: Install Helm
+        uses: azure/setup-helm@v5
         with:
-          setup-tools: |
-            helmv3
-          helm: "3.16.1"
+          version: v4.3.2
 
       - name: Prep Helm
-        run: helm plugin install https://github.com/helm-unittest/helm-unittest.git
+        run: helm plugin install https://github.com/helm-unittest/helm-unittest.git --verify=false
 
       - name: Run chart-testing (install)
         if: ${{ !contains(matrix.chart, 'library') }}
@@ -117,19 +115,17 @@ jobs:
           fetch-depth: 0
           ref: ${{ inputs.checkoutCommit }}
 
-      - name: Install Kubernetes tools
-        uses: yokawasa/action-setup-kube-tools@v0.14.1
+      - name: Install Helm
+        uses: azure/setup-helm@v5
         with:
-          setup-tools: |
-            helmv3
-          helm: "3.16.1"
+          version: v4.3.2
 
       - uses: actions/setup-python@v7
         with:
           python-version: "3.15"
 
       - name: Set up chart-testing
-        uses: helm/chart-testing-action@v2.8.0
+        uses: helm/chart-testing-action@v2.9.0
 
       - name: Create k3d cluster
         uses: nolar/setup-k3d-k3s@v1

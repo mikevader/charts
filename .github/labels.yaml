@@ -46,6 +46,10 @@
   color: "ffc300"
 - name: renovate/helm
   color: "ffc300"
+- name: automerge
+  color: "0E8A16"
+  description: >-
+    Renovate merges this PR automatically once all checks pass
 
 # Size
 - name: size/XS

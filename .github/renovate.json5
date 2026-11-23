@@ -49,6 +49,9 @@
       ],
       automerge: true,
       automergeType: 'pr',
+      addLabels: [
+        'automerge',
+      ],
       matchUpdateTypes: [
         'minor',
         'patch',
@@ -60,6 +63,9 @@
       ],
       automerge: true,
       automergeType: 'pr',
+      addLabels: [
+        'automerge',
+      ],
       matchUpdateTypes: [
         'minor',
         'patch',
