@@ -16,6 +16,17 @@ image:
 strategy:
   type: Recreate
 
+# -- Pod security context. Since v13 the image runs as the non-root user `node` (1000:1000)
+# and no longer changes the ownership of `/data`. `fsGroup` makes mounted volumes writable,
+# including volumes written by chart versions < 4.0.0 (owned by 421:421).
+# Volume types that ignore `fsGroup` (e.g. hostPath, most NFS setups) need a one-time `chown -R 1000:1000`.
+# @default -- See values.yaml
+podSecurityContext:
+  runAsUser: 1000
+  runAsGroup: 1000
+  fsGroup: 1000
+  fsGroupChangePolicy: OnRootMismatch
+
 # -- environment variables. See [image docs](https://github.com/felddy/foundryvtt-docker#environment-variables) for more details.
 # @default -- See below
 env:
@@ -30,6 +41,8 @@ env:
   FOUNDRY_RELEASE_URL:
   # -- Admin password to be applied at startup. If omitted the admin password will be cleared. May be set using secrets.
   FOUNDRY_ADMIN_KEY:
+  # -- Opt in (`true`) or out (`false`) of Foundry VTT telemetry. Set it explicitly to avoid the prompt on every start.
+  FOUNDRY_TELEMETRY:
 
 
 # -- Configures service settings for the chart. Normally this does not need to be modified.

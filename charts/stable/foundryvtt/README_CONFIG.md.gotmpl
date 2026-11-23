@@ -5,5 +5,17 @@
 {{- define "custom.custom.configuration" -}}
 {{ template "custom.custom.configuration.header" . }}
 
-N/A
+### Upgrading from 3.x to 4.x
+
+Chart 4.x ships felddy/foundryvtt v14 (previously v12).
+
+- **Back up `/data` before upgrading.** Foundry VTT migrates worlds to the new format on first start.
+- Since v13 the container runs as the non-root user `node` (uid/gid `1000`) and no longer changes the ownership of `/data`.
+  Older versions ran as root and chowned `/data` to `421:421`.
+  The chart sets `podSecurityContext.fsGroup: 1000`, so Kubernetes makes mounted volumes group-writable.
+  Volume types that ignore `fsGroup`, such as `hostPath` or most NFS setups, need a one-time `chown -R 1000:1000` on the data directory.
+- `FOUNDRY_UID`, `FOUNDRY_GID` and `CONTAINER_PRESERVE_OWNER` no longer have any effect.
+  Use `podSecurityContext` to run as another user.
+- Images for `linux/arm/v6` and `linux/arm/v7` are no longer published.
+- Set `env.FOUNDRY_TELEMETRY` to `true` or `false` to avoid the telemetry prompt on every start.
 {{- end -}}
