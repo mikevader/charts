@@ -11,6 +11,7 @@ charts/**/Chart.lock
 charts/**/charts
 helper-charts/**/Chart.lock
 helper-charts/**/charts
+charts/**/RELEASE-NOTES.md
 
 # Other rsources
 .env

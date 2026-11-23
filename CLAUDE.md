@@ -60,7 +60,7 @@ ct install --config .github/ct-install.yaml --charts charts/stable/<app>
 
 ## CI flow
 
-The PR workflow is `.github/workflows/pr-validate.yaml`. It runs metadata detection, then pre-commit, then the changelog check (and auto-annotation for Renovate PRs), then lint and test. Tests run helm-unittest followed by `ct install` on k3d. When a changed chart is a library chart, the unit tests run against `helper-charts/common-test`. Pushing to `master` runs `charts-release.yaml`, which regenerates READMEs, commits them (`chore: Auto-update chart README [skip ci]`), and publishes with chart-releaser.
+The PR workflow is `.github/workflows/pr-validate.yaml`. It runs metadata detection, then pre-commit, then the changelog check (and auto-annotation for Renovate PRs), then lint and test. Tests run helm-unittest followed by `ct install` on k3d. When a changed chart is a library chart, the unit tests run against `helper-charts/common-test`. Pushing to `master` runs `charts-release.yaml`, which regenerates READMEs, commits them (`chore: Auto-update chart README [skip ci]`), and publishes with chart-releaser. GitHub release notes are chart-scoped: `.github/scripts/gen-release-notes.sh` writes `RELEASE-NOTES.md` into each unreleased chart (from its `artifacthub.io/changes` annotation and the PRs that touched its directory since the chart's previous tag), and chart-releaser reads it via `CR_RELEASE_NOTES_FILE`. GitHub's own generated notes are off because they list every PR in the repo between two tags.
 
 ## Changing the common library
 
