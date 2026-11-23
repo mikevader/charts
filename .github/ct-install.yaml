@@ -4,9 +4,10 @@ helm-extra-args: --timeout 600s
 chart-dirs:
   - charts/stable
   - charts/library
+# ct matches excluded charts by directory name, not by path
 excluded-charts:
-  - charts/stable/foundryvtt # complex to download foundryvtt binaries (credentials required)
-  - charts/stable/heimdall
+  - foundryvtt # complex to download foundryvtt binaries (credentials required)
+  - heimdall
 chart-repos:
   - bitnami=https://charts.bitnami.com/bitnami
   - mikevader=https://mikevader.github.io/charts

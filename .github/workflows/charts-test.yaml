@@ -35,10 +35,9 @@ jobs:
         id: list-changed
         if: inputs.chartChangesDetected == 'true'
         run: |
-          EXCLUDED=$(yq eval -o=json '.excluded-charts // []' .github/ct-install.yaml)
+          # ct list-changed already skips the excluded-charts from ct-install.yaml
           CHARTS=$(ct list-changed --config .github/ct-install.yaml)
-          CHARTS_JSON=$(echo "${CHARTS}" | jq -R -s -c 'split("\n")[:-1]')
-          OUTPUT_JSON=$(echo "{\"excluded\": ${EXCLUDED}, \"all\": ${CHARTS_JSON}}" | jq -c '.all-.excluded')
+          OUTPUT_JSON=$(echo "${CHARTS}" | jq -R -s -c 'split("\n")[:-1]')
           echo "charts=${OUTPUT_JSON}" >> "$GITHUB_OUTPUT"
           if [[ $(echo ${OUTPUT_JSON} | jq -c '. | length') -gt 0 ]]; then
             echo "detected=true" >> "$GITHUB_OUTPUT"
