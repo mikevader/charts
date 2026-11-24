@@ -1511,6 +1511,30 @@ entries:
         - kind: changed
           description: update gluetun
     apiVersion: v2
+    created: "2026-11-24T09:44:21.137748338Z"
+    description: Function library for mikevader charts
+    digest: 434fd6d956648c14ac23b190de37daa9159d11d8185a002f94d27329be975975
+    home: https://github.com/mikevader/charts/tree/master/charts/library/common
+    keywords:
+    - common
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: common
+    type: library
+    urls:
+    - https://github.com/mikevader/charts/releases/download/common-4.12.0/common-4.12.0.tgz
+    version: 4.12.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: add volume prune flags for argo cd
+        - kind: changed
+          description: update promtail
+        - kind: changed
+          description: update gluetun
+    apiVersion: v2
     created: "2026-11-16T11:39:53.234451692Z"
     description: Function library for mikevader charts
     digest: e41828163b475f9a8c58880b31f7dc68c312be4c5fd109b0503d1aadedceb236
@@ -34404,4 +34428,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-24T09:43:23.16093614Z"
+generated: "2026-11-24T09:44:21.139997219Z"
