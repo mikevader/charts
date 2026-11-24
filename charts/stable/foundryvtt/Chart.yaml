@@ -26,10 +26,4 @@ appVersion: 14.370.1
 annotations:
   artifacthub.io/changes: |-
     - kind: changed
-      description: "**Breaking:** Upgraded felddy/foundryvtt from v12 to v14 (Foundry VTT 14.370). Back up `/data` first; Foundry migrates worlds on first start."
-    - kind: changed
-      description: "**Breaking:** The container runs as the non-root user `node` (1000:1000) since v13 and no longer chowns `/data` (v12 used 421:421). The chart now sets `podSecurityContext` (runAsUser/runAsGroup/fsGroup 1000, fsGroupChangePolicy OnRootMismatch) so existing volumes stay writable."
-    - kind: removed
-      description: Upstream dropped the linux/arm/v6 and linux/arm/v7 images.
-    - kind: added
-      description: Documented `FOUNDRY_TELEMETRY`, which should be set explicitly since v14.
+      description: Upgraded `common` chart dependency to version 4.12.0
