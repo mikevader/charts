@@ -2,6 +2,7 @@
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
     'local>mikevader/renovate-config',
+    'local>mikevader/renovate-config:renovate-annotations',
   ],
   prConcurrentLimit: 5,
   'helm-values': {
@@ -12,20 +13,6 @@
       '/charts/.+/Chart\\.yaml$/',
     ],
   },
-  customManagers: [
-    {
-      customType: 'regex',
-      managerFilePatterns: [
-        '/charts/.+/Chart\\.yaml$/',
-      ],
-      matchStrings: [
-        '# renovate: image=(?<depName>.*?)(?: versioning=(?<versioning>[a-z-]+?))?\\sappVersion:\\s?\\"?(?<currentValue>[\\w+\\.\\-]*?)\\"?\\s',
-        '# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\sappVersion:\\s?(?<currentValue>.+?)\\s'
-      ],
-      versioningTemplate: '{{#if versioning}}{{{versioning}}}{{else}}docker{{/if}}',
-      datasourceTemplate: '{{#if datasource}}{{{datasource}}}{{else}}docker{{/if}}'
-    },
-  ],
   packageRules: [
     {
       matchDatasources: [
