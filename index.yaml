@@ -6,6 +6,36 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.10.0
     apiVersion: v2
+    appVersion: v1.0.0
+    created: "2026-11-24T09:43:23.160001824Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: DNS proxy as ad-blocker for local network
+    digest: 803ca5a3b2292991caa1dd1e1a7b43fc73f7d5f6ded678516f3a2a35769b9073
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/adguard-home
+    icon: https://avatars3.githubusercontent.com/u/8361145?s=200&v=4?sanitize=true
+    keywords:
+    - adguard-home
+    - adblock
+    - dns
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: adguard-home
+    sources:
+    - https://github.com/AdguardTeam/AdGuardHome
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/adguard-home-6.0.0/adguard-home-6.0.0.tgz
+    version: 6.0.0
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
     appVersion: v0.107.80
     created: "2026-11-16T11:39:53.054685071Z"
     dependencies:
@@ -34374,4 +34404,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-23T23:02:58.050086724Z"
+generated: "2026-11-24T09:43:23.16093614Z"
