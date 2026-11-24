@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: home-assistant
-version: 25.6.2
+version: 25.6.3
 kubeVersion: ">=1.16.0-0"
 description: Home Assistant
 keywords:
@@ -18,7 +18,7 @@ dependencies:
     repository: https://mikevader.github.io/charts
     version: 4.10.0
   - name: postgresql
-    version: 18.12.25
+    version: 18.12.27
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
   - name: mariadb
