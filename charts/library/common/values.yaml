@@ -7,6 +7,14 @@ global:
   labels: {}
   # -- Set additional global annotations. Helm templates can be used.
   annotations: {}
+  persistence:
+    # -- Default for what Argo CD may do with a PVC created by this chart when it would prune it
+    # or cascade-delete it with its Application: `delete` (no protection), `confirm`
+    # (`Prune=confirm,Delete=confirm`: wait for manual approval) or `preserve`
+    # (`Prune=false,Delete=false` and `helm.sh/resource-policy: keep`: never delete).
+    # Override per PVC with `persistence.<name>.onRemoval`.
+    # [[ref]](https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/)
+    onRemoval: confirm
 
 controller:
   # -- enable the controller.
@@ -399,8 +407,12 @@ persistence:
     # -- The amount of storage that is requested for the persistent volume.
     size: 1Gi
 
-    # -- Set to true to retain the PVC upon `helm uninstall`
+    # -- Set to true to retain the PVC upon `helm uninstall` and Argo CD deletion.
+    # Same as `onRemoval: preserve`.
     retain: false
+
+    # -- Override `global.persistence.onRemoval` for this PVC: `delete`, `confirm` or `preserve`.
+    onRemoval:  # confirm
 
   # -- Create an emptyDir volume to share between all containers
   # [[ref]]https://kubernetes.io/docs/concepts/storage/volumes/#emptydir)

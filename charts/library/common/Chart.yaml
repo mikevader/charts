@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: common
-version: 4.12.0
+version: 4.13.0
 kubeVersion: ">=1.16.0-0"
 description: Function library for mikevader charts
 type: library
@@ -15,8 +15,6 @@ maintainers:
 annotations:
   artifacthub.io/changes: |-
     - kind: added
-      description: add volume prune flags for argo cd
+      description: add persistence onRemoval (delete, confirm, preserve) for Argo CD prune and delete, default confirm
     - kind: changed
-      description: update promtail
-    - kind: changed
-      description: update gluetun
+      description: retain now also sets Prune=false for Argo CD
