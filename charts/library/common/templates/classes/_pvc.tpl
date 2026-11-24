@@ -23,14 +23,29 @@ metadata:
   {{- with (merge ($values.labels | default dict) (include "common.labels" $ | fromYaml)) }}
   labels: {{- toYaml . | nindent 4 }}
   {{- end }}
-  annotations:
-    {{- if $values.retain }}
-    "helm.sh/resource-policy": keep
-    "argocd.argoproj.io/sync-options": Delete=false
-    {{- end }}
-    {{- with (merge ($values.annotations | default dict) (include "common.annotations" $ | fromYaml)) }}
-    {{- toYaml . | nindent 4 }}
-    {{- end }}
+  {{- /* onRemoval: per PVC > global.persistence.onRemoval > "confirm"; retain: true means preserve */ -}}
+  {{- $onRemoval := default "confirm" (dig "persistence" "onRemoval" "" (default dict $.Values.global)) -}}
+  {{- with $values.onRemoval }}
+    {{- $onRemoval = . -}}
+  {{- end }}
+  {{- if $values.retain }}
+    {{- $onRemoval = "preserve" -}}
+  {{- end }}
+  {{- if not (has $onRemoval (list "delete" "confirm" "preserve")) }}
+    {{- fail (printf "persistence onRemoval for PVC %v must be one of delete, confirm, preserve (got %q)" $pvcName $onRemoval) }}
+  {{- end }}
+  {{- $annotations := dict -}}
+  {{- if eq $onRemoval "confirm" }}
+    {{- $_ := set $annotations "argocd.argoproj.io/sync-options" "Prune=confirm,Delete=confirm" -}}
+  {{- else if eq $onRemoval "preserve" }}
+    {{- $_ := set $annotations "argocd.argoproj.io/sync-options" "Prune=false,Delete=false" -}}
+    {{- $_ := set $annotations "helm.sh/resource-policy" "keep" -}}
+  {{- end }}
+  {{- /* explicit annotations win over the onRemoval defaults */ -}}
+  {{- $annotations = merge (deepCopy ($values.annotations | default dict)) (include "common.annotations" $ | fromYaml) $annotations }}
+  {{- with $annotations }}
+  annotations: {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   accessModes:
     - {{ required (printf "accessMode is required for PVC %v" $pvcName) $values.accessMode | quote }}
