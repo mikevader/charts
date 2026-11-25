@@ -18193,6 +18193,35 @@ entries:
         - kind: changed
           description: Upgraded `common` chart dependency to version 4.10.0
     apiVersion: v2
+    appVersion: v0.25.34
+    created: "2026-11-25T00:02:37.492289024Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: API Support for your favorite torrent trackers
+    digest: 8f0e255df50afaa4176a4dbe4d6d42faf825c376c7dc51ac8918131749ecaf9e
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/jackett
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/jackett-banner.png
+    keywords:
+    - jackett
+    - torrent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: jackett
+    sources:
+    - https://github.com/Jackett/Jackett
+    - https://github.com/mikevader/container-images
+    urls:
+    - https://github.com/mikevader/charts/releases/download/jackett-11.12.2/jackett-11.12.2.tgz
+    version: 11.12.2
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.10.0
+    apiVersion: v2
     appVersion: v0.25.28
     created: "2026-11-24T11:02:37.800996072Z"
     dependencies:
@@ -34572,4 +34601,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-24T23:00:32.308692326Z"
+generated: "2026-11-25T00:02:37.493323734Z"
