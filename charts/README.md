@@ -9,18 +9,15 @@
 | [adguard-home](stable/adguard-home) | DNS proxy as ad-blocker for local network |
 | [error-pages](stable/error-pages) | Server error pages in the docker image |
 | [filebrowser](stable/filebrowser) | filebrowser provides a file managing interface within a specified directory |
-| [firefly-iii](stable/firefly-iii) | Firefly III: a personal finances manager |
 | [flaresolverr](stable/flaresolverr) | FlareSolverr is a proxy server to bypass Cloudflare protection |
 | [flood](stable/flood) | Flood is a monitoring service for various torrent clients |
 | [foundryvtt](stable/foundryvtt) | An easy-to-deploy Dockerized Foundry Virtual Tabletop server |
 | [heimdall](stable/heimdall) | An Application dashboard and launcher |
 | [home-assistant](stable/home-assistant) | Home Assistant |
-| [jackett](stable/jackett) | API Support for your favorite torrent trackers |
 | [magic-mirror](stable/magic-mirror) | magic-mirror helm package |
 | [overseerr](stable/overseerr) | Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services such as Sonarr, Radarr and Plex! |
 | [plex](stable/plex) | Plex Media Server |
 | [prowlarr](stable/prowlarr) | Indexer manager/proxy built on the popular arr net base stack to integrate with your various PVR apps. |
-| [qbittorrent](stable/qbittorrent) | qBittorrent is a cross-platform free and open-source BitTorrent client |
 | [radarr](stable/radarr) | A fork of Sonarr to work with movies à la Couchpotato |
 | [recipes](stable/recipes) | Recipes is a Django application to manage, tag and search recipes using either built in models or external storage providers hosting PDF's, Images or other files. |
 | [sabnzbd](stable/sabnzbd) | Free and easy binary newsreader |
@@ -32,11 +29,14 @@
 | [transmission](stable/transmission) | Transmission is a cross-platform BitTorrent client |
 | [uptime-kuma](stable/uptime-kuma) | A fancy self-hosted monitoring tool for your websites and applications |
 | [wikijs](stable/wikijs) | Make documentation a joy to write using Wiki.js's beautiful and intuitive interface! |
-| [youtubedl-material](stable/youtubedl-material) | Self-hosted YouTube downloader built on Material Design |
 ### Incubator charts:
 | Chart | Description |
 | ----- | ----------- |
 ### Archived charts:
 | Chart | Description |
 | ----- | ----------- |
+| [firefly-iii](archived/firefly-iii) | Firefly III: a personal finances manager |
+| [jackett](archived/jackett) | API Support for your favorite torrent trackers |
 | [jellyfin](archived/jellyfin) | Jellyfin Media Server |
+| [qbittorrent](archived/qbittorrent) | qBittorrent is a cross-platform free and open-source BitTorrent client |
+| [youtubedl-material](archived/youtubedl-material) | Self-hosted YouTube downloader built on Material Design |
