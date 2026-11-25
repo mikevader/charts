@@ -1,0 +1,39 @@
+{{- if and .Values.metrics.enabled .Values.metrics.prometheusRule.enabled }}
+{{- include "common.values.setup" . -}}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "common.names.fullname" . }}
+  labels:
+    {{- include "common.labels" . | nindent 4 }}
+    {{- with .Values.metrics.prometheusRule.labels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  groups:
+    - name: {{ include "common.names.fullname" . }}
+      rules:
+        - alert: FlareSolverrAbsent
+          annotations:
+            description: FlareSolverr has disappeared from Prometheus service discovery.
+            summary: FlareSolverr is down.
+          expr: |
+            absent(up{job=~".*{{ include "common.names.fullname" . }}.*"} == 1)
+          for: 5m
+          labels:
+            severity: critical
+        - alert: FlareSolverrHighErrorRate
+          annotations:
+            description: More than half of the FlareSolverr requests failed in the last 15 minutes.
+            summary: FlareSolverr fails to solve challenges.
+          expr: |
+            sum(rate(flaresolverr_request_total{job=~".*{{ include "common.names.fullname" . }}.*", result="error"}[15m]))
+              / sum(rate(flaresolverr_request_total{job=~".*{{ include "common.names.fullname" . }}.*"}[15m])) > 0.5
+          for: 15m
+          labels:
+            severity: warning
+        {{- with .Values.metrics.prometheusRule.rules }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+{{- end }}

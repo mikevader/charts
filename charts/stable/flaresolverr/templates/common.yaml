@@ -1,1 +1,24 @@
-{{- include "common.all" . }}
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the hardcoded settings */}}
+{{- define "flaresolverr.harcodedValues" -}}
+{{- if .Values.metrics.enabled }}
+env:
+  PROMETHEUS_ENABLED: "true"
+  PROMETHEUS_PORT: {{ .Values.metrics.port | quote }}
+
+service:
+  metrics:
+    enabled: true
+    ports:
+      metrics:
+        enabled: true
+        protocol: TCP
+        port: {{ .Values.metrics.port }}
+{{- end }}
+{{- end -}}
+{{- $_ := mergeOverwrite .Values (include "flaresolverr.harcodedValues" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "common.all" . }}

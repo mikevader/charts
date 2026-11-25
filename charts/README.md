@@ -36,3 +36,7 @@
 ### Incubator charts:
 | Chart | Description |
 | ----- | ----------- |
+### Archived charts:
+| Chart | Description |
+| ----- | ----------- |
+| [jellyfin](archived/jellyfin) | Jellyfin Media Server |

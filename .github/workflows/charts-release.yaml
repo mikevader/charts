@@ -9,10 +9,12 @@ on:
       - master
     paths:
       - "charts/**"
+      - "hack/gen-helm-docs.sh"
+      - "hack/templates/**"
 
 jobs:
   release:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -27,15 +29,34 @@ jobs:
 
       - name: Install helm-docs
         run: | 
-          wget -O /tmp/helm-docs.deb https://github.com/norwoodj/helm-docs/releases/download/v1.11.0/helm-docs_1.11.0_Linux_x86_64.deb
+          wget -O /tmp/helm-docs.deb https://github.com/norwoodj/helm-docs/releases/download/v1.14.2/helm-docs_1.14.2_Linux_x86_64.deb
           sudo dpkg -i /tmp/helm-docs.deb
 
       - name: Collect changes
         id: collect-changes
         uses: ./.github/actions/collect-changes
 
+      # A change to the generator or its templates affects every README, so regenerate all of them.
+      # Manual runs do the same, which is useful to refresh all READMEs.
+      - name: Check for README generator changes
+        id: docs-generator
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ] || \
+             ! git cat-file -e "${{ github.event.before }}^{commit}" 2>/dev/null || \
+             [ -n "$(git diff --name-only "${{ github.event.before }}" "${GITHUB_SHA}" -- hack/gen-helm-docs.sh hack/templates)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate README for all charts
+        if: |
+          steps.docs-generator.outputs.changed == 'true'
+        run: ./hack/gen-helm-docs.sh
+
       - name: Generate README for changed charts
         if: |
+          steps.docs-generator.outputs.changed != 'true' &&
           steps.collect-changes.outputs.changesDetected == 'true'
         run: |
           CHARTS=(${{ steps.collect-changes.outputs.addedOrModifiedCharts }})
@@ -43,7 +64,7 @@ jobs:
           do
               IFS='/' read -r -a chart_parts <<< "$i"
               if [ -f "charts/${chart_parts[0]}"/"${chart_parts[1]}/Chart.yaml" ]; then
-                ./.github/scripts/gen-helm-docs.sh "${chart_parts[0]}" "${chart_parts[1]}"
+                ./hack/gen-helm-docs.sh "${chart_parts[0]}" "${chart_parts[1]}"
               fi
           done
 
@@ -110,7 +131,7 @@ jobs:
 
   generate-summary:
     name: Auto-generate charts summary
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     needs:
       - release
     steps:

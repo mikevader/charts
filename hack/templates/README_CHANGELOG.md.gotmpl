@@ -3,25 +3,37 @@
 {{- end -}}
 
 {{- define "custom.changelog" -}}
+{{- $chart := .Files.Get "Chart.yaml" | fromYaml -}}
+{{- $raw := "" -}}
+{{- with $chart.annotations -}}
+  {{- $raw = index . "artifacthub.io/changes" | default "" -}}
+{{- end -}}
+{{- $changes := list -}}
+{{- if $raw -}}
+  {{- $changes = (printf "changes:\n%s" ($raw | indent 2) | fromYaml).changes | default list -}}
+{{- end -}}
 {{ template "custom.changelog.header" . }}
 
-All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/mikevader/charts/tree/main/charts/library/common/README.md#Changelog).
+### Version {{ template "chart.version" . }}
+{{- range $kind := list "added" "changed" "deprecated" "removed" "fixed" "security" }}
+  {{- $entries := list -}}
+  {{- range $changes }}
+    {{- if eq (.kind | toString) $kind }}{{ $entries = append $entries .description }}{{ end -}}
+  {{- end }}
+  {{- if $entries }}
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+#### {{ $kind | title }}
+{{ range $entries }}
+- {{ . }}
+{{- end }}
+  {{- end }}
+{{- end }}
+{{- if not $changes }}
 
-### [1.0.0]
+N/A
+{{- end }}
 
-#### Added
+### Older versions
 
-- N/A
-
-#### Changed
-
-- N/A
-
-#### Removed
-
-- N/A
-
-[1.0.0]: #1.0.0
+A historical overview of changes can be found on the [GitHub releases](https://github.com/mikevader/charts/releases?q={{ template "chart.name" . }}&expanded=true) page.
 {{- end -}}

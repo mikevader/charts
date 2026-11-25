@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
 name: flaresolverr
-version: 1.5.1
+version: 1.6.0
 kubeVersion: ">=1.16.0-0"
 description: FlareSolverr is a proxy server to bypass Cloudflare protection
 type: application
@@ -27,5 +27,7 @@ appVersion: v3.5.2
 
 annotations:
   artifacthub.io/changes: |-
+    - kind: added
+      description: Optional Prometheus metrics via `metrics.enabled`, which turns on FlareSolverr's built-in exporter and adds a `metrics` service, a ServiceMonitor and a PrometheusRule with `FlareSolverrAbsent` and `FlareSolverrHighErrorRate` alerts.
     - kind: changed
-      description: Upgraded `common` chart dependency to version 4.10.0
+      description: The built-in exporter (`PROMETHEUS_ENABLED`/`PROMETHEUS_PORT`) is no longer turned on by default. Set `metrics.enabled=true` to keep it.
