@@ -2,7 +2,14 @@
 set -eu
 
 # Generate helm-docs for Helm charts
-# Usage ./gen-helm-docs.sh [stable/incubator] [chart]
+# Usage ./gen-helm-docs.sh [stable|library] [chart]
+#
+# Application charts (charts/stable/*) are rendered with the shared templates in
+# hack/templates. Only README_CONFIG.md.gotmpl lives in the chart directory: it is
+# seeded from hack/templates if missing and can then be customised per chart.
+# Library charts (charts/library/*) use the README/CONFIG templates in their own
+# chart directory. Every chart shares the changelog template, which renders the
+# current version's artifacthub.io/changes annotation from Chart.yaml.
 
 # require helm-docs
 command -v helm-docs >/dev/null 2>&1 || {
@@ -13,41 +20,41 @@ command -v helm-docs >/dev/null 2>&1 || {
 # Absolute path of repository
 repository=$(git rev-parse --show-toplevel)
 
-# Templates to copy into each chart directory
+# Shared templates for application charts
 readme_template="${repository}/hack/templates/README.md.gotmpl"
 readme_config_template="${repository}/hack/templates/README_CONFIG.md.gotmpl"
 readme_changelog_template="${repository}/hack/templates/README_CHANGELOG.md.gotmpl"
 
-# Gather all charts using the common library, excluding common-test
-charts=$(find "${repository}" -name "Chart.yaml" -not -path "${repository}/charts/archived/*")
-
 # Allow for a specific chart to be passed in as a argument
-if [ $# -ge 1 ] && [ -n "$1" ] && [ -n "$2" ]; then
-    charts="${repository}/charts/$1/$2/Chart.yaml"
-    root="$(dirname "${charts}")"
-    if [ ! -f "$charts" ]; then
-        echo "File ${charts} does not exist."
+if [ $# -ge 2 ] && [ -n "$1" ] && [ -n "$2" ]; then
+    chart_dirs="${repository}/charts/$1/$2"
+    if [ ! -f "${chart_dirs}/Chart.yaml" ]; then
+        echo "File ${chart_dirs}/Chart.yaml does not exist."
         exit 1
     fi
 else
-    root="${repository}/charts/stable"
+    chart_dirs=$(find "${repository}/charts/stable" "${repository}/charts/library" -mindepth 2 -maxdepth 2 -name Chart.yaml -exec dirname {} \; | sort)
 fi
 
-for chart in ${charts}; do
-    chart_directory="$(dirname "${chart}")"
-    echo "-] Copying templates to ${chart_directory}"
-    # Copy README template into each Chart directory, overwrite if exists
-    cp "${readme_template}" "${chart_directory}"
-    # Copy CONFIG template to each Chart directory, do not overwrite if exists
-    cp -n "${readme_config_template}" "${chart_directory}" || true
-    # Copy CHANGELOG template to each Chart directory, do not overwrite if exists
-    cp -n "${readme_changelog_template}" "${chart_directory}" || true
+for chart_directory in ${chart_dirs}; do
+    case "${chart_directory}" in
+        "${repository}/charts/library/"*)
+            echo "-] Generating README for library chart ${chart_directory}"
+            helm-docs \
+                --template-files=README.md.gotmpl \
+                --template-files=README_CONFIG.md.gotmpl \
+                --template-files="${readme_changelog_template}" \
+                --chart-search-root="${chart_directory}"
+            ;;
+        *)
+            echo "-] Generating README for application chart ${chart_directory}"
+            # Seed the CONFIG template, do not overwrite if it exists
+            cp -n "${readme_config_template}" "${chart_directory}" || true
+            helm-docs \
+                --template-files="${readme_template}" \
+                --template-files=README_CONFIG.md.gotmpl \
+                --template-files="${readme_changelog_template}" \
+                --chart-search-root="${chart_directory}"
+            ;;
+    esac
 done
-
-# Run helm-docs for charts using the common library and the common library itself
-helm-docs \
-    --ignore-file="${repository}/.helmdocsignore" \
-    --template-files="$(basename "${readme_template}")" \
-    --template-files="$(basename "${readme_config_template}")" \
-    --template-files="$(basename "${readme_changelog_template}")" \
-    --chart-search-root="${root}"
