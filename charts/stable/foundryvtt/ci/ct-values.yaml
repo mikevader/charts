@@ -1,0 +1,14 @@
+env:
+  # FOUNDRY_RELEASE_URL: ""
+  FOUNDRY_USERNAME: "asdfasdf"
+  FOUNDRY_PASSWORD: "asdfasdf"
+  # CONTAINER_CACHE: ""
+# persistence:
+#   config:
+#     enabled: true
+#     type: emptyDir
+#     mountPath: /root/.stash
+#   media:
+#     enabled: true
+#     type: emptyDir
+#     mountPath: /media
