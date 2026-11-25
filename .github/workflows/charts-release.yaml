@@ -78,6 +78,11 @@ jobs:
           git config user.name "mikevader[bot]"
           git config user.email "mikevader[bot]@users.noreply.github.com"
 
+      # Archived charts are no longer released. Their published versions stay in the repo index.
+      # chart-releaser skips chart directories that do not exist, so drop them from this checkout.
+      - name: Exclude archived charts
+        run: rm -rf charts/archived
+
       # GitHub's generated notes list every PR between two tags, including ones for other charts.
       # Build chart-scoped notes for every chart whose version has not been released yet; chart-releaser
       # reads them from the packaged chart via CR_RELEASE_NOTES_FILE.

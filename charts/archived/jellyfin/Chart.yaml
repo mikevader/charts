@@ -1,0 +1,30 @@
+---
+apiVersion: v2
+name: jellyfin
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+description: Jellyfin Media Server
+type: application
+keywords:
+  - jellyfin
+  - media-server
+home: https://github.com/mikevader/charts/tree/master/charts/archived/jellyfin
+sources:
+  - https://github.com/jellyfin/jellyfin
+  - https://github.com/mikevader/charts/tree/master/charts/archived/jellyfin
+dependencies:
+  - name: common
+    repository: https://mikevader.github.io/charts
+    version: 4.6.0
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/icon-transparent.svg
+
+appVersion: 10.10.7
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: added
+      description: Initial Jellyfin chart release
+

@@ -18,7 +18,7 @@ readme_template="${repository}/hack/templates/README.md.gotmpl"
 readme_config_template="${repository}/hack/templates/README_CONFIG.md.gotmpl"
 
 # Gather all charts using the common library, excluding common-test
-charts=$(find "${repository}" -name "Chart.yaml")
+charts=$(find "${repository}" -name "Chart.yaml" -not -path "${repository}/charts/archived/*")
 
 # Allow for a specific chart to be passed in as a argument
 if [ $# -ge 1 ] && [ -n "$1" ] && [ -n "$2" ]; then

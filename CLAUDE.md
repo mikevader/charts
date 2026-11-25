@@ -8,6 +8,7 @@ A Helm chart repository (published at `https://mikevader.github.io/charts/`, rep
 
 - `charts/library/common`: a Helm **library** chart that renders all Kubernetes resources: controllers (deployment/daemonset/statefulset), services, ingress, PVCs, configmaps, secrets, service accounts, HPA, and add-ons (code-server, vpn/gluetun, promtail, netshoot). Its `values.yaml` defines the full values schema the app charts inherit.
 - `charts/stable/<app>`: thin **application** charts. Each depends on `common` from the published repo (pinned version, not a local `file://` path). Most of the chart is its `values.yaml`.
+- `charts/archived/<app>`: unmaintained charts, moved here with `git mv`. Renovate, ct lint/install, pre-commit, the changelog check, README generation and chart-releaser all skip this folder. The charts are only listed in `charts/README.md`. See `charts/archived/README.md`.
 
 ## App chart pattern
 
