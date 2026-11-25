@@ -23,9 +23,12 @@ runs:
       id: filter
       with:
         list-files: shell
+        # 'every': a file has to match all rules of a filter, so the negated rule excludes archived charts
+        predicate-quantifier: every
         filters: |
           addedOrModified:
             - added|modified: 'charts/*/**'
+            - added|modified: '!charts/archived/**'
           helperCharts:
             - added|modified: 'helper-charts/**'
 

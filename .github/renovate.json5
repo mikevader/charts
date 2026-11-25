@@ -15,6 +15,13 @@
   },
   packageRules: [
     {
+      // Archived charts are no longer maintained
+      matchFileNames: [
+        'charts/archived/**',
+      ],
+      enabled: false,
+    },
+    {
       matchDatasources: [
         'helm',
       ],
