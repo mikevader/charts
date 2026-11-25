@@ -16,8 +16,6 @@ image:
 env:
   # -- Set the container timezone
   TZ: Europe/Zurich
-  PROMETHEUS_ENABLED: true
-  PROMETHEUS_PORT: 8192
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
@@ -32,3 +30,24 @@ ingress:
   # @default -- See values.yaml
   main:
     enabled: false
+
+metrics:
+  # -- Enable the built-in Prometheus exporter, a `metrics` service and a Prometheus serviceMonitor.
+  # @default -- See values.yaml
+  enabled: false
+  # -- Port the built-in Prometheus exporter listens on (sets `PROMETHEUS_PORT`).
+  port: 8192
+  serviceMonitor:
+    # -- Create a Prometheus Operator ServiceMonitor (requires its CRDs).
+    enabled: true
+    interval: 1m
+    scrapeTimeout: 30s
+    labels: {}
+  # -- Enable and configure Prometheus Rules for the chart under this key.
+  # @default -- See values.yaml
+  prometheusRule:
+    enabled: false
+    labels: {}
+    # -- Configure additionial rules for the chart under this key.
+    # @default -- See prometheusrules.yaml
+    rules: []
