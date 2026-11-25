@@ -1,0 +1,6 @@
+# Test the built-in Prometheus exporter and metrics service.
+# The ServiceMonitor is skipped because the test cluster has no Prometheus Operator CRDs.
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: false
