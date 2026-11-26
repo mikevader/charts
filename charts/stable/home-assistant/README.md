@@ -1,6 +1,6 @@
 # home-assistant
 
-![Version: 26.0.0](https://img.shields.io/badge/Version-26.0.0-informational?style=flat-square) ![AppVersion: 2026.11.3](https://img.shields.io/badge/AppVersion-2026.11.3-informational?style=flat-square)
+![Version: 26.0.1](https://img.shields.io/badge/Version-26.0.1-informational?style=flat-square) ![AppVersion: 2026.11.3](https://img.shields.io/badge/AppVersion-2026.11.3-informational?style=flat-square)
 
 Home Assistant
 
@@ -22,7 +22,7 @@ Kubernetes: `>=1.16.0-0`
 |------------|------|---------|
 | https://charts.bitnami.com/bitnami | influxdb | 6.6.16 |
 | https://charts.bitnami.com/bitnami | mariadb | 28.1.9 |
-| https://charts.bitnami.com/bitnami | postgresql | 18.12.27 |
+| https://charts.bitnami.com/bitnami | postgresql | 18.12.28 |
 | https://mikevader.github.io/charts | common | 4.10.0 |
 
 ## TL;DR
@@ -176,11 +176,11 @@ endpoint in your Home-Assistant configuration. See the [official documentation](
 
 ## Changelog
 
-### Version 26.0.0
+### Version 26.0.1
 
 #### Changed
 
-- Upgraded `mariadb` chart dependency to version 28.1.9
+- Upgraded `postgresql` chart dependency to version 18.12.28
 
 ### Older versions
 
