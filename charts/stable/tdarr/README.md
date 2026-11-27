@@ -1,6 +1,6 @@
 # tdarr
 
-![Version: 5.0.0](https://img.shields.io/badge/Version-5.0.0-informational?style=flat-square) ![AppVersion: 3.08.00](https://img.shields.io/badge/AppVersion-3.08.00-informational?style=flat-square)
+![Version: 5.1.0](https://img.shields.io/badge/Version-5.1.0-informational?style=flat-square) ![AppVersion: 3.08.00](https://img.shields.io/badge/AppVersion-3.08.00-informational?style=flat-square)
 
 Tdarr is a self hosted web-app for automating media library transcode/remux management and making sure your files are exactly how you need them to be in terms of codecs/streams/containers etc.
 
@@ -91,7 +91,7 @@ N/A
 | node.id | string | `"node"` | Node ID |
 | node.image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | node.image.repository | string | `"haveagitgat/tdarr_node"` | image repository |
-| node.image.tag | string | `"3.08.00"` | image tag |
+| node.image.tag | string | `"3.09.00"` | image tag |
 | node.resources | object | `{}` | Node resources |
 | persistence | object | See below | Configure persistence settings for the chart under this key. |
 | persistence.config | object | See values.yaml | Volume used for configuration |
@@ -102,7 +102,7 @@ N/A
 
 ## Changelog
 
-### Version 5.0.0
+### Version 5.1.0
 
 #### Changed
 
