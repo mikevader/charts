@@ -19798,6 +19798,37 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/magic-mirror-4.4.2/magic-mirror-4.4.2.tgz
     version: 4.4.2
+  mealie:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: New `mealie` chart.
+    apiVersion: v2
+    appVersion: v3.31.0
+    created: "2026-11-27T00:04:36.842332149Z"
+    dependencies:
+    - name: common
+      repository: https://mikevader.github.io/charts
+      version: 4.10.0
+    description: Mealie is a self hosted recipe manager and meal planner with a RestAPI
+      backend and a reactive frontend application built in Vue for a pleasant user
+      experience for the whole family.
+    digest: ec68924432c48f9dc0da5e081d3aaf80fd6bcffe773d2b924d6c7b32e92bb403
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/mealie
+    icon: https://raw.githubusercontent.com/hay-kot/mealie/gh-pages/assets/img/favicon.png
+    keywords:
+    - grocy
+    kubeVersion: '>=1.30.0-0'
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: mealie
+    sources:
+    - https://github.com/hay-kot/mealie
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/mealie-1.0.0/mealie-1.0.0.tgz
+    version: 1.0.0
   overseerr:
   - annotations:
       artifacthub.io/changes: |-
@@ -34869,4 +34900,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-26T12:53:27.681945323Z"
+generated: "2026-11-27T00:04:36.844012545Z"
