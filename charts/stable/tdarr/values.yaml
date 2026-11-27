@@ -59,7 +59,7 @@ node:
     # -- image repository
     repository: haveagitgat/tdarr_node
     # -- image tag
-    tag: 3.08.00
+    tag: 3.09.00
     # -- image pull policy
     pullPolicy: IfNotPresent
   # -- Node resources
