@@ -15,6 +15,7 @@
 | [heimdall](stable/heimdall) | An Application dashboard and launcher |
 | [home-assistant](stable/home-assistant) | Home Assistant |
 | [magic-mirror](stable/magic-mirror) | magic-mirror helm package |
+| [mealie](stable/mealie) | Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. |
 | [overseerr](stable/overseerr) | Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services such as Sonarr, Radarr and Plex! |
 | [plex](stable/plex) | Plex Media Server |
 | [prowlarr](stable/prowlarr) | Indexer manager/proxy built on the popular arr net base stack to integrate with your various PVR apps. |
