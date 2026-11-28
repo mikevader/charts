@@ -19,15 +19,19 @@ https://mikevader.github.io/charts/
 {{- end -}}
 
 {{- define "custom.requirements" -}}
+{{- if .KubeVersion -}}
 ## Requirements
 
 {{ template "chart.kubeVersionLine" . }}
 {{- end -}}
+{{- end -}}
 
 {{- define "custom.dependencies" -}}
+{{- if .Dependencies -}}
 ## Dependencies
 
 {{ template "chart.requirementsTable" . }}
+{{- end -}}
 {{- end -}}
 
 {{- define "custom.install.tldr" -}}
@@ -51,6 +55,7 @@ helm install {{ template "chart.name" . }} {{ template "custom.helm.path" . }}
 {{- end -}}
 
 {{- define "custom.uninstall" -}}
+{{- $common := false }}{{- range .Dependencies }}{{- if eq .Name "common" }}{{- $common = true }}{{- end }}{{- end -}}
 ## Uninstalling the Chart
 
 To uninstall the `{{ template "chart.name" . }}` deployment
@@ -59,7 +64,7 @@ To uninstall the `{{ template "chart.name" . }}` deployment
 helm uninstall {{ template "chart.name" . }}
 ```
 
-The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
+The command removes all the Kubernetes components associated with the chart {{ if $common }}**including persistent volumes** {{ end }}and deletes the release.
 {{- end -}}
 
 {{- define "custom.configuration.header" -}}
@@ -67,18 +72,24 @@ The command removes all the Kubernetes components associated with the chart **in
 {{- end -}}
 
 {{- define "custom.configuration.readValues" -}}
+{{- $common := false }}{{- range .Dependencies }}{{- if eq .Name "common" }}{{- $common = true }}{{- end }}{{- end -}}
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
+{{- if $common }}
 Other values may be used from the [values.yaml]({{ template "custom.repository.url" . }}/tree/master/charts/library/common/values.yaml) from the [common library]({{ template "custom.repository.url" . }}/tree/master/charts/library/common).
+{{- end }}
 {{- end -}}
 
 {{- define "custom.configuration.example.set" -}}
+{{- $common := false }}{{- range .Dependencies }}{{- if eq .Name "common" }}{{- $common = true }}{{- end }}{{- end -}}
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
+{{- if $common }}
 
 ```console
 helm install {{ template "chart.name" . }} \
   --set env.TZ="America/New_York" \
     {{ template "custom.helm.path" . }}
 ```
+{{- end }}
 {{- end -}}
 
 {{- define "custom.configuration.example.file" -}}
@@ -90,9 +101,12 @@ helm install {{ template "chart.name" . }} {{ template "custom.helm.path" . }} -
 {{- end -}}
 
 {{- define "custom.valuesSection" -}}
+{{- $common := false }}{{- range .Dependencies }}{{- if eq .Name "common" }}{{- $common = true }}{{- end }}{{- end -}}
 ## Values
+{{- if $common }}
 
 **Important**: When deploying an application Helm chart you can add more values from our common library chart [here]({{ template "custom.repository.url" . }}/tree/master/charts/library/common)
+{{- end }}
 
 {{ template "chart.valuesTable" . }}
 {{- end -}}

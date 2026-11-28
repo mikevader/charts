@@ -10,13 +10,6 @@ Argo CD app-of-apps chart that renders AppProjects, guarded Namespaces and Appli
 
 * <https://github.com/mikevader/k3s-cluster-infra-apps/tree/master/apps-root-config>
 
-## Requirements
-
-## Dependencies
-
-| Repository | Name | Version |
-|------------|------|---------|
-
 ## TL;DR
 
 ```console
@@ -41,20 +34,13 @@ To uninstall the `app-of-apps` deployment
 helm uninstall app-of-apps
 ```
 
-The command removes all the Kubernetes components associated with the chart **including persistent volumes** and deletes the release.
+The command removes all the Kubernetes components associated with the chart and deletes the release.
 
 ## Configuration
 
 Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
-Other values may be used from the [values.yaml](https://github.com/mikevader/charts/tree/master/charts/library/common/values.yaml) from the [common library](https://github.com/mikevader/charts/tree/master/charts/library/common).
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
-
-```console
-helm install app-of-apps \
-  --set env.TZ="America/New_York" \
-    mikevader/app-of-apps
-```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
@@ -92,8 +78,6 @@ The parent Applications that deploy each group are rendered by the
 [app-of-apps-bootstrap](../app-of-apps-bootstrap) chart.
 
 ## Values
-
-**Important**: When deploying an application Helm chart you can add more values from our common library chart [here](https://github.com/mikevader/charts/tree/master/charts/library/common)
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
