@@ -1,0 +1,15 @@
+suite: Snapshot
+# Full render of every template with ci/default-values.yaml (all guardrails switched on).
+# After an intended change, update with: helm unittest -u -f "tests/**/*_test.yaml" charts/stable/app-of-apps
+templates:
+  - templates/00-appprojects.yaml
+  - templates/01-namespace-resources.yaml
+  - templates/02-application.yaml
+release:
+  name: cluster-test-apps
+values:
+  - ../ci/default-values.yaml
+tests:
+  - it: matches the snapshot
+    asserts:
+      - matchSnapshot: {}

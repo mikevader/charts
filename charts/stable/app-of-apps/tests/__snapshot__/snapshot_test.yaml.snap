@@ -1,0 +1,404 @@
+matches the snapshot:
+  1: |
+    apiVersion: argoproj.io/v1alpha1
+    kind: AppProject
+    metadata:
+      name: cluster-test-apps
+      namespace: argocd-system
+    spec:
+      destinations:
+        - namespace: app-a
+          server: https://kubernetes.default.svc
+        - namespace: app-b
+          server: https://kubernetes.default.svc
+      sourceRepos:
+        - https://github.com/mikevader/k3s-cluster-infra-apps.git
+        - https://mikevader.github.io/charts
+        - https://charts.truecharts.org/
+  2: |
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+      labels:
+        client: ci
+        pod-security.kubernetes.io/audit: restricted
+        pod-security.kubernetes.io/audit-version: latest
+        pod-security.kubernetes.io/enforce: baseline
+        pod-security.kubernetes.io/enforce-version: latest
+        pod-security.kubernetes.io/warn: restricted
+        pod-security.kubernetes.io/warn-version: latest
+      name: app-a
+  3: |
+    apiVersion: v1
+    kind: LimitRange
+    metadata:
+      name: core-resource-limits
+      namespace: app-a
+    spec:
+      limits:
+        - max:
+            cpu: "4"
+            memory: 8Gi
+          min:
+            cpu: 1m
+            memory: 1
+          type: Pod
+        - default:
+            cpu: 2
+            memory: 1Gi
+          defaultRequest:
+            cpu: 25m
+            memory: 512Mi
+          type: Container
+  4: |
+    apiVersion: v1
+    kind: ResourceQuota
+    metadata:
+      name: core-resource-quota
+      namespace: app-a
+    spec:
+      hard:
+        pods: "20"
+  5: |
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      name: vault-reader
+      namespace: app-a
+  6: |
+    apiVersion: external-secrets.io/v1
+    kind: SecretStore
+    metadata:
+      name: vault
+      namespace: app-a
+    spec:
+      provider:
+        vault:
+          auth:
+            kubernetes:
+              mountPath: kubernetes
+              role: test-namespace
+              serviceAccountRef:
+                name: vault-reader
+          path: secret
+          server: http://vault.vault.svc:8200
+          version: v2
+  7: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: allow-from-k3s-ingress
+      namespace: app-a
+    spec:
+      ingress:
+        - from:
+            - namespaceSelector:
+                matchExpressions:
+                  - key: kubernetes.io/metadata.name
+                    operator: In
+                    values:
+                      - traefik
+                      - nginx
+      podSelector: {}
+      policyTypes:
+        - Ingress
+  8: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: allow-same-namespace
+      namespace: app-a
+    spec:
+      ingress:
+        - from:
+            - podSelector: {}
+      podSelector: {}
+  9: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: deny-by-default
+      namespace: app-a
+    spec:
+      ingress: []
+      podSelector: {}
+  10: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: restrict-egress
+      namespace: app-a
+    spec:
+      egress:
+        - to:
+            - podSelector: {}
+        - ports:
+            - port: 53
+              protocol: UDP
+            - port: 53
+              protocol: TCP
+          to:
+            - namespaceSelector:
+                matchLabels:
+                  kubernetes.io/metadata.name: kube-system
+              podSelector:
+                matchLabels:
+                  k8s-app: kube-dns
+        - to:
+            - ipBlock:
+                cidr: 0.0.0.0/0
+                except:
+                  - 10.0.0.0/8
+                  - 172.16.0.0/12
+                  - 192.168.0.0/16
+                  - 100.64.0.0/10
+                  - 169.254.0.0/16
+      podSelector: {}
+      policyTypes:
+        - Egress
+  11: |
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: RoleBinding
+    metadata:
+      name: team1-admin
+      namespace: app-a
+    roleRef:
+      apiGroup: rbac.authorization.k8s.io
+      kind: ClusterRole
+      name: admin
+    subjects:
+      - apiGroup: rbac.authorization.k8s.io
+        kind: Group
+        name: team1
+  12: |
+    apiVersion: v1
+    kind: Namespace
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-options: Prune=false,Delete=false
+      labels:
+        client: ci
+        pod-security.kubernetes.io/audit: restricted
+        pod-security.kubernetes.io/audit-version: latest
+        pod-security.kubernetes.io/enforce: privileged
+        pod-security.kubernetes.io/enforce-version: latest
+        pod-security.kubernetes.io/warn: restricted
+        pod-security.kubernetes.io/warn-version: latest
+      name: app-b
+  13: |
+    apiVersion: v1
+    kind: LimitRange
+    metadata:
+      name: core-resource-limits
+      namespace: app-b
+    spec:
+      limits:
+        - max:
+            cpu: "4"
+            memory: 8Gi
+          min:
+            cpu: 1m
+            memory: 1
+          type: Pod
+        - default:
+            cpu: 2
+            memory: 1Gi
+          defaultRequest:
+            cpu: 25m
+            memory: 512Mi
+          type: Container
+  14: |
+    apiVersion: v1
+    kind: ResourceQuota
+    metadata:
+      name: core-resource-quota
+      namespace: app-b
+    spec:
+      hard:
+        pods: "20"
+  15: |
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      name: vault-reader
+      namespace: app-b
+  16: |
+    apiVersion: external-secrets.io/v1
+    kind: SecretStore
+    metadata:
+      name: vault
+      namespace: app-b
+    spec:
+      provider:
+        vault:
+          auth:
+            kubernetes:
+              mountPath: kubernetes
+              role: test-namespace
+              serviceAccountRef:
+                name: vault-reader
+          path: secret
+          server: http://vault.vault.svc:8200
+          version: v2
+  17: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: allow-from-k3s-ingress
+      namespace: app-b
+    spec:
+      ingress:
+        - from:
+            - namespaceSelector:
+                matchExpressions:
+                  - key: kubernetes.io/metadata.name
+                    operator: In
+                    values:
+                      - traefik
+                      - nginx
+      podSelector: {}
+      policyTypes:
+        - Ingress
+  18: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: allow-same-namespace
+      namespace: app-b
+    spec:
+      ingress:
+        - from:
+            - podSelector: {}
+      podSelector: {}
+  19: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: deny-by-default
+      namespace: app-b
+    spec:
+      ingress: []
+      podSelector: {}
+  20: |
+    apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: restrict-egress
+      namespace: app-b
+    spec:
+      egress:
+        - to:
+            - podSelector: {}
+        - ports:
+            - port: 53
+              protocol: UDP
+            - port: 53
+              protocol: TCP
+          to:
+            - namespaceSelector:
+                matchLabels:
+                  kubernetes.io/metadata.name: kube-system
+              podSelector:
+                matchLabels:
+                  k8s-app: kube-dns
+        - to:
+            - ipBlock:
+                cidr: 0.0.0.0/0
+                except:
+                  - 10.0.0.0/8
+                  - 172.16.0.0/12
+                  - 192.168.0.0/16
+                  - 100.64.0.0/10
+                  - 169.254.0.0/16
+      podSelector: {}
+      policyTypes:
+        - Egress
+  21: |
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: RoleBinding
+    metadata:
+      name: team1-admin
+      namespace: app-b
+    roleRef:
+      apiGroup: rbac.authorization.k8s.io
+      kind: ClusterRole
+      name: admin
+    subjects:
+      - apiGroup: rbac.authorization.k8s.io
+        kind: Group
+        name: team1
+  22: |
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+        argocd.argoproj.io/sync-wave: "10"
+      finalizers:
+        - resources-finalizer.argocd.argoproj.io
+      name: app-a
+      namespace: argocd-system
+    spec:
+      destination:
+        name: in-cluster
+        namespace: app-a
+      project: cluster-test-apps
+      source:
+        path: cluster-test/app-a
+        repoURL: https://github.com/mikevader/k3s-cluster-infra-apps.git
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - ApplyOutOfSyncOnly=true
+  23: |
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-options: Prune=false,Delete=false
+        argocd.argoproj.io/sync-wave: "10"
+      name: app-b
+      namespace: argocd-system
+    spec:
+      destination:
+        name: in-cluster
+        namespace: app-b
+      project: cluster-test-apps
+      source:
+        path: cluster-test/app-b
+        repoURL: https://github.com/mikevader/k3s-cluster-infra-apps.git
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - ApplyOutOfSyncOnly=true
+  24: |
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+        argocd.argoproj.io/sync-wave: "10"
+      finalizers:
+        - resources-finalizer.argocd.argoproj.io
+      name: app-c
+      namespace: argocd-system
+    spec:
+      destination:
+        name: in-cluster
+        namespace: app-a
+      project: cluster-test-apps
+      source:
+        path: cluster-test/app-c
+        repoURL: https://github.com/mikevader/k3s-cluster-infra-apps.git
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - ApplyOutOfSyncOnly=true

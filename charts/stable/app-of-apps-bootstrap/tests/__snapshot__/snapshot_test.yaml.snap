@@ -1,0 +1,45 @@
+matches the snapshot:
+  1: |
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application
+    metadata:
+      name: cluster-init-apps-apps
+      namespace: argocd-system
+    spec:
+      destination:
+        namespace: argocd-system
+        server: https://kubernetes.default.svc
+      project: default
+      source:
+        helm:
+          valueFiles:
+            - cluster-init-apps.yaml
+        path: apps-root-config/applications
+        repoURL: https://github.com/mikevader/k3s-cluster-infra-apps.git
+        targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+  2: |
+    apiVersion: argoproj.io/v1alpha1
+    kind: Application
+    metadata:
+      name: cluster-platform-apps-apps
+      namespace: argocd-system
+    spec:
+      destination:
+        namespace: argocd-system
+        server: https://kubernetes.default.svc
+      project: default
+      source:
+        helm:
+          valueFiles:
+            - cluster-platform-apps.yaml
+        path: apps-root-config/applications
+        repoURL: https://github.com/mikevader/k3s-cluster-infra-apps.git
+        targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
