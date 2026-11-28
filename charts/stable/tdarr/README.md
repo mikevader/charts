@@ -12,8 +12,6 @@ Tdarr is a self hosted web-app for automating media library transcode/remux mana
 * <https://hub.docker.com/r/haveagitgat/tdarr/>
 * <https://tdarr.io/docs/>
 
-## Requirements
-
 ## Dependencies
 
 | Repository | Name | Version |
