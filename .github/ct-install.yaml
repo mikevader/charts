@@ -8,6 +8,8 @@ chart-dirs:
 excluded-charts:
   - foundryvtt # complex to download foundryvtt binaries (credentials required)
   - heimdall
+  - app-of-apps # renders Argo CD and External Secrets CRs only (no CRDs on k3d)
+  - app-of-apps-bootstrap
 chart-repos:
   - bitnami=https://charts.bitnami.com/bitnami
   - mikevader=https://mikevader.github.io/charts

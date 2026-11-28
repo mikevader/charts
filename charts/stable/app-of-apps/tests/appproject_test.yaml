@@ -1,0 +1,106 @@
+suite: AppProject
+templates:
+  - templates/00-appprojects.yaml
+release:
+  name: cluster-test-apps
+set:
+  repository: https://example.com/repo.git
+tests:
+  - it: is named after the release and allows the repository and chart repos as sources
+    set:
+      applications:
+        app-a: {}
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: AppProject
+      - equal:
+          path: metadata.name
+          value: cluster-test-apps
+      - equal:
+          path: metadata.namespace
+          value: argocd-system
+      - equal:
+          path: spec.sourceRepos
+          value:
+            - https://example.com/repo.git
+            - https://mikevader.github.io/charts
+            - https://charts.truecharts.org/
+
+  - it: uses argocdNamespace
+    set:
+      argocdNamespace: argocd
+      applications:
+        app-a: {}
+    asserts:
+      - equal:
+          path: metadata.namespace
+          value: argocd
+
+  - it: allows one destination per distinct namespace, sorted
+    set:
+      applications:
+        zeta: {}
+        app-b:
+          destinationNamespace: shared
+        app-a:
+          destinationNamespace: shared
+    asserts:
+      - equal:
+          path: spec.destinations
+          value:
+            - namespace: shared
+              server: https://kubernetes.default.svc
+            - namespace: zeta
+              server: https://kubernetes.default.svc
+
+  - it: allows every namespace with allowAllNamespaces
+    set:
+      allowAllNamespaces: true
+      applications:
+        app-a: {}
+    asserts:
+      - equal:
+          path: spec.destinations
+          value:
+            - namespace: "*"
+              server: https://kubernetes.default.svc
+
+  - it: allows no destinations without applications
+    asserts:
+      - equal:
+          path: spec.destinations
+          value: []
+
+  - it: renders the cluster resource whitelist and namespace resource blacklist
+    set:
+      applications:
+        app-a: {}
+      clusterResourceWhitelist:
+        - group: "*"
+          kind: "*"
+      namespaceResourceBlacklist:
+        - group: apps
+          kind: DaemonSet
+    asserts:
+      - equal:
+          path: spec.clusterResourceWhitelist
+          value:
+            - group: "*"
+              kind: "*"
+      - equal:
+          path: spec.namespaceResourceBlacklist
+          value:
+            - group: apps
+              kind: DaemonSet
+
+  - it: omits the whitelist and blacklist by default
+    set:
+      applications:
+        app-a: {}
+    asserts:
+      - notExists:
+          path: spec.clusterResourceWhitelist
+      - notExists:
+          path: spec.namespaceResourceBlacklist

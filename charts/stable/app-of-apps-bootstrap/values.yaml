@@ -1,0 +1,19 @@
+---
+# Default values for app-of-apps-bootstrap.
+#
+# Renders one parent Argo CD Application per app group. Each one deploys the app-of-apps chart at
+# `path` in `repository` with the group's values file `<name>.yaml`.
+
+# -- Git repository holding the app-of-apps chart and the group values files
+repository: ""
+
+# -- Namespace Argo CD runs in; the parent Applications are created and deployed there
+argocdNamespace: argocd-system
+
+# -- Path of the app-of-apps chart and its group values files in `repository`
+path: apps-root-config/applications
+
+# -- App groups to create a parent Application for. Each entry renders the Application
+# `<name>-apps` with the values file `<name>.yaml`.
+bootstrap: []
+# - name: cluster-init-apps

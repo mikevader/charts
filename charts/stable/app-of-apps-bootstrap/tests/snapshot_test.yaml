@@ -1,0 +1,13 @@
+suite: Snapshot
+# Full render with ci/default-values.yaml.
+# After an intended change, update with: helm unittest -u -f "tests/**/*_test.yaml" charts/stable/app-of-apps-bootstrap
+templates:
+  - templates/application.yaml
+release:
+  name: bootstrap
+values:
+  - ../ci/default-values.yaml
+tests:
+  - it: matches the snapshot
+    asserts:
+      - matchSnapshot: {}

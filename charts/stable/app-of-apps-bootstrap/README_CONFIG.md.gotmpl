@@ -1,0 +1,18 @@
+{{- define "custom.custom.configuration.header" -}}
+## Custom configuration
+{{- end -}}
+
+{{- define "custom.custom.configuration" -}}
+{{ template "custom.custom.configuration.header" . }}
+
+The chart is the root of an Argo CD app-of-apps setup. For every entry in `bootstrap` it renders a
+parent `Application` named `<name>-apps` that deploys the [app-of-apps](../app-of-apps) chart at
+`path` in `repository`, with the group's values file `<name>.yaml`.
+
+```yaml
+repository: https://github.com/mikevader/k3s-cluster-infra-apps.git
+bootstrap:
+  - name: cluster-init-apps
+  - name: cluster-platform-apps
+```
+{{- end -}}

@@ -1,0 +1,418 @@
+suite: Namespace resources
+templates:
+  - templates/01-namespace-resources.yaml
+release:
+  name: cluster-test-apps
+set:
+  repository: https://example.com/repo.git
+tests:
+  # --- Namespace -----------------------------------------------------------------------------
+  - it: creates only the Namespace by default, with PSA labels and confirm-on-removal
+    set:
+      applications:
+        app-a: {}
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Namespace
+      - equal:
+          path: metadata.name
+          value: app-a
+      - equal:
+          path: metadata.annotations
+          value:
+            argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+      - equal:
+          path: metadata.labels
+          value:
+            pod-security.kubernetes.io/enforce: baseline
+            pod-security.kubernetes.io/enforce-version: latest
+            pod-security.kubernetes.io/audit: restricted
+            pod-security.kubernetes.io/audit-version: latest
+            pod-security.kubernetes.io/warn: restricted
+            pod-security.kubernetes.io/warn-version: latest
+
+  - it: creates nothing with disableNamespaceCreation
+    set:
+      enableDefaultNetworkPolicy: true
+      roleBindings:
+        - name: team1
+          kind: Group
+          clusterRoleName: admin
+      applications:
+        app-a:
+          disableNamespaceCreation: true
+    asserts:
+      - hasDocuments:
+          count: 0
+
+  - it: adds the group namespace labels and annotations
+    set:
+      namespace:
+        labels:
+          client: cluster-infra
+        annotations:
+          example.com/owner: me
+      podSecurity:
+        enforce: ""
+        audit: ""
+        warn: ""
+      applications:
+        app-a: {}
+    asserts:
+      - equal:
+          path: metadata.labels
+          value:
+            client: cluster-infra
+      - equal:
+          path: metadata.annotations
+          value:
+            example.com/owner: me
+            argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+
+  - it: keeps an explicit sync-options namespace annotation
+    set:
+      namespace:
+        annotations:
+          argocd.argoproj.io/sync-options: Prune=false
+      applications:
+        app-a: {}
+    asserts:
+      - equal:
+          path: metadata.annotations
+          value:
+            argocd.argoproj.io/sync-options: Prune=false
+
+  - it: lets an application override single PSA modes and the version
+    set:
+      applications:
+        app-a:
+          podSecurity:
+            enforce: privileged
+            audit: ""
+            version: v1.35
+    asserts:
+      - equal:
+          path: metadata.labels
+          value:
+            pod-security.kubernetes.io/enforce: privileged
+            pod-security.kubernetes.io/enforce-version: v1.35
+            pod-security.kubernetes.io/warn: restricted
+            pod-security.kubernetes.io/warn-version: v1.35
+
+  - it: onRemoval delete sets no namespace annotation
+    set:
+      applications:
+        app-a:
+          onRemoval: delete
+    asserts:
+      - notExists:
+          path: metadata.annotations
+
+  - it: onRemoval preserve protects the namespace
+    set:
+      onRemoval: preserve
+      applications:
+        app-a: {}
+    asserts:
+      - equal:
+          path: metadata.annotations
+          value:
+            argocd.argoproj.io/sync-options: Prune=false,Delete=false
+
+  # --- LimitRange / ResourceQuota --------------------------------------------------------------
+  - it: creates the default LimitRange
+    set:
+      enableDefaultLimitRange: true
+      applications:
+        app-a: {}
+    documentSelector:
+      path: kind
+      value: LimitRange
+    asserts:
+      - equal:
+          path: metadata
+          value:
+            name: core-resource-limits
+            namespace: app-a
+      - equal:
+          path: spec.limits[1].defaultRequest
+          value:
+            cpu: 25m
+            memory: 512Mi
+
+  - it: replaces the LimitRange limits per application
+    set:
+      enableDefaultLimitRange: true
+      applications:
+        app-a:
+          limitRange:
+            limits:
+              - type: Container
+                default:
+                  memory: 4Gi
+    documentSelector:
+      path: kind
+      value: LimitRange
+    asserts:
+      - equal:
+          path: spec.limits
+          value:
+            - type: Container
+              default:
+                memory: 4Gi
+
+  - it: creates no ResourceQuota without hard limits
+    set:
+      enableDefaultResourceQuota: true
+      applications:
+        app-a: {}
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Namespace
+
+  - it: overlays the application quota onto the group quota
+    set:
+      enableDefaultResourceQuota: true
+      resourceQuota:
+        hard:
+          pods: "10"
+          requests.storage: 20Gi
+      applications:
+        app-a:
+          resourceQuota:
+            hard:
+              requests.storage: 60Gi
+    documentSelector:
+      path: kind
+      value: ResourceQuota
+    asserts:
+      - equal:
+          path: metadata
+          value:
+            name: core-resource-quota
+            namespace: app-a
+      - equal:
+          path: spec.hard
+          value:
+            pods: "10"
+            requests.storage: 60Gi
+
+  # --- Vault SecretStore -------------------------------------------------------------------------
+  - it: requires a Vault role
+    set:
+      enableVaultSecretStore: true
+      applications:
+        app-a: {}
+    asserts:
+      - failedTemplate:
+          errorPattern: vaultSecretStore.role is required with enableVaultSecretStore
+
+  - it: creates a ServiceAccount for Vault auth
+    set:
+      enableVaultSecretStore: true
+      vaultSecretStore:
+        role: test-namespace
+      applications:
+        app-a: {}
+    documentSelector:
+      path: kind
+      value: ServiceAccount
+    asserts:
+      - equal:
+          path: metadata
+          value:
+            name: vault-reader
+            namespace: app-a
+
+  - it: creates a Vault SecretStore with the per-application role
+    set:
+      enableVaultSecretStore: true
+      vaultSecretStore:
+        role: test-namespace
+      applications:
+        app-a:
+          vaultSecretStore:
+            role: special
+    documentSelector:
+      path: kind
+      value: SecretStore
+    asserts:
+      - equal:
+          path: metadata
+          value:
+            name: vault
+            namespace: app-a
+      - equal:
+          path: spec.provider.vault
+          value:
+            server: http://vault.vault.svc:8200
+            path: secret
+            version: v2
+            auth:
+              kubernetes:
+                mountPath: kubernetes
+                role: special
+                serviceAccountRef:
+                  name: vault-reader
+
+  # --- NetworkPolicies ---------------------------------------------------------------------------
+  - it: creates the default NetworkPolicies without egress restriction
+    set:
+      enableDefaultNetworkPolicy: true
+      applications:
+        app-a: {}
+    asserts:
+      - hasDocuments:
+          count: 4
+      - containsDocument:
+          kind: NetworkPolicy
+          apiVersion: networking.k8s.io/v1
+          name: allow-same-namespace
+          namespace: app-a
+          any: true
+      - containsDocument:
+          kind: NetworkPolicy
+          apiVersion: networking.k8s.io/v1
+          name: deny-by-default
+          namespace: app-a
+          any: true
+
+  - it: allows ingress from the ingress controller namespaces
+    set:
+      enableDefaultNetworkPolicy: true
+      applications:
+        app-a: {}
+    documentSelector:
+      path: metadata.name
+      value: allow-from-k3s-ingress
+    asserts:
+      - equal:
+          path: spec.ingress[0].from[0].namespaceSelector.matchExpressions[0].values
+          value:
+            - traefik
+            - nginx
+
+  - it: drops the ingress-controller policy when an application clears the list
+    set:
+      enableDefaultNetworkPolicy: true
+      applications:
+        app-a:
+          networkPolicy:
+            ingressFromNamespaces: []
+    asserts:
+      # Namespace, allow-same-namespace, deny-by-default
+      - hasDocuments:
+          count: 3
+
+  - it: renders extra ingress rules
+    set:
+      enableDefaultNetworkPolicy: true
+      networkPolicy:
+        extraIngress:
+          - from:
+              - namespaceSelector:
+                  matchLabels:
+                    kubernetes.io/metadata.name: monitoring
+      applications:
+        app-a: {}
+    documentSelector:
+      path: metadata.name
+      value: allow-extra-ingress
+    asserts:
+      - equal:
+          path: spec.ingress
+          value:
+            - from:
+                - namespaceSelector:
+                    matchLabels:
+                      kubernetes.io/metadata.name: monitoring
+
+  - it: restricts egress to namespace, DNS and the internet
+    set:
+      enableDefaultNetworkPolicy: true
+      networkPolicy:
+        egress:
+          enabled: true
+      applications:
+        app-a: {}
+    documentSelector:
+      path: metadata.name
+      value: restrict-egress
+    asserts:
+      - lengthEqual:
+          path: spec.egress
+          count: 3
+      - equal:
+          path: spec.egress[2].to[0].ipBlock
+          value:
+            cidr: 0.0.0.0/0
+            except:
+              - 10.0.0.0/8
+              - 172.16.0.0/12
+              - 192.168.0.0/16
+              - 100.64.0.0/10
+              - 169.254.0.0/16
+
+  - it: lets an application disable internet egress (false wins over the group value)
+    set:
+      enableDefaultNetworkPolicy: true
+      networkPolicy:
+        egress:
+          enabled: true
+        extraEgress:
+          - to:
+              - ipBlock:
+                  cidr: 192.168.1.10/32
+      applications:
+        app-a:
+          networkPolicy:
+            egress:
+              allowInternet: false
+    documentSelector:
+      path: metadata.name
+      value: restrict-egress
+    asserts:
+      - lengthEqual:
+          path: spec.egress
+          count: 3
+      - equal:
+          path: spec.egress[2]
+          value:
+            to:
+              - ipBlock:
+                  cidr: 192.168.1.10/32
+
+  # --- RoleBindings ------------------------------------------------------------------------------
+  - it: binds the configured ClusterRoles in every namespace
+    set:
+      roleBindings:
+        - name: team1
+          kind: Group
+          clusterRoleName: admin
+      applications:
+        app-a: {}
+    documentSelector:
+      path: kind
+      value: RoleBinding
+    asserts:
+      - equal:
+          path: metadata
+          value:
+            name: team1-admin
+            namespace: app-a
+      - equal:
+          path: roleRef
+          value:
+            apiGroup: rbac.authorization.k8s.io
+            kind: ClusterRole
+            name: admin
+      - equal:
+          path: subjects
+          value:
+            - apiGroup: rbac.authorization.k8s.io
+              kind: Group
+              name: team1

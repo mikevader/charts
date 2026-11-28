@@ -1,0 +1,5 @@
+---
+repository: https://github.com/mikevader/k3s-cluster-infra-apps.git
+bootstrap:
+  - name: cluster-init-apps
+  - name: cluster-platform-apps

@@ -1,0 +1,22 @@
+---
+apiVersion: v2
+name: app-of-apps-bootstrap
+version: 1.0.0
+description: Argo CD root chart that renders one parent Application per app group of the app-of-apps chart
+type: application
+keywords:
+  - argocd
+  - gitops
+  - app-of-apps
+home: https://github.com/mikevader/charts/tree/master/charts/stable/app-of-apps-bootstrap
+sources:
+  - https://github.com/mikevader/k3s-cluster-infra-apps/tree/master/apps-root-config
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/assets/argo.png
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: added
+      description: Initial version, extracted from the apps-root-config `bootstrap` chart of k3s-cluster-infra-apps

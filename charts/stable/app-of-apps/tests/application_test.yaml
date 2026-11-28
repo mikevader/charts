@@ -1,0 +1,210 @@
+suite: Application
+templates:
+  - templates/02-application.yaml
+release:
+  name: cluster-test-apps
+set:
+  repository: https://example.com/repo.git
+  subFolder: cluster-test
+tests:
+  - it: renders an auto-synced Application with defaults
+    set:
+      applications:
+        app-a: {}
+    asserts:
+      - hasDocuments:
+          count: 1
+      - isKind:
+          of: Application
+      - equal:
+          path: metadata
+          value:
+            name: app-a
+            namespace: argocd-system
+            annotations:
+              argocd.argoproj.io/sync-wave: "10"
+              argocd.argoproj.io/sync-options: Prune=confirm,Delete=confirm
+            finalizers:
+              - resources-finalizer.argocd.argoproj.io
+      - equal:
+          path: spec
+          value:
+            destination:
+              namespace: app-a
+              name: in-cluster
+            project: cluster-test-apps
+            source:
+              path: cluster-test/app-a
+              repoURL: https://example.com/repo.git
+            syncPolicy:
+              syncOptions:
+                - ApplyOutOfSyncOnly=true
+              automated:
+                prune: true
+                selfHeal: true
+
+  - it: is not rendered when disabled
+    set:
+      applications:
+        app-a:
+          disabled: true
+    asserts:
+      - hasDocuments:
+          count: 0
+
+  - it: applies per-application overrides
+    set:
+      applications:
+        app-a:
+          destinationNamespace: other
+          project: custom
+          path: somewhere/else
+          syncWave: 5
+          source:
+            targetRevision: main
+            helm:
+              valueFiles:
+                - values-prod.yaml
+    asserts:
+      - equal:
+          path: metadata.annotations["argocd.argoproj.io/sync-wave"]
+          value: "5"
+      - equal:
+          path: spec.destination.namespace
+          value: other
+      - equal:
+          path: spec.project
+          value: custom
+      - equal:
+          path: spec.source
+          value:
+            path: somewhere/else
+            repoURL: https://example.com/repo.git
+            targetRevision: main
+            helm:
+              valueFiles:
+                - values-prod.yaml
+
+  - it: uses the kustomized-helm plugin with enableHelmKustomize
+    set:
+      applications:
+        app-a:
+          enableHelmKustomize: true
+    asserts:
+      - equal:
+          path: spec.source.plugin.name
+          value: kustomized-helm
+
+  - it: adds server-side apply and diff options
+    set:
+      applications:
+        app-a:
+          helmServerSideApply: true
+          serverSideDiff: true
+    asserts:
+      - equal:
+          path: spec.syncPolicy.syncOptions
+          value:
+            - ApplyOutOfSyncOnly=true
+            - ServerSideApply=true
+      - equal:
+          path: metadata.annotations["argocd.argoproj.io/compare-options"]
+          value: ServerSideDiff=true
+
+  - it: renders ignoreDifferences
+    set:
+      applications:
+        app-a:
+          ignoreDifferences:
+            - group: apps
+              kind: Deployment
+              jsonPointers:
+                - /spec/replicas
+    asserts:
+      - equal:
+          path: spec.ignoreDifferences
+          value:
+            - group: apps
+              kind: Deployment
+              jsonPointers:
+                - /spec/replicas
+
+  - it: has no syncPolicy with disableAutoSync
+    set:
+      applications:
+        app-a:
+          disableAutoSync: true
+    asserts:
+      - notExists:
+          path: spec.syncPolicy
+
+  - it: onRemoval delete keeps the finalizer and sets no sync-options
+    set:
+      onRemoval: delete
+      applications:
+        app-a: {}
+    asserts:
+      - notExists:
+          path: metadata.annotations["argocd.argoproj.io/sync-options"]
+      - equal:
+          path: metadata.finalizers
+          value:
+            - resources-finalizer.argocd.argoproj.io
+
+  - it: onRemoval preserve drops the finalizer and disables prune and delete
+    set:
+      applications:
+        app-a:
+          onRemoval: preserve
+    asserts:
+      - equal:
+          path: metadata.annotations["argocd.argoproj.io/sync-options"]
+          value: Prune=false,Delete=false
+      - notExists:
+          path: metadata.finalizers
+
+  - it: application onRemoval wins over the group setting
+    set:
+      onRemoval: preserve
+      applications:
+        app-a:
+          onRemoval: confirm
+    asserts:
+      - equal:
+          path: metadata.annotations["argocd.argoproj.io/sync-options"]
+          value: Prune=confirm,Delete=confirm
+
+  - it: fails on an unknown onRemoval mode
+    set:
+      applications:
+        app-a:
+          onRemoval: nope
+    asserts:
+      - failedTemplate:
+          errorPattern: onRemoval must be one of delete, confirm, preserve
+
+  # --- Known quirks, kept 1:1 with the original apps-root-config chart --------------------------
+  # `default` treats false and 0 as empty, so these values cannot be switched off / set to 0.
+  # These tests pin the current behaviour; change them together with the template when fixing it.
+  - it: "quirk: automatedPrune false and selfHeal false are ignored"
+    set:
+      applications:
+        app-a:
+          automatedPrune: false
+          selfHeal: false
+    asserts:
+      - equal:
+          path: spec.syncPolicy.automated
+          value:
+            prune: true
+            selfHeal: true
+
+  - it: "quirk: syncWave 0 falls back to 10"
+    set:
+      applications:
+        app-a:
+          syncWave: 0
+    asserts:
+      - equal:
+          path: metadata.annotations["argocd.argoproj.io/sync-wave"]
+          value: "10"

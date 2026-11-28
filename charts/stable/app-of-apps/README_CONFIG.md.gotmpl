@@ -1,0 +1,34 @@
+{{- define "custom.custom.configuration.header" -}}
+## Custom configuration
+{{- end -}}
+
+{{- define "custom.custom.configuration" -}}
+{{ template "custom.custom.configuration.header" . }}
+
+The chart renders one Argo CD app group per release. One values file per app group lists the group's applications. For every application the chart renders
+
+- an `Application` pointing at `<repository>/<subFolder>/<name>`,
+- a `Namespace` with Pod Security Admission labels and, if switched on, a LimitRange, ResourceQuota,
+  NetworkPolicies, a Vault `SecretStore` and RoleBindings,
+
+plus one `AppProject` (named after the release) restricted to the group's destination namespaces.
+
+```yaml
+repository: https://github.com/mikevader/k3s-cluster-infra-apps.git
+subFolder: cluster-platform-apps
+enableDefaultNetworkPolicy: true
+applications:
+  authentik: {}
+  vault:
+    serverSideDiff: true
+    podSecurity:
+      enforce: privileged
+```
+
+Group-level settings (`podSecurity`, `onRemoval`, `limitRange`, `resourceQuota`, `networkPolicy`,
+`vaultSecretStore`) can be overridden per application; the application's value is overlaid on
+the group value.
+
+The parent Applications that deploy each group are rendered by the
+[app-of-apps-bootstrap](../app-of-apps-bootstrap) chart.
+{{- end -}}
