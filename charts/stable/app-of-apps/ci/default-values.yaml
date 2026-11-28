@@ -1,0 +1,31 @@
+---
+repository: https://github.com/mikevader/k3s-cluster-infra-apps.git
+subFolder: cluster-test
+namespace:
+  labels:
+    client: ci
+enableDefaultLimitRange: true
+enableDefaultResourceQuota: true
+enableDefaultNetworkPolicy: true
+enableVaultSecretStore: true
+vaultSecretStore:
+  role: test-namespace
+resourceQuota:
+  hard:
+    pods: "20"
+networkPolicy:
+  egress:
+    enabled: true
+roleBindings:
+  - name: team1
+    kind: Group
+    clusterRoleName: admin
+applications:
+  app-a: {}
+  app-b:
+    onRemoval: preserve
+    podSecurity:
+      enforce: privileged
+  app-c:
+    disableNamespaceCreation: true
+    destinationNamespace: app-a

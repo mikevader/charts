@@ -1,0 +1,63 @@
+suite: Parent Application
+templates:
+  - templates/application.yaml
+set:
+  repository: https://example.com/repo.git
+tests:
+  - it: renders nothing without app groups
+    asserts:
+      - hasDocuments:
+          count: 0
+
+  - it: renders one parent Application per group
+    set:
+      bootstrap:
+        - name: cluster-init-apps
+        - name: cluster-platform-apps
+    asserts:
+      - hasDocuments:
+          count: 2
+      - equal:
+          path: metadata.name
+          value: cluster-platform-apps-apps
+        documentIndex: 1
+      - equal:
+          path: metadata.namespace
+          value: argocd-system
+        documentIndex: 0
+      - equal:
+          path: spec
+          value:
+            destination:
+              namespace: argocd-system
+              server: https://kubernetes.default.svc
+            project: default
+            source:
+              helm:
+                valueFiles:
+                  - cluster-init-apps.yaml
+              path: apps-root-config/applications
+              repoURL: https://example.com/repo.git
+              targetRevision: HEAD
+            syncPolicy:
+              automated:
+                prune: true
+                selfHeal: true
+        documentIndex: 0
+
+  - it: uses path and argocdNamespace
+    set:
+      argocdNamespace: argocd
+      path: gitops/root
+      bootstrap:
+        - name: cluster-init-apps
+    asserts:
+      - equal:
+          path: metadata.namespace
+          value: argocd
+      - equal:
+          path: spec.destination.namespace
+          value: argocd
+      - equal:
+          path: spec.source.path
+          value: gitops/root

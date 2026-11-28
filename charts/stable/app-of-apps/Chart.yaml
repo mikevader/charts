@@ -1,0 +1,22 @@
+---
+apiVersion: v2
+name: app-of-apps
+version: 1.0.0
+description: Argo CD app-of-apps chart that renders AppProjects, guarded Namespaces and Applications per app group
+type: application
+keywords:
+  - argocd
+  - gitops
+  - app-of-apps
+home: https://github.com/mikevader/charts/tree/master/charts/stable/app-of-apps
+sources:
+  - https://github.com/mikevader/k3s-cluster-infra-apps/tree/master/apps-root-config
+maintainers:
+  - name: mikevader
+    email: mikevader@users.noreply.github.com
+icon: https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/assets/argo.png
+
+annotations:
+  artifacthub.io/changes: |-
+    - kind: added
+      description: Initial version, extracted from the apps-root-config `applications` chart of k3s-cluster-infra-apps
