@@ -1501,6 +1501,58 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/adguard-home-5.5.2/adguard-home-5.5.2.tgz
     version: 5.5.2
+  app-of-apps:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: Initial version, extracted from the apps-root-config `applications` chart of k3s-cluster-infra-apps
+    apiVersion: v2
+    created: "2026-11-28T12:49:44.228888852Z"
+    description: Argo CD app-of-apps chart that renders AppProjects, guarded Namespaces
+      and Applications per app group
+    digest: 6b0207260742b33f2c1fe3fefeeb797f2c94535d8bee59c964c8ec39d1dab4ad
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/app-of-apps
+    icon: https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/assets/argo.png
+    keywords:
+    - argocd
+    - gitops
+    - app-of-apps
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: app-of-apps
+    sources:
+    - https://github.com/mikevader/k3s-cluster-infra-apps/tree/master/apps-root-config
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/app-of-apps-1.0.0/app-of-apps-1.0.0.tgz
+    version: 1.0.0
+  app-of-apps-bootstrap:
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: added
+          description: Initial version, extracted from the apps-root-config `bootstrap` chart of k3s-cluster-infra-apps
+    apiVersion: v2
+    created: "2026-11-28T12:49:44.327432197Z"
+    description: Argo CD root chart that renders one parent Application per app group
+      of the app-of-apps chart
+    digest: 8e1cbca24dbb3604fb1084519c4f0e1a56371d3d13609e1acf8013e7dd8228d6
+    home: https://github.com/mikevader/charts/tree/master/charts/stable/app-of-apps-bootstrap
+    icon: https://raw.githubusercontent.com/argoproj/argo-cd/master/docs/assets/argo.png
+    keywords:
+    - argocd
+    - gitops
+    - app-of-apps
+    maintainers:
+    - email: mikevader@users.noreply.github.com
+      name: mikevader
+    name: app-of-apps-bootstrap
+    sources:
+    - https://github.com/mikevader/k3s-cluster-infra-apps/tree/master/apps-root-config
+    type: application
+    urls:
+    - https://github.com/mikevader/charts/releases/download/app-of-apps-bootstrap-1.0.0/app-of-apps-bootstrap-1.0.0.tgz
+    version: 1.0.0
   common:
   - annotations:
       artifacthub.io/changes: |-
@@ -34933,4 +34985,4 @@ entries:
     urls:
     - https://github.com/mikevader/charts/releases/download/youtubedl-material-4.4.2/youtubedl-material-4.4.2.tgz
     version: 4.4.2
-generated: "2026-11-27T00:06:17.463743224Z"
+generated: "2026-11-28T12:49:44.487067345Z"
