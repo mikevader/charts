@@ -16,15 +16,22 @@ on:
         default: "false"
 
 jobs:
-  generate-install-matrix:
-    name: Generate matrix for install
+  generate-matrix:
+    name: Generate matrices for unit tests and install
     runs-on: ubuntu-latest
     outputs:
-      matrix: |
+      # Unit tests run for every changed chart; the install test skips the excluded-charts
+      # of ct-install.yaml (e.g. charts that need credentials or CRDs k3d does not have).
+      unittestMatrix: |
         {
-          "chart": ${{ steps.list-changed.outputs.charts }}
+          "chart": ${{ steps.list-changed.outputs.unittestCharts }}
         }
-      detected: ${{ steps.list-changed.outputs.detected }}
+      unittestDetected: ${{ steps.list-changed.outputs.unittestDetected }}
+      installMatrix: |
+        {
+          "chart": ${{ steps.list-changed.outputs.installCharts }}
+        }
+      installDetected: ${{ steps.list-changed.outputs.installDetected }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -42,30 +49,33 @@ jobs:
         env:
           HELPER_CHARTS_CHANGED: ${{ inputs.helperChartsChanged }}
         run: |
-          # ct list-changed already skips the excluded-charts from ct-install.yaml
-          CHARTS=$(ct list-changed --config .github/ct-install.yaml)
-          OUTPUT_JSON=$(echo "${CHARTS}" | jq -R -s -c 'split("\n") | map(select(length > 0))')
-          # Changes under helper-charts/ (common library tests) run the library tests,
-          # unless a library chart change already does.
-          if [[ "${HELPER_CHARTS_CHANGED}" == "true" ]]; then
-            OUTPUT_JSON=$(echo "${OUTPUT_JSON}" | jq -c 'if any(.[]; contains("library")) then . else . + ["helper-charts/common-test"] end')
-          fi
-          echo "charts=${OUTPUT_JSON}" >> "$GITHUB_OUTPUT"
-          if [[ $(echo ${OUTPUT_JSON} | jq -c '. | length') -gt 0 ]]; then
-            echo "detected=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "detected=false" >> "$GITHUB_OUTPUT"
-          fi
-          echo "Detected changed charts: ${OUTPUT_JSON}"
-          
+          # ct-lint.yaml has no excluded-charts; ct list-changed skips the excluded-charts of ct-install.yaml
+          for kind in unittest:.github/ct-lint.yaml install:.github/ct-install.yaml; do
+            name="${kind%%:*}"
+            config="${kind#*:}"
+            CHARTS=$(ct list-changed --config "${config}")
+            OUTPUT_JSON=$(echo "${CHARTS}" | jq -R -s -c 'split("\n") | map(select(length > 0))')
+            # Changes under helper-charts/ (common library tests) run the library tests,
+            # unless a library chart change already does.
+            if [[ "${HELPER_CHARTS_CHANGED}" == "true" ]]; then
+              OUTPUT_JSON=$(echo "${OUTPUT_JSON}" | jq -c 'if any(.[]; contains("library")) then . else . + ["helper-charts/common-test"] end')
+            fi
+            echo "${name}Charts=${OUTPUT_JSON}" >> "$GITHUB_OUTPUT"
+            if [[ $(echo "${OUTPUT_JSON}" | jq -c '. | length') -gt 0 ]]; then
+              echo "${name}Detected=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "${name}Detected=false" >> "$GITHUB_OUTPUT"
+            fi
+            echo "Detected changed charts (${name}): ${OUTPUT_JSON}"
+          done
 
   unittest:
     needs:
-      - generate-install-matrix
-    if: needs.generate-install-matrix.outputs.detected == 'true'
+      - generate-matrix
+    if: needs.generate-matrix.outputs.unittestDetected == 'true'
     name: Run unit tests
     strategy:
-      matrix: ${{ fromJson(needs.generate-install-matrix.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.generate-matrix.outputs.unittestMatrix) }}
       fail-fast: false
     runs-on: ubuntu-latest
     steps:
@@ -84,11 +94,11 @@ jobs:
       - name: Prep Helm
         run: helm plugin install https://github.com/helm-unittest/helm-unittest.git --verify=false
 
-      - name: Run chart-testing (install)
+      - name: Run unit tests
         if: ${{ !(contains(matrix.chart, 'library') || startsWith(matrix.chart, 'helper-charts/')) }}
         run: helm unittest -f "tests/**/*_test.yaml" ${{ matrix.chart }}
 
-      - name: Run library-chart-testing (install)
+      - name: Run library unit tests
         if: ${{ contains(matrix.chart, 'library') || startsWith(matrix.chart, 'helper-charts/') }}
         run: |
           helm dep update helper-charts/common-test
@@ -96,26 +106,26 @@ jobs:
 
   unittest_success:
     needs:
-      - generate-install-matrix
+      - generate-matrix
       - unittest
     if: |
       always()
-    name: Install successful
+    name: Unit tests successful
     runs-on: ubuntu-latest
     steps:
-      - name: Check install matrix status
-        if: ${{ (needs.generate-install-matrix.outputs.detected == 'true') && (needs.unittest.result != 'success') }}
+      - name: Check unit test matrix status
+        if: ${{ (needs.generate-matrix.outputs.unittestDetected == 'true') && (needs.unittest.result != 'success') }}
         run: exit 1
 
 
   install-charts:
     needs:
       - unittest_success
-      - generate-install-matrix
-    if: needs.generate-install-matrix.outputs.detected == 'true'
+      - generate-matrix
+    if: needs.generate-matrix.outputs.installDetected == 'true'
     name: Install charts
     strategy:
-      matrix: ${{ fromJson(needs.generate-install-matrix.outputs.matrix) }}
+      matrix: ${{ fromJson(needs.generate-matrix.outputs.installMatrix) }}
       fail-fast: false
     runs-on: ubuntu-latest
     steps:
@@ -159,7 +169,7 @@ jobs:
   # Summarize matrix https://github.community/t/status-check-for-a-matrix-jobs/127354/7
   install_success:
     needs:
-      - generate-install-matrix
+      - generate-matrix
       - install-charts
     if: |
       always()
@@ -167,5 +177,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check install matrix status
-        if: ${{ (needs.generate-install-matrix.outputs.detected == 'true') && (needs.install-charts.result != 'success') }}
+        if: ${{ (needs.generate-matrix.outputs.installDetected == 'true') && (needs.install-charts.result != 'success') }}
         run: exit 1

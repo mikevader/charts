@@ -8,7 +8,7 @@ chart-dirs:
 excluded-charts:
   - foundryvtt # complex to download foundryvtt binaries (credentials required)
   - heimdall
-  - app-of-apps # render Argo CD and External Secrets CRs only; covered by helm-unittest
+  - app-of-apps # renders Argo CD and External Secrets CRs only (no CRDs on k3d)
   - app-of-apps-bootstrap
 chart-repos:
   - bitnami=https://charts.bitnami.com/bitnami

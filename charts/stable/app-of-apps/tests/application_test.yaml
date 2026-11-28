@@ -182,3 +182,29 @@ tests:
     asserts:
       - failedTemplate:
           errorPattern: onRemoval must be one of delete, confirm, preserve
+
+  # --- Known quirks, kept 1:1 with the original apps-root-config chart --------------------------
+  # `default` treats false and 0 as empty, so these values cannot be switched off / set to 0.
+  # These tests pin the current behaviour; change them together with the template when fixing it.
+  - it: "quirk: automatedPrune false and selfHeal false are ignored"
+    set:
+      applications:
+        app-a:
+          automatedPrune: false
+          selfHeal: false
+    asserts:
+      - equal:
+          path: spec.syncPolicy.automated
+          value:
+            prune: true
+            selfHeal: true
+
+  - it: "quirk: syncWave 0 falls back to 10"
+    set:
+      applications:
+        app-a:
+          syncWave: 0
+    asserts:
+      - equal:
+          path: metadata.annotations["argocd.argoproj.io/sync-wave"]
+          value: "10"

@@ -57,7 +57,7 @@ ct install --config .github/ct-install.yaml --charts charts/stable/<app>
 ./hack/gen-helm-docs.sh stable <app>
 ```
 
-`ct install` runs once for each `ci/*-values.yaml` file in a chart. `foundryvtt` and `heimdall` are excluded from install tests (`.github/ct-install.yaml`). The Ruby/minitest harness (`Gemfile`, `test/test_helper.rb`) is legacy and has no active tests.
+`ct install` runs once for each `ci/*-values.yaml` file in a chart. `foundryvtt`, `heimdall`, `app-of-apps` and `app-of-apps-bootstrap` are excluded from install tests (`.github/ct-install.yaml`); helm-unittest still runs for every changed chart, since its matrix comes from `.github/ct-lint.yaml`. The Ruby/minitest harness (`Gemfile`, `test/test_helper.rb`) is legacy and has no active tests.
 
 ## CI flow
 
