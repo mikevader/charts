@@ -7,6 +7,8 @@
 | Chart | Description |
 | ----- | ----------- |
 | [adguard-home](stable/adguard-home) | DNS proxy as ad-blocker for local network |
+| [app-of-apps-bootstrap](stable/app-of-apps-bootstrap) | Argo CD root chart that renders one parent Application per app group of the app-of-apps chart |
+| [app-of-apps](stable/app-of-apps) | Argo CD app-of-apps chart that renders AppProjects, guarded Namespaces and Applications per app group |
 | [error-pages](stable/error-pages) | Server error pages in the docker image |
 | [filebrowser](stable/filebrowser) | filebrowser provides a file managing interface within a specified directory |
 | [flaresolverr](stable/flaresolverr) | FlareSolverr is a proxy server to bypass Cloudflare protection |
